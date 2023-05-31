@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    background: #efefef;
+    padding: 3rem;
+}
+.container div {
+    background: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}

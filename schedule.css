@@ -1,0 +1,177 @@
+.schedule__table {
+    display: table;
+    width: 100%;
+}
+.schedule__row {
+    display: table-row;
+    position: relative;
+}
+.schedule__row::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background: #efefef;
+}
+.schedule__row:not(:first-child) {
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+}
+.schedule__row:not(:first-child):hover {
+    background-color: rgba(239, 239, 239, 0.35);
+}
+.schedule__col {
+    color: #1a1d1f;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 16px 12px;
+    position: relative;
+}
+.schedule__col:first-child {
+    font-size: 0;
+    width: 56px;
+    border-radius: 8px 0 0 8px;
+}
+.schedule__col:last-child {
+    border-radius: 0 8px 8px 0;
+}
+.schedule__row:first-child .schedule__col {
+    color: #6f767e;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.23077;
+    padding: 0 12px 16px;
+}
+.checkbox {
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+    cursor: pointer;
+}
+.checkbox__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.checkbox__inner {
+    display: flex;
+}
+.checkbox__tick {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: block !important;
+    border: 2px solid rgba(111, 118, 126, 0.4);
+    border-radius: 6px;
+    transition: all 0.2s;
+    position: relative;
+}
+.checkbox__inner:hover .checkbox__tick {
+    border-color: #2a85ff;
+}
+.checkbox__input:checked + .checkbox__inner .checkbox__tick {
+    background: #2a85ff;
+    border-color: #2a85ff;
+}
+.checkbox__tick:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 12px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='12' viewBox='0 0 17 12'%3E%3Cpath d='M16.707.293a1 1 0 0 1 0 1.414l-8.586 8.586a3 3 0 0 1-4.243 0L.293 6.707A1 1 0 0 1 .735 5.02a1 1 0 0 1 .973.273l3.586 3.586a1 1 0 0 0 1.414 0L15.293.293a1 1 0 0 1 1.414 0z' fill='%23fcfcfc' fill-rule='evenodd'/%3E%3C/svg%3E")
+        no-repeat 50% 50%/100% auto;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.checkbox__input:checked + .checkbox__inner .checkbox__tick:before {
+    opacity: 1;
+}
+
+.schedule__item {
+    display: flex;
+    align-items: center;
+}
+.schedule__preview {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.schedule__preview img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.schedule__product {
+    max-width: 170px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    line-height: 1.6;
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -ms-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    cursor: pointer;
+}
+.schedule__product:hover {
+    color: #2a85ff;
+}
+.schedule__link {
+    color: #9a9fa5;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.23077;
+}
+.schedule__price,
+.schedule__empty {
+    flex-shrink: 0;
+    font-weight: 700;
+    line-height: 32px;
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+.schedule__price {
+    background: #b5e4ca;
+}
+.schedule__empty {
+    background: #efefef;
+}
+.schedule__date {
+    color: #6f767e;
+    font-weight: 600;
+}
+
+@media (max-width: 750px) {
+    .schedule__table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .schedule__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .schedule__col {
+        width: 100%;
+    }
+}

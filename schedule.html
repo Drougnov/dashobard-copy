@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/schedule.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/style.css"
+        />
+        <title>Schedule</title>
+    </head>
+    <body>
+        <div class="schedule__table">
+            <div class="schedule__row">
+                <div class="schedule__col">
+                    <label class="checkbox">
+                        <input
+                            class="checkbox__input"
+                            type="checkbox"
+                            id="select-all"
+                        /><span class="checkbox__inner"
+                            ><span class="checkbox__tick"></span
+                        ></span>
+                    </label>
+                </div>
+                <div class="schedule__col">Product</div>
+                <div class="schedule__col">Price</div>
+                <div class="schedule__col">Last edited</div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__col">
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" /><span
+                            class="checkbox__inner"
+                            ><span class="checkbox__tick"></span
+                        ></span>
+                    </label>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__item">
+                        <div class="schedule__preview">
+                            <img
+                                src="https://ui8-core.herokuapp.com/img/content/product-pic-1.jpg"
+                                alt="Product"
+                            />
+                        </div>
+                        <div>
+                            <div class="schedule__product">
+                                Bento Matte 3D Illustration
+                            </div>
+                            <div class="schedule__link">
+                                ui8.net/product/product-link
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__price">$123</div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__date">Apr 9, 2021 at 1:55 PM</div>
+                </div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__col">
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" /><span
+                            class="checkbox__inner"
+                            ><span class="checkbox__tick"></span
+                        ></span>
+                    </label>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__item">
+                        <div class="schedule__preview">
+                            <img
+                                src="https://ui8-core.herokuapp.com/img/content/product-pic-1.jpg"
+                                alt="Product"
+                            />
+                        </div>
+                        <div>
+                            <div class="schedule__product">
+                                DSM - Geometry pattern
+                            </div>
+                            <div class="schedule__link">
+                                ui8.net/product/product-link
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__empty">$0.0</div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__date">Apr 12, 2021 at 9:22 PM</div>
+                </div>
+            </div>
+            <div class="schedule__row">
+                <div class="schedule__col">
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" /><span
+                            class="checkbox__inner"
+                            ><span class="checkbox__tick"></span
+                        ></span>
+                    </label>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__item">
+                        <div class="schedule__preview">
+                            <img
+                                src="https://ui8-core.herokuapp.com/img/content/product-pic-1.jpg"
+                                alt="Product"
+                            />
+                        </div>
+                        <div>
+                            <div class="schedule__product">
+                                Node - Crypto iOS UI design kit
+                            </div>
+                            <div class="schedule__link">
+                                ui8.net/product/product-link
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__price">$95</div>
+                </div>
+                <div class="schedule__col">
+                    <div class="schedule__date">Apr 15, 2021 at 7:43 PM</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const selectAllCheckbox = document.getElementById("select-all");
+            const checkboxes = document.querySelectorAll(".checkbox__input");
+
+            selectAllCheckbox.addEventListener("change", function () {
+                // Set the state of all checkboxes based on the state of "select all" checkbox
+                checkboxes.forEach((checkbox) => {
+                    checkbox.checked = selectAllCheckbox.checked;
+                });
+            });
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener("change", function () {
+                    // If any checkbox other than "select all" is unchecked, uncheck "select all" checkbox
+                    if (!this.checked) {
+                        selectAllCheckbox.checked = false;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
