@@ -4,17 +4,429 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="mortgage.css" />
         <link
             rel="stylesheet"
             href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/style.css"
         />
+        <link rel="stylesheet" href="mortgage.css" />
         <title>Mortgage</title>
     </head>
     <body>
         <div class="container">
-            <div class="tRLtc"></div>
+            <div class="container-left">
+                <div class="sidebar">
+                    <div class="tab-button-section">
+                        <button
+                            id="interior-btn"
+                            class="tab-button active"
+                            onclick="showTab('interior')"
+                        >
+                            Interior
+                        </button>
+                        <button
+                            id="exterior-btn"
+                            class="tab-button"
+                            onclick="showTab('exterior')"
+                        >
+                            Exterior
+                        </button>
+                    </div>
+                    <ul
+                        id="interior-tab"
+                        class="sidebar-menu interior-container zaSgn active"
+                    >
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Ceilings</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">1</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Plasterboard
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    VJ
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Pressed metal
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Fivro with cover strip
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Other
+                                </div>
+                            </div>
+                        </li>
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Walls</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">2</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 1
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 2
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 3
+                                </div>
+                            </div>
+                        </li>
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Doors</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">3</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 1
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 2
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul
+                        id="exterior-tab"
+                        class="sidebar-menu exterior-container zaSgn"
+                    >
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Ceilings 2</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">3</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Plasterboard
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    VJ
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Pressed metal
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Fivro with cover strip
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Other
+                                </div>
+                            </div>
+                        </li>
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Walls 2</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">2</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 1
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 2
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 3
+                                </div>
+                            </div>
+                        </li>
+                        <li class="DeYlt">
+                            <div class="menu-item gsCWf EJVsl">
+                                <div class="menu-item-left gsCWf EJVsl">
+                                    <svg
+                                        class="HNdzs icon-arrow"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="SVGRepo_bgCarrier"
+                                            stroke-width="0"
+                                        ></g>
+                                        <g
+                                            id="SVGRepo_tracerCarrier"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title></title>
+                                            <g id="Complete">
+                                                <g id="F-Chevron">
+                                                    <polyline
+                                                        fill="none"
+                                                        id="Down"
+                                                        points="5 8.5 12 15.5 19 8.5"
+                                                        stroke="#000000"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                    ></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span>Doors 2</span>
+                                </div>
+                                <div class="menu-item-right gsCWf EJVsl">
+                                    <span class="number">3</span>
+                                </div>
+                            </div>
+                            <div class="sub-menu HruDj">
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 1
+                                </div>
+                                <div class="sub-menu-item gsCWf EJVsl HruDj">
+                                    Example 2
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main tRLtc"></div>
+            </div>
             <div class="tRLtc"></div>
         </div>
+        <script>
+            // sidebar dropdown menu
+
+            const sidebar = document.querySelector(".sidebar-menu");
+            const sidebarDropDownButtons =
+                document.querySelectorAll(".menu-item");
+
+            sidebarDropDownButtons.forEach((btn) => {
+                let dropDownContainer = btn.parentElement;
+
+                btn.addEventListener("click", toggleDropdown);
+
+                function toggleDropdown(event) {
+                    dropDownContainer.classList.toggle("active");
+                    countDropDownContainerHeight(dropDownContainer);
+                }
+            });
+
+            function countDropDownContainerHeight(dropDownContainer) {
+                const dropDownBody =
+                    dropDownContainer.querySelector(".sub-menu");
+                const dropDownItems = dropDownBody.children;
+                let height = 0;
+
+                for (let i = 0; i < dropDownItems.length; i++) {
+                    height += dropDownItems[i].offsetHeight;
+                }
+
+                if (dropDownContainer.classList.contains("active")) {
+                    dropDownBody.style.height = height + "px";
+                } else {
+                    dropDownBody.style.height = 0;
+                }
+            }
+
+            // tab section
+
+            function hideAllTabs() {
+                const tabs = document.querySelectorAll(".sidebar-menu");
+                tabs.forEach((tab) => {
+                    tab.classList.remove("active");
+                });
+            }
+            function showTab(tabId) {
+                hideAllTabs();
+                const tab = document.getElementById(`${tabId}-tab`);
+                tab.classList.add("active");
+                setActiveButton(tabId);
+            }
+            function setActiveButton(tabId) {
+                const buttons = document.querySelectorAll(".tab-button");
+                buttons.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+                const button = document.getElementById(`${tabId}-btn`);
+                button.classList.add("active");
+            }
+        </script>
     </body>
 </html>

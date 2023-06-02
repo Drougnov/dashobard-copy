@@ -998,6 +998,9 @@ button[type="submit"] {
         -o-transform: rotate(360deg);
     }
 }
+.TpsXD.white-loader::after {
+    border-top-color: white;
+}
 
 /* ------------filter---------- */
 
