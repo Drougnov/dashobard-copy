@@ -25,6 +25,7 @@ function lHCgG(event) {
     if (!formField.classList.contains("first_focus")) {
         // add the class 'first_focus'
         formField.classList.add("first_focus");
+        console.log("focus added");
 
         // add the class 'password_invisible'
         formField.classList.add("password_invisible");
