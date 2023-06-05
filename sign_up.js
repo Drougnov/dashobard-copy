@@ -38,57 +38,51 @@ function lHCgG(event) {
         // show the eye icon wrapper
         eye_icon_wrapper.style.display = "block";
     }
-
-    // Add an event listener for keydown to show the eye icon on any keypress
-    passwordInput.addEventListener("keydown", function () {
-        let eye_icon_wrapper = formField.querySelector(".piDFy");
-        eye_icon_wrapper.style.display = "block";
-    });
 }
 
-// // Toggle visibility of password input on click of icon
-// function piDFy(event) {
-//     // get the target of the event
-//     let element = event.target;
+// Toggle visibility of password input on click of icon
+function piDFy(event) {
+    // get the target of the event
+    let element = event.target;
 
-//     // find parent div .form-field of the event target
-//     let formField = element.closest(".form-field");
-//     if (!formField) {
-//         console.error("closest form field not found");
-//         return;
-//     }
+    // find parent div .form-field of the event target
+    let formField = element.closest(".form-field");
+    if (!formField) {
+        console.error("closest form field not found");
+        return;
+    }
 
-//     // find password input within the form field
-//     let passwordInput = formField.querySelector("input[data-type=password]");
-//     if (!passwordInput) {
-//         console.error("password input not found");
-//         return;
-//     }
+    // find password input within the form field
+    let passwordInput = formField.querySelector("input[data-type=password]");
+    if (!passwordInput) {
+        console.error("password input not found");
+        return;
+    }
 
-//     // if the form field has the class 'password_visible'
-//     if (formField.classList.contains("password_visible")) {
-//         // remove the class 'password_visible'
-//         formField.classList.remove("password_visible");
+    // if the form field has the class 'password_visible'
+    if (formField.classList.contains("password_visible")) {
+        // remove the class 'password_visible'
+        formField.classList.remove("password_visible");
 
-//         // add the class 'password_invisible'
-//         formField.classList.add("password_invisible");
+        // add the class 'password_invisible'
+        formField.classList.add("password_invisible");
 
-//         // set the type of the password input to 'password'
-//         passwordInput.type = "password";
+        // set the type of the password input to 'password'
+        passwordInput.type = "password";
 
-//         // focus on the password input
-//         passwordInput.focus();
-//     } else {
-//         // remove the class 'password_invisible'
-//         formField.classList.remove("password_invisible");
+        // focus on the password input
+        passwordInput.focus();
+    } else {
+        // remove the class 'password_invisible'
+        formField.classList.remove("password_invisible");
 
-//         // add the class 'password_visible'
-//         formField.classList.add("password_visible");
+        // add the class 'password_visible'
+        formField.classList.add("password_visible");
 
-//         // set the type of the password input to 'text'
-//         passwordInput.type = "text";
+        // set the type of the password input to 'text'
+        passwordInput.type = "text";
 
-//         // focus on the password input
-//         passwordInput.focus();
-//     }
-// }
+        // focus on the password input
+        passwordInput.focus();
+    }
+}
