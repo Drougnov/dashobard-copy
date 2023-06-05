@@ -17,13 +17,12 @@
     -o-border-radius: 15px;
     height: 100%;
 }
-
 .container-left {
     display: flex !important;
 }
-
 .sidebar {
-    max-width: 250px;
+    max-width: 175px;
+    width: 100%;
     height: 100%;
 }
 
@@ -64,8 +63,14 @@
 .sidebar-menu::-webkit-scrollbar {
     display: none;
 }
+.sidebar-menu li {
+    width: 100%;
+}
 .menu-item-left {
     gap: 0.5rem;
+}
+.menu-item-left span {
+    white-space: nowrap;
 }
 .icon-arrow {
     transition: transform 0.3s ease-out;
@@ -115,7 +120,15 @@ li.active .icon-arrow {
     height: 3rem;
 }
 
+/* .menu-content */
+
 .main {
     width: 100%;
     height: 100%;
+}
+.menu-content {
+    display: none;
+}
+.menu-content.active {
+    display: block;
 }
