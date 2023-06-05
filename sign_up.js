@@ -38,6 +38,12 @@ function lHCgG(event) {
         // show the eye icon wrapper
         eye_icon_wrapper.style.display = "block";
     }
+
+    // Add an event listener for keydown to show the eye icon on any keypress
+    passwordInput.addEventListener("keydown", function () {
+        let eye_icon_wrapper = formField.querySelector(".piDFy");
+        eye_icon_wrapper.style.display = "block";
+    });
 }
 
 // // Toggle visibility of password input on click of icon
@@ -86,9 +92,3 @@ function lHCgG(event) {
 //         passwordInput.focus();
 //     }
 // }
-
-// Add an event listener for keydown to show the eye icon on any keypress
-passwordInput.addEventListener("keydown", function () {
-    let eye_icon_wrapper = formField.querySelector(".piDFy");
-    eye_icon_wrapper.style.display = "block";
-});
