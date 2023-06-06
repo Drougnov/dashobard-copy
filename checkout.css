@@ -1,0 +1,30 @@
+.elementor-section .elementor-container {
+    flex-direction: row-reverse;
+}
+.elementor-369553 .elementor-element.elementor-element-35e20806 {
+    width: 39.92% !important;
+}
+.elementor-column-wrap--35e20806 {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+.elementor-369553 .elementor-element.elementor-element-3bea7835 {
+    width: calc(100% - 39.92%) !important;
+    padding-left: 51px;
+}
+.woocommerce .woolentor-fields-1 .woocommerce-billing-fields__field-wrapper {
+    justify-content: space-between;
+    align-items: center;
+}
+.woocommerce .woolentor-fields-1 .form-row-first {
+    width: 50% !important;
+}
+.woocommerce-checkout
+    .woocommerce-billing-fields__field-wrapper
+    #billing_city_field,
+.woocommerce-checkout
+    .woocommerce-billing-fields__field-wrapper
+    #billing_postcode_field {
+    width: calc(25% - 15px) !important;
+    max-width: calc(25% - 15px) !important;
+}
