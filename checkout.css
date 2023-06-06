@@ -28,3 +28,44 @@
     width: calc(25% - 15px) !important;
     max-width: calc(25% - 15px) !important;
 }
+.woolentor-review-order-1 .woolentor-product-thumb {
+    flex: unset !important;
+}
+.woocommerce img {
+    width: 80px;
+    height: 80px !important;
+}
+
+@media (max-width: 1070px) {
+    .woocommerce-checkout
+        .woocommerce-billing-fields__field-wrapper
+        #billing_city_field,
+    .woocommerce-checkout
+        .woocommerce-billing-fields__field-wrapper
+        #billing_postcode_field {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+}
+@media (max-width: 800px) {
+    .elementor-section .elementor-container {
+        flex-direction: column-reverse;
+    }
+    .elementor-369553 .elementor-element.elementor-element-35e20806 {
+        width: 100% !important;
+    }
+    .elementor-369553 .elementor-element.elementor-element-3bea7835 {
+        width: 100% !important;
+    }
+}
+@media (max-width: 480px) {
+    .woocommerce-checkout
+        .woocommerce-billing-fields__field-wrapper
+        #billing_city_field,
+    .woocommerce-checkout
+        .woocommerce-billing-fields__field-wrapper
+        #billing_postcode_field {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
