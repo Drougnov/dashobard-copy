@@ -24,9 +24,20 @@
 .woocommerce .woolentor-fields-1 .woocommerce-billing-fields__field-wrapper {
     justify-content: space-between;
     align-items: center;
+    gap: unset !important;
+}
+.woocommerce .woolentor-fields-1 .form-row-first,
+.woocommerce .woolentor-fields-1 .form-row-last {
+    flex: calc(50% - 2px) !important;
+    width: calc(50% - 2px) !important;
+    max-width: calc(50% - 2px) !important;
+    margin-bottom: 1rem !important;
 }
 .woocommerce .woolentor-fields-1 .form-row-first {
-    width: 50% !important;
+    margin-right: 2px !important;
+}
+.woocommerce .woolentor-fields-1 .form-row-last {
+    margin-left: 2px !important;
 }
 .woocommerce-checkout
     .woocommerce-billing-fields__field-wrapper
@@ -34,8 +45,11 @@
 .woocommerce-checkout
     .woocommerce-billing-fields__field-wrapper
     #billing_postcode_field {
-    width: calc(25% - 15px) !important;
-    max-width: calc(25% - 15px) !important;
+    flex: calc(25% - 4px) !important;
+    width: calc(25% - 4px) !important;
+    max-width: calc(25% - 4px) !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
 }
 .elementor-369553
     .elementor-element.elementor-element-38c3a1dc
@@ -60,6 +74,46 @@
     height: 80px !important;
 }
 
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    :is(.woocommerce-account-fields, .woocommerce-billing-fields)
+    input.input-text,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    .form-row
+    select,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    .form-row
+    .select2-container
+    .select2-selection,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    :is(.woocommerce-account-fields, .woocommerce-billing-fields)
+    .input-text {
+    height: 46px !important;
+    color: #212121 !important;
+    padding: 10px 15px !important;
+    border: 1px solid #212121 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    :is(.woocommerce-account-fields, .woocommerce-billing-fields)
+    .form-row
+    label {
+    color: #21212187;
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 18px !important;
+}
+
 @media (max-width: 1070px) {
     .woocommerce-checkout
         .woocommerce-billing-fields__field-wrapper
@@ -67,8 +121,9 @@
     .woocommerce-checkout
         .woocommerce-billing-fields__field-wrapper
         #billing_postcode_field {
-        width: 50% !important;
-        max-width: 50% !important;
+        flex: calc(50% - 4px) !important;
+        width: calc(50% - 4px) !important;
+        max-width: calc(50% - 4px) !important;
     }
 }
 @media (max-width: 800px) {
@@ -80,16 +135,22 @@
     }
     .elementor-369553 .elementor-element.elementor-element-3bea7835 {
         width: 100% !important;
+        padding-left: 30px !important;
     }
 }
 @media (max-width: 480px) {
+    .woocommerce .woolentor-fields-1 .form-row-first,
+    .woocommerce .woolentor-fields-1 .form-row-last,
     .woocommerce-checkout
         .woocommerce-billing-fields__field-wrapper
         #billing_city_field,
     .woocommerce-checkout
         .woocommerce-billing-fields__field-wrapper
         #billing_postcode_field {
+        flex: 100% !important;
         width: 100% !important;
         max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
