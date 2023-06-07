@@ -4,9 +4,18 @@
 .elementor-369553 .elementor-element.elementor-element-35e20806 {
     width: 39.92% !important;
 }
+.elementor-369553
+    .elementor-element.elementor-element-6f280050
+    > .elementor-widget-container {
+    background-color: white !important;
+    padding: 32px 42px 28px !important;
+    margin: 0 !important;
+}
 .elementor-column-wrap--35e20806 {
+    height: max-content;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    border: 1px solid #e6e6e6;
 }
 .elementor-369553 .elementor-element.elementor-element-3bea7835 {
     width: calc(100% - 39.92%) !important;
@@ -27,6 +36,21 @@
     #billing_postcode_field {
     width: calc(25% - 15px) !important;
     max-width: calc(25% - 15px) !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-38c3a1dc
+    > .elementor-widget-container {
+    background: white !important;
+    padding: 32px 42px 8px !important;
+}
+.woocommerce .shop_table tfoot {
+    background: white !important;
+}
+.woolentor-review-order-1 .woolentor-products {
+    border: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6 !important;
+    padding: 20px;
+    padding-bottom: 20px !important;
 }
 .woolentor-review-order-1 .woolentor-product-thumb {
     flex: unset !important;
