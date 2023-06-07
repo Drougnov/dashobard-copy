@@ -1,3 +1,14 @@
+.elementor-369553
+    .elementor-element.elementor-element-6f31882f
+    .elementor-heading-title {
+    font-size: 42px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 30px;
+}
+.elementor-369553 .elementor-element.elementor-element-627a9cc5 {
+    padding-top: 0px !important;
+}
 .elementor-section .elementor-container {
     flex-direction: row-reverse;
 }
@@ -20,6 +31,14 @@
 .elementor-369553 .elementor-element.elementor-element-3bea7835 {
     width: calc(100% - 39.92%) !important;
     padding-left: 51px;
+}
+.woocommerce .woocommerce-billing-fields {
+    margin-bottom: 0 !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    > .elementor-widget-container {
+    margin: 0 !important;
 }
 .woocommerce .woolentor-fields-1 .woocommerce-billing-fields__field-wrapper {
     justify-content: space-between;
@@ -69,6 +88,28 @@
 .woolentor-review-order-1 .woolentor-product-thumb {
     flex: unset !important;
 }
+.woolentor-review-order-1.contents-display--inline .woolentor-product-content {
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-6f280050
+    .woolentor-product-title {
+    color: #212121 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.woolentor-review-order-1.contents-display--inline
+    .woolentor-product-content-bottom {
+    width: 100%;
+    flex-direction: row !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-6f280050
+    .woolentor-product-price-value {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
 .woocommerce img {
     width: 80px;
     height: 80px !important;
@@ -112,6 +153,25 @@
     padding-left: 5px;
     padding-right: 5px;
     left: 18px !important;
+}
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    .woocommerce-billing-fields
+    > h3 {
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    line-height: 39px;
+    text-transform: capitalize !important;
+    margin-bottom: 9px;
+    margin-left: -8px;
+}
+.elementor-369553
+    .elementor-element.elementor-element-210bc472
+    .elementor-heading-title {
+    font-size: 25px !important;
+    font-weight: 400 !important;
+    margin-bottom: 9px;
+    margin-left: -8px;
 }
 
 @media (max-width: 1070px) {
