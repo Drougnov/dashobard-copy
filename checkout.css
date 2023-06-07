@@ -88,9 +88,24 @@
 .woolentor-review-order-1 .woolentor-product-thumb {
     flex: unset !important;
 }
+.woolentor-review-order-1 .woolentor-product-thumb img {
+    border: none !important;
+}
 .woolentor-review-order-1.contents-display--inline .woolentor-product-content {
     flex-direction: column;
     align-items: flex-start !important;
+}
+.woocommerce
+    .elementor-369553
+    .elementor-element.elementor-element-6f280050
+    #order_review
+    table.shop_table
+    tfoot
+    tr:not(.order-total, .woolentor-save)
+    th {
+    font-size: 16px !important;
+    color: #212121 !important;
+    text-transform: capitalize !important;
 }
 .elementor-369553
     .elementor-element.elementor-element-6f280050
@@ -172,6 +187,44 @@
     font-weight: 400 !important;
     margin-bottom: 9px;
     margin-left: -8px;
+}
+.elementor-369553
+    .elementor-element.elementor-element-38c3a1dc
+    .woolentor-checkout-coupon-form
+    .coupon-form
+    input.input-text {
+    padding: 7px 10px;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    border: 1px solid #ececec !important;
+    text-transform: uppercase;
+}
+.elementor-369553
+    .elementor-element.elementor-element-38c3a1dc
+    .woolentor-checkout-coupon-form
+    .coupon-form
+    button.button {
+    font-size: 14px !important;
+    background-color: #b2976e !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    padding: 8px 9px;
+    white-space: nowrap;
+    border: 1px solid #b2976e;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.elementor-369553
+    .elementor-element.elementor-element-38c3a1dc
+    .woolentor-checkout-coupon-form
+    .coupon-form
+    button.button:hover {
+    color: #b2976e !important;
+    background: #fff !important;
 }
 
 @media (max-width: 1070px) {
