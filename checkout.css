@@ -58,6 +58,17 @@
 .woocommerce .woolentor-fields-1 .form-row-last {
     margin-left: 2px !important;
 }
+.woocommerce .woolentor-fields-1.wl_on_top .focused label {
+    display: none;
+}
+.form-row:nth-child(6) > label {
+    display: none !important;
+}
+.select2-container.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    top: calc(50% - 3px) !important;
+}
 .woocommerce-checkout
     .woocommerce-billing-fields__field-wrapper
     #billing_city_field,
@@ -102,14 +113,47 @@
     table.shop_table
     tfoot
     tr:not(.order-total, .woolentor-save)
+    td,
+.woocommerce
+    .elementor-369553
+    .elementor-element.elementor-element-6f280050
+    #order_review
+    table.shop_table
+    tfoot
+    tr:not(.order-total, .woolentor-save)
     th {
     font-size: 16px !important;
     color: #212121 !important;
+    font-weight: 400 !important;
     text-transform: capitalize !important;
+}
+.woocommerce
+    #order_review.woolentor-review-order-1
+    table.shop_table
+    .order-total
+    th,
+.woocommerce
+    #order_review.woolentor-review-order-1
+    table.shop_table
+    .order-total
+    td {
+    color: #212121 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+}
+.woocommerce .shop_table tfoot .order-total {
+    background: white !important;
+}
+.woocommerce-shipping-totals.shipping {
+    margin-bottom: 1rem;
 }
 .elementor-369553
     .elementor-element.elementor-element-6f280050
     .woolentor-product-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    display: block;
     color: #212121 !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -228,6 +272,11 @@
 }
 
 @media (max-width: 1070px) {
+    .elementor-369553
+        .elementor-element.elementor-element-6f280050
+        > .elementor-widget-container {
+        padding: 20px !important;
+    }
     .woocommerce-checkout
         .woocommerce-billing-fields__field-wrapper
         #billing_city_field,
@@ -237,6 +286,12 @@
         flex: calc(50% - 4px) !important;
         width: calc(50% - 4px) !important;
         max-width: calc(50% - 4px) !important;
+    }
+}
+@media (max-width: 1000px) {
+    .elementor-369553 .elementor-element.elementor-element-35e20806,
+    .elementor-369553 .elementor-element.elementor-element-3bea7835 {
+        width: 50% !important;
     }
 }
 @media (max-width: 800px) {
