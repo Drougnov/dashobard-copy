@@ -58,6 +58,7 @@
 .woocommerce .woolentor-fields-1 .form-row-last {
     margin-left: 2px !important;
 }
+.woocommerce .woolentor-fields-1.wl_on_top .has-value label,
 .woocommerce .woolentor-fields-1.wl_on_top .focused label {
     display: none;
 }
@@ -212,8 +213,7 @@
     font-size: 16px !important;
     font-weight: 500 !important;
     text-transform: capitalize !important;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 25px;
     left: 18px !important;
 }
 .elementor-369553
