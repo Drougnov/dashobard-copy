@@ -45,6 +45,9 @@
     align-items: center;
     gap: unset !important;
 }
+.woocommerce-billing-fields__field-wrapper .form-row {
+    height: 48px !important;
+}
 .woocommerce .woolentor-fields-1 .form-row-first,
 .woocommerce .woolentor-fields-1 .form-row-last {
     flex: calc(50% - 2px) !important;
@@ -89,17 +92,16 @@
     .select2-selection__arrow {
     top: calc(50% - 3px) !important;
 }
-.woocommerce-checkout
-    .woocommerce-billing-fields__field-wrapper
-    #billing_city_field,
-.woocommerce-checkout
-    .woocommerce-billing-fields__field-wrapper
-    #billing_postcode_field {
+.woocommerce .woolentor-fields-1 .form-row:nth-child(4),
+.woocommerce .woolentor-fields-1 .form-row:nth-child(5) {
     flex: calc(25% - 4px) !important;
     width: calc(25% - 4px) !important;
     max-width: calc(25% - 4px) !important;
     margin-left: 2px !important;
     margin-right: 2px !important;
+}
+.woocommerce .woolentor-fields-1 .form-row:nth-child(5) {
+    margin-right: 0 !important;
 }
 .elementor-369553
     .elementor-element.elementor-element-38c3a1dc
@@ -299,15 +301,25 @@
         > .elementor-widget-container {
         padding: 20px !important;
     }
-    .woocommerce-checkout
-        .woocommerce-billing-fields__field-wrapper
-        #billing_city_field,
-    .woocommerce-checkout
-        .woocommerce-billing-fields__field-wrapper
-        #billing_postcode_field {
-        flex: calc(50% - 4px) !important;
-        width: calc(50% - 4px) !important;
-        max-width: calc(50% - 4px) !important;
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(4),
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(5) {
+        flex: calc(50% - 2px) !important;
+        width: calc(50% - 2px) !important;
+        max-width: calc(50% - 2px) !important;
+    }
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(4),
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(6) {
+        margin-right: 0 !important;
+    }
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(5),
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(7) {
+        margin-left: 0 !important;
+    }
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(5) {
+        margin-right: 2px !important;
+    }
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(6) {
+        margin-left: 2px !important;
     }
 }
 @media (max-width: 1000px) {
@@ -342,5 +354,8 @@
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+    .woocommerce .woolentor-fields-1 .form-row:nth-child(6) {
+        margin-left: 0 !important;
     }
 }
