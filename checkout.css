@@ -58,6 +58,25 @@
 .woocommerce .woolentor-fields-1 .form-row-last {
     margin-left: 2px !important;
 }
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    :is(.woocommerce-account-fields, .woocommerce-billing-fields)
+    input.input-text:focus,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    .form-row
+    select:focus,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    .form-row
+    .select2-container
+    .select2-selection:focus,
+.elementor-369553
+    .elementor-element.elementor-element-183f663c
+    :is(.woocommerce-account-fields, .woocommerce-billing-fields)
+    .input-text:focus {
+    border: 2px solid #212121 !important;
+}
 .woocommerce .woolentor-fields-1.wl_on_top .has-value label,
 .woocommerce .woolentor-fields-1.wl_on_top .focused label {
     display: none;
