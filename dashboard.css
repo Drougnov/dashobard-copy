@@ -1,0 +1,361 @@
+/* main-container */
+.CaDJv {
+    min-height: 100vh;
+}
+
+/* ---------------------------------nav section------------------------------------- */
+
+/* nav-container */
+.ZJtVQ {
+    padding: 1.5rem 2.5rem;
+    box-shadow: inset 1px 0px 0px #f4f4f4, inset 0 -1px 0px #efefef;
+}
+
+/* nav-logo (top left) */
+.tCmWA {
+    width: 48px;
+    height: 48px;
+}
+
+/* nav-right section (top right) */
+.NBQVu {
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* nav-right icon containers */
+.gmOiP {
+    height: max-content;
+}
+
+/* red dot on icon */
+.bPLpQ {
+    position: absolute;
+    top: 9px;
+    right: -3px;
+    width: 14px;
+    height: 14px;
+    background: #ff6a55;
+    border: 2px solid #ffffff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* profile-image (top right) */
+.ZgQHk {
+    width: 48px;
+    height: 48px;
+}
+
+/* ---------------------------------sidebar section------------------------------------- */
+
+/* sidebar container */
+.soGOI {
+    max-width: 340px;
+    padding: 1.5rem 2.5rem;
+}
+
+/*----hamburger----*/
+.IhwpR {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+    z-index: 100;
+}
+.yZcCW {
+    width: 1.5rem;
+    height: 3px;
+    background: black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.yZcCW::before,
+.yZcCW::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 1.5rem;
+    height: 3px;
+    background: black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.yZcCW::after {
+    -webkit-transform: translateY(-0.5rem);
+    -moz-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    -o-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+}
+.yZcCW::before {
+    -webkit-transform: translateY(0.5rem);
+    -moz-transform: translateY(0.5rem);
+    -ms-transform: translateY(0.5rem);
+    -o-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+}
+.soGOI.active .yZcCW {
+    background: transparent;
+}
+.soGOI.active .yZcCW::before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+.soGOI.active .yZcCW::after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+/*----button container----*/
+.LysFj {
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+.iJNhP:last-child {
+    background: var(--secondary-color);
+}
+
+/*----sidebar menu----*/
+.NsKKe {
+    list-style-type: none;
+}
+.NsKKe li {
+    margin-bottom: 0.5rem;
+}
+
+/* sidebar menu rows (menu-list + sidebar-dropdown-list) */
+.uoNTe,
+.vCGkN {
+    height: 3rem;
+}
+
+/* menu-item left side + right side */
+.bPNQZ,
+.YWGXW {
+    gap: 0.75rem;
+}
+
+/*----icons (index page)----*/
+.icon-arrow {
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+li.active .icon-arrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.profile-icon > *,
+.shop-icon > *,
+.profile-icon:hover > *,
+.shop-icon:hover > * {
+    fill: unset;
+}
+.profile-icon > path,
+.shop-icon > path {
+    stroke: #6c757d;
+}
+.profile-icon:hover > path,
+.shop-icon:hover > path {
+    stroke: #333333;
+}
+
+/* sidebar-dropdown-list container */
+.GpIbu {
+    padding-left: 36px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-out;
+    -webkit-transition: height 0.3s ease-out;
+    -moz-transition: height 0.3s ease-out;
+    -ms-transition: height 0.3s ease-out;
+    -o-transition: height 0.3s ease-out;
+}
+
+/* ---------------------------------Products dashboard------------------------------------- */
+
+.YEFiA {
+    background: #f4f4f4;
+    padding: 2.5rem;
+}
+.YEFiA h1 {
+    color: var(--default-strong-color);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.eLfwd {
+    background: white;
+    padding: 1.5rem;
+}
+
+/* ---------------------------------dropdown-menus------------------------------------- */
+
+.target-id {
+    position: relative !important;
+}
+.target-id::after {
+    position: absolute;
+    content: "";
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15px;
+    height: 15px;
+    background: white;
+    box-shadow: -5px -5px 5px 1px #f1f1f1;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    display: none;
+}
+.target-id.active::after {
+    display: initial;
+}
+.menu-id {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: -1rem;
+    right: unset;
+    width: 300px;
+    background: white;
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+}
+.menu-id.right {
+    left: unset;
+    right: -1rem;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+.menu-item .menu-item-icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item.menu-item-active .menu-item-icon {
+    display: flex;
+}
+
+/* ---------------------------------media-queries------------------------------------- */
+
+@media (max-width: 1120px) {
+    .soGOI {
+        max-width: 285px;
+    }
+    .iJNhP {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 899px) {
+    .ZJtVQ {
+        padding: 1.5rem;
+    }
+    .NBQVu {
+        gap: 1.5rem;
+    }
+    .IhwpR {
+        display: flex;
+        margin: 1.5rem 0 2.5rem 0;
+    }
+    .LysFj,
+    .bPNQZ span,
+    .YWGXW {
+        display: none !important;
+    }
+
+    .soGOI {
+        position: fixed;
+        background: white;
+        width: 72px;
+        height: 100%;
+        padding: 1.5rem;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+    }
+    .soGOI::-webkit-scrollbar {
+        display: none;
+    }
+    .soGOI.active {
+        width: 250px;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+    .soGOI.active .bPNQZ span,
+    .soGOI.active .YWGXW {
+        display: flex !important;
+    }
+
+    .YEFiA {
+        margin-left: 72px;
+        padding: 1.5rem;
+    }
+    .soGOI.active .YEFiA {
+        margin-left: 250px;
+    }
+    .YEFiA h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-id {
+        width: 220px;
+        padding: 0.5rem 0.75rem;
+    }
+}
