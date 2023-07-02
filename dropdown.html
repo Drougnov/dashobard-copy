@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="dropdown.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul class="sidebar-menu zaSgn">
+            <li class="DeYlt">
+                <div class="menu-item gsCWf EJVsl">
+                    <div>Show/Hide dropdown</div>
+                </div>
+                <div class="sub-menu HruDj">
+                    <div class="sub-menu-item gsCWf EJVsl HruDj">Example 6</div>
+                    <div class="sub-menu-item gsCWf EJVsl HruDj">Example 7</div>
+                    <div class="sub-menu-item gsCWf EJVsl HruDj">Example 8</div>
+                    <div class="sub-menu-item gsCWf EJVsl HruDj">Example 9</div>
+                    <div class="sub-menu-item gsCWf EJVsl HruDj">
+                        Example 10
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <script>
+            // sidebar dropdown menu
+
+            const sidebar = document.querySelector(".sidebar-menu");
+            const sidebarDropDownButtons =
+                document.querySelectorAll(".menu-item");
+
+            sidebarDropDownButtons.forEach((btn) => {
+                let dropDownContainer = btn.parentElement;
+
+                btn.addEventListener("click", toggleDropdown);
+
+                function toggleDropdown(event) {
+                    dropDownContainer.classList.toggle("active");
+                    countDropDownContainerHeight(dropDownContainer);
+                }
+            });
+
+            function countDropDownContainerHeight(dropDownContainer) {
+                const dropDownBody =
+                    dropDownContainer.querySelector(".sub-menu");
+                const dropDownItems = dropDownBody.children;
+                let height = 0;
+
+                for (let i = 0; i < dropDownItems.length; i++) {
+                    height += dropDownItems[i].offsetHeight;
+                }
+
+                if (dropDownContainer.classList.contains("active")) {
+                    dropDownBody.style.height = height + "px";
+                } else {
+                    dropDownBody.style.height = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
