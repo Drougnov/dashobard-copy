@@ -1020,6 +1020,21 @@ input.nice-select-search {
     width: 100%;
     height: 100%;
 }
+.site-footer {
+    text-align: center;
+}
+.svg-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.site-footer svg {
+    width: 20px;
+    height: 20px;
+    scale: 100%;
+}
 .piDFy {
     width: 30px;
     height: 30px;
