@@ -1021,6 +1021,9 @@ input.nice-select-search {
     height: 100%;
 }
 .site-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     text-align: center;
 }
 .svg-container {
