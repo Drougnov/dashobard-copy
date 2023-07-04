@@ -210,6 +210,21 @@
                 </div>
             </div>
         </div>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                repellat est alias dignissimos ea quasi, eum iusto ex quisquam
+                praesentium quidem delectus nam eveniet officia eius saepe
+                cupiditate repudiandae sed. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Culpa fugit, doloribus facere
+                obcaecati illo animi saepe blanditiis autem ex sed ad iste
+                architecto nostrum distinctio impedit enim! In repellendus error
+                iste ratione impedit maxime nemo amet, eaque omnis, pariatur
+                quisquam iure quaerat nulla eveniet reiciendis cupiditate
+                deserunt corrupti eius quia.
+            </p>
+            <button class="toggle-btn">Toggle view</button>
+        </div>
         <script>
             window.addEventListener("DOMContentLoaded", () => {
                 EmojiButton(
@@ -218,6 +233,12 @@
                         document.querySelector(".emoji-input").value += emoji;
                     }
                 );
+            });
+            const toggleBtn = document.querySelector(".toggle-btn");
+            const container = document.querySelector(".container");
+
+            toggleBtn.addEventListener("click", () => {
+                container.classList.toggle("full-width");
             });
         </script>
     </body>

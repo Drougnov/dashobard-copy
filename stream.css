@@ -41,7 +41,7 @@
     -o-border-radius: 0;
 }
 .container.full-width .right-container {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     background-color: transparent;
