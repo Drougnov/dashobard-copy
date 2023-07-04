@@ -11,11 +11,6 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
     overflow: hidden;
 }
 .right-container {
@@ -34,11 +29,6 @@
 }
 .container.full-width .left-container {
     width: 100%;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
 }
 .container.full-width .right-container {
     position: absolute;
@@ -221,10 +211,6 @@
     width: 24px;
     height: 24px;
 }
-.emoji-picker {
-    top: unset;
-    bottom: 0;
-}
 .select-emoji svg:not(:root).svg-inline--fa {
     opacity: 0;
 }
@@ -256,4 +242,60 @@
     fill: black;
     width: 24px;
     height: 24px;
+}
+
+@media (max-width: 1300px) {
+    .right-container {
+        min-width: 425px;
+    }
+    .empty-container {
+        height: 30%;
+    }
+    .chatbox-container {
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+    }
+    .message-container {
+        height: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-container {
+        width: 100%;
+        height: 100%;
+    }
+    .right-container {
+        width: 100%;
+        min-width: auto;
+    }
+    .empty-container {
+        display: none;
+    }
+    .chatbox-container {
+        height: 100%;
+    }
+    .container.full-width .right-container {
+        position: unset;
+        height: unset;
+    }
+    .container.full-width .right-container {
+        background: #f2f2f2;
+    }
+    .container.full-width .text-container {
+        background: white;
+    }
+    .container.full-width .message-right .text-container {
+        background: #d7e0db;
+    }
+    .container.full-width .name {
+        color: var(--alt-button-text-color);
+    }
+    .container.full-width .text {
+        color: black;
+    }
 }
