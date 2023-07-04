@@ -42,7 +42,7 @@
                     </div>
                     <!-- icon-container -->
                     <div class="room__icons">
-                        <div class="room__icon-container">
+                        <div class="room__icon-container dropdown-target">
                             <svg
                                 class="icon-keyhole"
                                 width="24"
@@ -69,6 +69,11 @@
                                     </g>
                                 </g>
                             </svg>
+                            <div class="dropdown-menu">
+                                <div>Item 1</div>
+                                <div>Item 2</div>
+                                <div>Item 3</div>
+                            </div>
                         </div>
                         <div class="room__icon-container">
                             <svg
@@ -388,6 +393,7 @@
             <button class="toggle-btn">Toggle view</button>
         </div>
         <script>
+            // set emoji picker
             window.addEventListener("DOMContentLoaded", () => {
                 EmojiButton(
                     document.querySelector("#emoji-button"),
@@ -396,6 +402,8 @@
                     }
                 );
             });
+
+            //toggle full-width / 2 column
             const toggleBtn = document.querySelector(".toggle-btn");
             const container = document.querySelector(".container");
 
@@ -418,6 +426,33 @@
                 collectedAmount;
             document.querySelector(".goal-amount").textContent = totalAmount;
             updateProgressBar(collectedAmount, totalAmount);
+
+            // const dropdownTarget = document.querySelector(".dropdown-target");
+            // const handleMouseEnter = () => {
+            //     dropdownTarget.classList.add("active");
+            // };
+            // const handleMouseLeave = () => {
+            //     dropdownTarget.classList.remove("active");
+            // };
+
+            // if (window.matchMedia("(hover: hover)").matches) {
+            //     dropdownTarget.addEventListener("mouseover", handleMouseEnter);
+            // } else {
+            //     dropdownTarget.removeEventListener(
+            //         "mouseleave",
+            //         handleMouseLeave
+            //     );
+            // }
+
+            // const handleClick = () => {
+            //     dropdownTarget.classList.toggle("active");
+            // };
+
+            // if (window.matchMedia("(hover: none)").matches) {
+            //     dropdownTarget.addEventListener("click", handleClick);
+            // } else {
+            //     dropdownTarget.removeEventListener("click", handleClick);
+            // }
         </script>
     </body>
 </html>

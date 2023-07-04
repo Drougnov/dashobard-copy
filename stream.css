@@ -125,6 +125,55 @@
     display: none;
 }
 
+/* dropdown-container */
+.dropdown-target {
+    position: relative;
+}
+.dropdown-target::after {
+    position: absolute;
+    content: "";
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15px;
+    height: 15px;
+    background: white;
+    box-shadow: -5px -5px 5px 1px #f1f1f1;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    z-index: 9999;
+    display: none;
+}
+.dropdown-target:hover:after,
+.dropdown-target:active::after {
+    display: initial;
+}
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: -0.5rem;
+    width: 100px;
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    display: none;
+}
+.dropdown-target:hover .dropdown-menu,
+.dropdown-target:active .dropdown-menu {
+    display: initial;
+}
+
 /* goal-container */
 
 .goal-container {
