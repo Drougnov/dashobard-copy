@@ -121,6 +121,9 @@
 .container.full-width .empty-container {
     display: none;
 }
+.more-btn-mobile {
+    display: none;
+}
 
 /* goal-container */
 
@@ -158,6 +161,8 @@
 .chatbox-container {
     flex: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .container.full-width .chatbox-container {
     display: flex;
@@ -165,7 +170,7 @@
     height: 100%;
 }
 .message-container {
-    height: 300px;
+    height: 320px;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
@@ -374,6 +379,12 @@
 @media (max-width: 1300px) {
     .right-container {
         min-width: 425px;
+        height: auto;
+        min-height: 100vh;
+    }
+    .container.full-width .right-container {
+        height: 100vh;
+        min-height: unset;
     }
 }
 
@@ -382,6 +393,9 @@
         height: auto;
         min-height: 100vh;
         flex-direction: column;
+    }
+    .container.full-width {
+        height: 100vh;
     }
     .left-container {
         width: 100%;
@@ -394,14 +408,10 @@
     }
     .container.full-width .right-container {
         position: unset;
-        height: 100vh;
         background: #f2f2f2;
     }
     .chatbox-container {
         height: 100%;
-    }
-    .container.full-width .message-container {
-        height: 320px;
     }
     .container.full-width .text-container {
         background: white;
@@ -414,5 +424,15 @@
     }
     .container.full-width .text {
         color: black;
+    }
+}
+
+@media (max-width: 450px) {
+    .more-btn {
+        display: none;
+    }
+    .more-btn-mobile {
+        display: block;
+        margin-top: 0.75rem;
     }
 }
