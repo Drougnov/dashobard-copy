@@ -396,7 +396,7 @@
             <button class="toggle-btn">Toggle view</button>
         </div>
         <script>
-            // set emoji picker
+            // -------------------------------------set emoji picker--------------------------------------
             window.addEventListener("DOMContentLoaded", () => {
                 EmojiButton(
                     document.querySelector("#emoji-button"),
@@ -406,7 +406,7 @@
                 );
             });
 
-            //toggle full-width / 2 column
+            //----------------------------------toggle full-width / 2 column--------------------------------
             const toggleBtn = document.querySelector(".toggle-btn");
             const container = document.querySelector(".container");
 
@@ -414,7 +414,7 @@
                 container.classList.toggle("full-width");
             });
 
-            // Function to update the progress bar dynamically
+            //--------------------Function to update the progress bar dynamically---------------------------
             function updateProgressBar(collectedAmount, totalAmount) {
                 const progressPercentage =
                     (collectedAmount / totalAmount) * 100;
@@ -430,7 +430,7 @@
             document.querySelector(".goal-amount").textContent = totalAmount;
             updateProgressBar(collectedAmount, totalAmount);
 
-            // Menu Dropdown
+            //----------------------------------------Menu Dropdown------------------------------------------
             function singleMenu(target_id, menu_id, show = false) {
                 var targetElement = document.getElementById(target_id);
                 var menuElement = document.getElementById(menu_id);
