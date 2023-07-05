@@ -49,3 +49,31 @@
         transform: rotate(360deg);
     }
 }
+
+.svg_GdWlS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svg_GdWlS svg {
+    width: 20px;
+    height: 20px;
+    scale: 100%;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+footer .svg-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+footer svg {
+    width: 20px;
+    height: 20px;
+    scale: 100%;
+}
