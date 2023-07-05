@@ -129,33 +129,9 @@
 .dropdown-target {
     position: relative;
 }
-.dropdown-target::after {
-    position: absolute;
-    content: "";
-    bottom: -24px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15px;
-    height: 15px;
-    background: white;
-    box-shadow: -5px -5px 5px 1px #f1f1f1;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    z-index: 9999;
-    display: none;
-}
-.dropdown-target:hover:after,
-.dropdown-target:active::after {
-    display: initial;
-}
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 1rem);
+    top: 100%;
     left: -0.5rem;
     width: 100px;
     background: white;
