@@ -42,7 +42,10 @@
                     </div>
                     <!-- icon-container -->
                     <div class="room__icons">
-                        <div class="room__icon-container dropdown-target">
+                        <div
+                            class="room__icon-container target-id"
+                            id="target_id1"
+                        >
                             <svg
                                 class="icon-keyhole"
                                 width="24"
@@ -69,10 +72,10 @@
                                     </g>
                                 </g>
                             </svg>
-                            <div class="dropdown-menu">
-                                <div>Item 1</div>
-                                <div>Item 2</div>
-                                <div>Item 3</div>
+                            <div id="menu_id1" class="menu-id">
+                                <div class="menu-item">Item 1</div>
+                                <div class="menu-item">Item 2</div>
+                                <div class="menu-item">Item 3</div>
                             </div>
                         </div>
                         <div class="room__icon-container">
@@ -426,6 +429,64 @@
                 collectedAmount;
             document.querySelector(".goal-amount").textContent = totalAmount;
             updateProgressBar(collectedAmount, totalAmount);
+
+            // Menu Dropdown
+            function singleMenu(target_id, menu_id, show = false) {
+                var targetElement = document.getElementById(target_id);
+                var menuElement = document.getElementById(menu_id);
+
+                // Initial state
+                if (show) {
+                    menuElement.style.display = "block";
+                    targetElement.classList.add("active");
+                } else {
+                    menuElement.style.display = "none";
+                    targetElement.classList.remove("active");
+                }
+
+                targetElement.addEventListener("click", () => {
+                    show = !show; // Toggle the value of the 'show' variable
+
+                    if (show) {
+                        menuElement.style.display = "block";
+                        targetElement.classList.add("active");
+                    } else {
+                        menuElement.style.display = "none";
+                        targetElement.classList.remove("active");
+                    }
+                });
+
+                // Close menu if clicked outside of container
+                document.addEventListener("click", (event) => {
+                    if (!targetElement.contains(event.target)) {
+                        // Hide the menu
+                        show = false;
+                        menuElement.style.display = "none";
+                        targetElement.classList.remove("active");
+                    }
+                });
+
+                menuElement.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+            }
+
+            singleMenu("target_id1", "menu_id1", false);
+
+            // Check the containers position to align the menus
+            const dropdownContainers = document.querySelectorAll(".target-id");
+            const dropdownMenus = document.querySelectorAll(".menu-id");
+
+            dropdownContainers.forEach((container) => {
+                const rect = container.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+                const dropdownMenu = container.querySelector(".menu-id");
+
+                // add class if the dropdown-menu is within 300px right of the screen
+                if (rect.right > viewportWidth - 300) {
+                    dropdownMenu.classList.add("right");
+                }
+            });
         </script>
     </body>
 </html>
