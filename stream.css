@@ -194,6 +194,7 @@
     -o-border-radius: 10px;
     cursor: pointer;
 }
+/* style for menu-item with icon on the left */
 /* .menu-item .menu-item-icon {
     display: none;
     justify-content: center;
