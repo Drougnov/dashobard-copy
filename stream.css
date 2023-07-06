@@ -575,6 +575,6 @@
         display: none;
     }
     .emoji-picker__emojis {
-        width: calc(1.3rem * 1.5 * 8);
+        width: calc(1.3rem * 1.5 * 8) !important;
     }
 }
