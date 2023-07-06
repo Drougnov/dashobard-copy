@@ -415,6 +415,15 @@
                 container.classList.toggle("full-width");
             });
 
+            // Toggle class based on screen size
+            function checkScreenSize() {
+                var shouldAddClass = window.innerWidth <= 1200;
+                container.classList.toggle("full-width", shouldAddClass);
+            }
+
+            window.addEventListener("resize", checkScreenSize);
+            checkScreenSize();
+
             //--------------------Function to update the progress bar dynamically---------------------------
             function updateProgressBar(collectedAmount, totalAmount) {
                 const progressPercentage =
