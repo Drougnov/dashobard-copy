@@ -37,7 +37,9 @@
                             </div>
                         </div>
                         <div class="room-container__right">
-                            <button class="more-btn UJQCM">More Rooms</button>
+                            <button class="more-btn UJQCM more-room-btn">
+                                More Rooms
+                            </button>
                         </div>
                     </div>
                     <!-- icon-container -->
@@ -214,7 +216,9 @@
                         </div>
                     </div>
                     <!-- more button form mobile -->
-                    <button class="more-btn-mobile UJQCM">More Rooms</button>
+                    <button class="more-btn-mobile UJQCM more-room-btn">
+                        More Rooms
+                    </button>
                     <!-- goal-section -->
                     <div class="goal-container">
                         <div>
@@ -450,6 +454,9 @@
                 deserunt corrupti eius quia.
             </p>
             <button class="toggle-btn">Toggle view</button>
+            <div class="more-room" style="height: 100vh">
+                <h1>More room</h1>
+            </div>
         </div>
         <script>
             // -------------------------------------set emoji picker--------------------------------------
@@ -558,6 +565,19 @@
                 if (rect.right > viewportWidth - 300) {
                     dropdownMenu.classList.add("right");
                 }
+            });
+
+            // Scroll to more room section on button click
+            const moreRoomContainer = document.querySelector(".more-room");
+            const moreRoomButtons = document.querySelectorAll(".more-room-btn");
+
+            moreRoomButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    console.log("clicked");
+                    moreRoomContainer.scrollIntoView({
+                        behavior: "smooth",
+                    });
+                });
             });
         </script>
     </body>

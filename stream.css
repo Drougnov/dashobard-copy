@@ -286,6 +286,7 @@
 }
 .container.full-width .message-container {
     height: auto;
+    padding-top: 100px; /* keep the padding-top value and --top-mask-size same */
     -webkit-mask-image: linear-gradient(
         to bottom,
         transparent 0,
@@ -300,7 +301,7 @@
         black calc(100% - var(--bottom-mask-size, 0px)),
         transparent 100%
     );
-    --top-mask-size: 100px; /*this value controls the fade-out container height */
+    --top-mask-size: 100px; /* this value controls the fade-out container height */
 }
 .message {
     display: flex;
@@ -550,6 +551,7 @@
         height: 70vh;
     }
     .container.full-width .message-container {
+        padding-top: 50px;
         --top-mask-size: 50px;
     }
     .more-btn {
