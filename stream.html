@@ -49,7 +49,7 @@
                             id="target_id1"
                         >
                             <svg
-                                class="icon-keyhole"
+                                class="icon-keyhole DeYlt"
                                 width="24"
                                 height="24"
                                 fill="white"
@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="icon-container">
                                         <svg
-                                            class="icon-close"
+                                            class="icon-close DeYlt"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@
                         </div>
                         <div class="room__icon-container">
                             <svg
-                                class="icon-share"
+                                class="icon-share DeYlt"
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -193,7 +193,7 @@
                         </div>
                         <div class="room__icon-container">
                             <svg
-                                class="icon-heart"
+                                class="icon-heart DeYlt"
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -437,9 +437,71 @@
                         </button>
                     </div>
                 </div>
+                <!-- mobile-chatbox -->
+                <div class="mobile-chatbox">
+                    <div class="mobile-chatbox__top">
+                        <h3>Live Chat</h3>
+                        <span>6k watching</span>
+                    </div>
+                    <div class="mobile-chatbox__bottom">
+                        <div class="mobile-chatbox__img-container">
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                alt=""
+                            />
+                        </div>
+                        <form action="#" class="mobile-chatbox__form">
+                            <input
+                                type="text"
+                                placeholder="Chat as @profilename"
+                            />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- extra section -->
+        <div class="bio">
+            <h1>Bio</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+                dicta.
+            </p>
+        </div>
+        <div class="description">
+            <h1>description</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, possimus!
+            </p>
+        </div>
+        <div class="icon-container">
+            <svg
+                class="icon-close DeYlt"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g id="Menu / Close_LG">
+                        <path
+                            id="Vector"
+                            d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
         <div>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
@@ -578,6 +640,15 @@
                         behavior: "smooth",
                     });
                 });
+            });
+
+            // form submission
+            const form = document.querySelector(".mobile-chatbox__form");
+            const rightContainer = document.querySelector(".right-container");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                rightContainer.classList.add("active");
             });
         </script>
     </body>

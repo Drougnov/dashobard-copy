@@ -415,6 +415,52 @@
     height: 15px;
 }
 
+/* ------------------mobile chatbox holder-------------------- */
+.mobile-chatbox {
+    height: max-content;
+    background: white;
+    padding: 0.5rem;
+    margin-top: 0.75rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    display: none;
+}
+.mobile-chatbox__top {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.mobile-chatbox__bottom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.mobile-chatbox__img-container {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+}
+.mobile-chatbox__img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mobile-chatbox__bottom form,
+.mobile-chatbox__bottom input {
+    width: 100%;
+    margin-top: 0 !important;
+}
+
 /* ------------------input-container-------------------- */
 
 .input-container {
@@ -549,6 +595,30 @@
 @media (max-width: 600px) {
     .container.full-width .right-container {
         height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .container.full-width .chatbox-container {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+    }
+    .container.full-width .right-container.active .chatbox-container {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
     }
     .container.full-width .message-container {
         padding-top: 50px;
@@ -576,5 +646,11 @@
     }
     .emoji-picker__emojis {
         width: calc(1.3rem * 1.5 * 8) !important;
+    }
+    .mobile-chatbox {
+        display: block;
+    }
+    .right-container.active .mobile-chatbox {
+        display: none;
     }
 }
