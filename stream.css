@@ -578,6 +578,9 @@
     }
     .container.full-width .right-container {
         max-width: 400px;
+        height: 70vh;
+        top: 0;
+        bottom: unset;
     }
     .chatbox-container {
         height: 100%;
@@ -598,7 +601,8 @@
 
 @media (max-width: 600px) {
     .container.full-width .right-container {
-        height: 70vh;
+        top: unset;
+        bottom: 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
