@@ -97,3 +97,5 @@ Then we need to add the dropdown-menu container inside the div. It will have a c
 Then we'll have to call the function in the script with those specific ids. We can initially toggle the visibility of the dropdown menu by changing the 3rd argument. True = show dropdown initially, false = hide dropdown initially:
 
 `singleMenu("target_id1", "menu_id1", false);`
+
+Make sure to link the 'single-menu-dropdown.js' script file.
