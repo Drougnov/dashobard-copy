@@ -172,18 +172,18 @@ li.active .icon-arrow {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
 }
-.profile-icon > *,
-.shop-icon > *,
-.profile-icon:hover > *,
-.shop-icon:hover > * {
+.icon-profile > *,
+.icon-shop > *,
+.icon-profile:hover > *,
+.icon-shop:hover > * {
     fill: unset;
 }
-.profile-icon > path,
-.shop-icon > path {
+.icon-profile > path,
+.icon-shop > path {
     stroke: #6c757d;
 }
-.profile-icon:hover > path,
-.shop-icon:hover > path {
+.icon-profile:hover > path,
+.icon-shop:hover > path {
     stroke: #333333;
 }
 
