@@ -1,4 +1,4 @@
-// handle menu dropdown
+// handle icon menu dropdown
 function singleMenu(targetId, menuId, show = false) {
     const targetElement = document.getElementById(targetId);
     const menuElement = document.getElementById(menuId);

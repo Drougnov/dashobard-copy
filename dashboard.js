@@ -1,4 +1,4 @@
-// Selecting elements
+// handle sidebar menu dropdown
 const hamburger = document.querySelector(".IhwpR"); // Hamburger button
 const sidebar = document.querySelector(".soGOI"); // Sidebar container
 const sidebarDropDownButtons = document.querySelectorAll(
@@ -8,7 +8,7 @@ const sidebarDropDownButtons = document.querySelectorAll(
 // open/close sidebar on hamburger click
 hamburger.addEventListener("click", toggleSidebar);
 
-//loop through all the sidebar dropdown buttons
+//loop through all the dropdown buttons
 sidebarDropDownButtons.forEach((btn) => {
     let dropDownContainer = btn.parentElement;
     btn.addEventListener("click", toggleDropdown); // open/close dropdown on click
@@ -63,11 +63,11 @@ function countDropDownContainerHeight(dropDownContainer) {
         height += dropDownItems[i].offsetHeight;
     }
 
-    // add height to dropdown if open
+    // add height to dropdown if opened
     if (dropDownContainer.classList.contains("active")) {
         dropDownBody.style.height = height + "px";
     } else {
-        // remove height if dropdown is close
+        // remove height if dropdown is closed
         dropDownBody.style.height = 0;
     }
 }
