@@ -17,7 +17,7 @@ sidebarDropDownButtons.forEach((btn) => {
     function toggleDropdown(event) {
         // Check if the clicked element is the icon-plus
         const addBtn = dropDownContainer.querySelector(".icon-plus");
-        const isAddBtnClicked = addBtn.contains(event.target);
+        const isAddBtnClicked = addBtn && addBtn.contains(event.target);
         // open/close dropdown if the clicked element is the icon-plus
         if (!isAddBtnClicked) {
             dropDownContainer.classList.toggle("active");
