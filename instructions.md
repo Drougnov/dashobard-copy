@@ -2,9 +2,9 @@
 
 ## How to add/remove red-dot notification icon
 
-To add the red dot notification to an icon, follow these steps:
+To add the `red dot notification` to an icon, follow these steps:
 
-1. Locate the container where you want to add the red dot notification. For example, let's use the message-icon container:
+1. Locate the container where you want to add the `red dot notification`. For example, let's use the `message-icon container`:
 
 ```html
 <div class="gmOiP DeYlt HruDj">
@@ -19,7 +19,7 @@ To add the red dot notification to an icon, follow these steps:
 </div>
 ```
 
-2. After the 'svg' tag, insert the following line of code: `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>`. Ensure that the container has a relative position or the class 'HruDj', as the red dot is positioned absolutely. The updated code will be as follows:
+2. After the `svg` tag, insert the following line of code: `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>`. Ensure that the container has a relative position or the class `HruDj`, as the red dot is positioned absolutely. The updated code will be as follows:
 
 ```html
 <div class="gmOiP DeYlt HruDj">
@@ -37,7 +37,7 @@ To add the red dot notification to an icon, follow these steps:
 
 ## How to add single menu dropdown
 
-1. Identify the 'div' where you want to add the dropdown. For example:
+1. Identify the `div` where you want to add the dropdown. For example:
 
 ```html
 <div>
@@ -45,7 +45,7 @@ To add the red dot notification to an icon, follow these steps:
 </div>
 ```
 
-2. Add the class 'target_id' and an id 'target_id(number)' to the 'div'. The 'number' should be unique and can be any value. Here's an example:
+2. Add the class `target_id` and an id `target_id(number)` to the `div`. The `number` should be unique and can be any value. Here's an example:
 
 ```html
 <div class="target_id" id="target_id1">
@@ -53,7 +53,7 @@ To add the red dot notification to an icon, follow these steps:
 </div>
 ```
 
-3. Inside the 'div', add a dropdown-menu container. It should have the class 'menu-id' and an id 'menu-id(number)'. The 'number' should match the target_id's number. Here's the complete code:
+3. Inside the `div`, add a `dropdown-menu container`. It should have the class `menu-id` and an id `menu-id(number)`. The `number` should match the `target_id`'s number. Here's the complete code:
 
 ```html
 <div class="target-id DeYlt" id="target_id1">
@@ -72,8 +72,8 @@ To add the red dot notification to an icon, follow these steps:
 </div>
 ```
 
-4. Call the function in the script with the specific ids. You can toggle the visibility of the dropdown menu by modifying the 3rd argument. Use true to show the dropdown initially, and false to hide it initially. For example:
+4. Call the function in the script with the specific ids. You can toggle the visibility of the dropdown menu by modifying the 3rd argument. Use `true` to show the dropdown initially, and `false` to hide it initially. For example:
 
 `singleMenu("target_id1", "menu_id1", false);`
 
-Remember to include the 'single-menu-dropdown.js' script file in your HTML document.
+Remember to include the `single-menu-dropdown.js` script file in your HTML document.
