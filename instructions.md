@@ -2,9 +2,9 @@
 
 ## How to add/remove red-dot notification icon
 
-To add the red dot notification to a icon, we need to add this line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>`.
+To add the red dot notification to an icon, follow these steps:
 
-Suppose, you want to add the red dot notification to this message-icon container:
+1. Locate the container where you want to add the red dot notification. For example, let's use the message-icon container:
 
 ```html
 <div class="gmOiP DeYlt HruDj">
@@ -14,23 +14,12 @@ Suppose, you want to add the red dot notification to this message-icon container
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
     >
-        <g fill="#000000">
-            <path
-                d="M4 7.75A.75.75 0 014.75 7h3.5a.75.75 0 010 1.5h-3.5A.75.75 0 014 7.75zM4.75 4.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
-                class="tRLtc"
-            />
-            <path
-                fill-rule="evenodd"
-                d="M15 3.25A2.25 2.25 0 0012.75 1h-9.5A2.25 2.25 0 001 3.25v11a.75.75 0 001.26.55l2.801-2.6a.75.75 0 01.51-.2h7.179A2.25 2.25 0 0015 9.75v-6.5zm-2.25-.75a.75.75 0 01.75.75v6.5a.75.75 0 01-.75.75H5.572a2.25 2.25 0 00-1.531.6L2.5 12.53V3.25a.75.75 0 01.75-.75h9.5z"
-                clip-rule="evenodd"
-                class="tRLtc"
-            />
-        </g>
+        <!-- SVG paths and other elements -->
     </svg>
 </div>
 ```
 
-simply just add the line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>` after the 'svg'. Make sure the container's position is relative or has the class 'HruDj', as the red-dot is absolute. The updated code will look like this:
+2. After the 'svg' tag, insert the following line of code: `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>`. Ensure that the container has a relative position or the class 'HruDj', as the red dot is positioned absolutely. The updated code will be as follows:
 
 ```html
 <div class="gmOiP DeYlt HruDj">
@@ -40,18 +29,7 @@ simply just add the line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>` after t
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
     >
-        <g fill="#000000">
-            <path
-                d="M4 7.75A.75.75 0 014.75 7h3.5a.75.75 0 010 1.5h-3.5A.75.75 0 014 7.75zM4.75 4.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
-                class="tRLtc"
-            />
-            <path
-                fill-rule="evenodd"
-                d="M15 3.25A2.25 2.25 0 0012.75 1h-9.5A2.25 2.25 0 001 3.25v11a.75.75 0 001.26.55l2.801-2.6a.75.75 0 01.51-.2h7.179A2.25 2.25 0 0015 9.75v-6.5zm-2.25-.75a.75.75 0 01.75.75v6.5a.75.75 0 01-.75.75H5.572a2.25 2.25 0 00-1.531.6L2.5 12.53V3.25a.75.75 0 01.75-.75h9.5z"
-                clip-rule="evenodd"
-                class="tRLtc"
-            />
-        </g>
+        <!-- SVG paths and other elements -->
     </svg>
     <span class="bPLpQ tRLtc fZEgl vzHJK"></span>
 </div>
@@ -59,7 +37,7 @@ simply just add the line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>` after t
 
 ## How to add single menu dropdown
 
-To add dropdown to a div, for example this div:
+1. Identify the 'div' where you want to add the dropdown. For example:
 
 ```html
 <div>
@@ -67,7 +45,7 @@ To add dropdown to a div, for example this div:
 </div>
 ```
 
-we'd have to add a class 'target_id' and a id 'target_id(number)' to the div. Like this:
+2. Add the class 'target_id' and an id 'target_id(number)' to the 'div'. The 'number' should be unique and can be any value. Here's an example:
 
 ```html
 <div class="target_id" id="target_id1">
@@ -75,7 +53,7 @@ we'd have to add a class 'target_id' and a id 'target_id(number)' to the div. Li
 </div>
 ```
 
-Then we need to add the dropdown-menu container inside the div. It will have a class 'menu-id' and a id 'menu-id(number)'. The number have to be same as target_id's number. The complete code will look like this:
+3. Inside the 'div', add a dropdown-menu container. It should have the class 'menu-id' and an id 'menu-id(number)'. The 'number' should match the target_id's number. Here's the complete code:
 
 ```html
 <div class="target-id DeYlt" id="target_id1">
@@ -94,8 +72,8 @@ Then we need to add the dropdown-menu container inside the div. It will have a c
 </div>
 ```
 
-Then we'll have to call the function in the script with those specific ids. We can initially toggle the visibility of the dropdown menu by changing the 3rd argument. True = show dropdown initially, false = hide dropdown initially:
+4. Call the function in the script with the specific ids. You can toggle the visibility of the dropdown menu by modifying the 3rd argument. Use true to show the dropdown initially, and false to hide it initially. For example:
 
 `singleMenu("target_id1", "menu_id1", false);`
 
-Make sure to link the 'single-menu-dropdown.js' script file.
+Remember to include the 'single-menu-dropdown.js' script file in your HTML document.
