@@ -30,7 +30,7 @@ Suppose, you want to add the red dot notification to this message-icon container
 </div>
 ```
 
-simply just add the line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>` after the <svg>. Make sure the container's position is relative or has the class 'HruDj' as the red-dot is absolute. The updated code will look like this:
+simply just add the line `<span class="bPLpQ tRLtc fZEgl vzHJK"></span>` after the 'svg'. Make sure the container's position is relative or has the class 'HruDj', as the red-dot is absolute. The updated code will look like this:
 
 ```html
 <div class="gmOiP DeYlt HruDj">
@@ -78,7 +78,7 @@ we'd have to add a class 'target_id' and a id 'target_id(number)' to the div. Li
 Then we need to add the dropdown-menu container inside the div. It will have a class 'menu-id' and a id 'menu-id(number)'. The number have to be same as target_id's number. The complete code will look like this:
 
 ```html
-<div class="target-id DeYlt" id="target_id4">
+<div class="target-id DeYlt" id="target_id1">
     <!-- this <p> will be the toggle button for the dropdown-menu -->
     <p>text</p>
     <!-- add dropdown-menu container with a class 'menu-id' and id 'menu-id(same-number)' -->
@@ -93,3 +93,7 @@ Then we need to add the dropdown-menu container inside the div. It will have a c
     </div>
 </div>
 ```
+
+Then we'll have to call the function in the script with those specific ids. We can initially toggle the visibility of the dropdown menu by changing the 3rd argument. True = show dropdown initially, false = hide dropdown initially:
+
+`singleMenu("target_id1", "menu_id1", false);`
