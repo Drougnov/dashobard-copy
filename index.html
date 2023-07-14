@@ -9,10 +9,7 @@
             rel="stylesheet"
             href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css"
         />
-        <link
-            rel="stylesheet"
-            href="https://drougnov.github.io/dashobard-copy/dashboard.css"
-        />
+        <link rel="stylesheet" href="dashboard.css" />
     </head>
     <body>
         <!-- -------main container------- -->
@@ -734,7 +731,8 @@
                 function toggleDropdown(event) {
                     const addBtn =
                         dropDownContainer.querySelector(".icon-plus");
-                    if (event.target !== addBtn) {
+                    const isAddBtnClicked = addBtn.contains(event.target);
+                    if (!isAddBtnClicked) {
                         // Check if the clicked element is not the icon-plus
                         dropDownContainer.classList.toggle("active");
                         updateSidebarActiveClass();
