@@ -71,16 +71,3 @@ function countDropDownContainerHeight(dropDownContainer) {
         dropDownBody.style.height = 0;
     }
 }
-
-// add scrolling for sidebar dropdown
-document.addEventListener("DOMContentLoaded", function () {
-    demo = new LetMeScroll({
-        selector: "#sidebar-menu",
-        config: {
-            scroll: {
-                bottomOffset: 0,
-                autoHide: true,
-            },
-        },
-    });
-});

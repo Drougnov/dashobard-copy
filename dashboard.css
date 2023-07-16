@@ -52,8 +52,6 @@
 /* sidebar container */
 .soGOI {
     max-width: 340px;
-    height: calc(100vh - 96px);
-    overflow: hidden;
     padding: 1.5rem 2.5rem;
 }
 
@@ -251,9 +249,10 @@ li.active .icon-arrow {
     left: -1rem;
     right: unset;
     width: 300px;
-    /* overflow-y: auto;
+    max-height: 160px;
+    overflow-y: auto;
     -ms-overflow-style: none;
-    scrollbar-width: none; */
+    scrollbar-width: none;
     background: white;
     text-align: left;
     padding: 0.75rem 1.5rem;
@@ -264,18 +263,9 @@ li.active .icon-arrow {
     -o-border-radius: 10px;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     z-index: 9999;
-    display: none;
 }
-/* .menu-id::-webkit-scrollbar {
+.menu-id::-webkit-scrollbar {
     display: none;
-} */
-.menu-id.lms_scrollable {
-    position: absolute !important;
-    max-width: unset !important;
-    padding-right: 1.5rem !important;
-}
-.menu-id.lms_scrollable .lms_content_wrapper {
-    max-height: 200px;
 }
 .menu-id.right {
     left: unset;

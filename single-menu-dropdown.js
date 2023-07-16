@@ -63,28 +63,3 @@ dropdownContainers.forEach((container) => {
         dropdownMenu.classList.add("right");
     }
 });
-
-// add scrolling for single menu dropdowns
-const addScrollEventForIconMenu = (selector) => {
-    document.addEventListener("DOMContentLoaded", function () {
-        demo = new LetMeScroll({
-            selector,
-            config: {
-                dimensions: {
-                    width: "300px",
-                    height: "auto",
-                },
-                scroll: {
-                    bottomOffset: 0,
-                    autoHide: true,
-                },
-            },
-        });
-    });
-};
-
-const iconMenuIds = ["#menu_id1", "#menu_id2", "#menu_id3"];
-
-iconMenuIds.forEach((iconMenuId) => {
-    addScrollEventForIconMenu(iconMenuId);
-});
