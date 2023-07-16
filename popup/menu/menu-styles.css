@@ -1,0 +1,19 @@
+.JVeuW {
+    display: none;
+    top: 100%;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e1e4e6;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.YLtig {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.YLtig:hover {
+    background: #e6f7ff;
+}
