@@ -1,48 +1,59 @@
 function initiate_popup(args) {
-    let target = args.target || false,
-        overlay_color = args.overlay_color || false;
+    // Extract the arguments
+    const target = args.target || false;
+    const overlayColor = args.overlay_color || false;
+
+    // If target is not provided, return
     if (!target) {
         return false;
     }
 
-    if (overlay_color) {
-        $(target).css("background-color", overlay_color);
+    // Set overlay background color if provided
+    if (overlayColor) {
+        const targetElement = document.querySelector(target);
+        targetElement.style.backgroundColor = overlayColor;
     }
 
-    popup_fade_in($(target));
+    // Fade in the popup
+    popup_fade_in(document.querySelector(target));
 
-    $(target).on("click", function (e) {
-        if ($(e.target).hasClass("DuKSh")) {
-            popup_fade_out($(this));
+    // Close the popup when clicking on the overlay
+    document.querySelector(target).addEventListener("click", function (e) {
+        if (e.target.classList.contains("DuKSh")) {
+            popup_fade_out(this);
         }
     });
 
-    $(target)
-        .find(".AYaOY")
-        .on("click", function () {
-            popup_fade_out($(this).closest(".DuKSh"));
+    // Close the popup when clicking on elements with class 'AYaOY(close buttons)'
+    const closeButtonElements = document.querySelectorAll(`${target} .AYaOY`);
+    closeButtonElements.forEach(function (element) {
+        element.addEventListener("click", function () {
+            popup_fade_out(this.closest(".DuKSh"));
         });
+    });
 
-    $(target)
-        .find(".AYaOY")
-        .on("click", function () {
-            popup_fade_out($(this).closest(".DuKSh"));
-        });
-
-    $(target)
-        .find("[type=submit]")
-        .on("click", function (e) {
+    // Prevent form submission and add 'gsCWf(display flex)' class to 'iDzey(popup loader)' element
+    const submitButtonElements = document.querySelectorAll(
+        `${target} [type=submit]`
+    );
+    submitButtonElements.forEach(function (element) {
+        element.addEventListener("click", function (e) {
             e.preventDefault();
-            $(this).closest(".DuKSh").find(".iDzey").addClass("gsCWf");
+            this.closest(".DuKSh")
+                .querySelector(".iDzey")
+                .classList.add("gsCWf");
         });
+    });
 }
 
-function popup_fade_in($ele) {
-    $ele.addClass("gsCWf");
-    $("body").css("overflow", "hidden");
+function popup_fade_in(element) {
+    // Fade in the popup by adding 'gsCWf(display flex)' class
+    element.classList.add("gsCWf");
+    document.body.style.overflow = "hidden";
 }
 
-function popup_fade_out($ele) {
-    $ele.removeClass("gsCWf");
-    $("body").css("overflow", "auto");
+function popup_fade_out(element) {
+    // Fade out the popup by removing 'gsCWf(display flex)' class
+    element.classList.remove("gsCWf");
+    document.body.style.overflow = "auto";
 }
