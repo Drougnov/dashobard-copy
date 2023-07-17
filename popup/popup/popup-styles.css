@@ -82,13 +82,6 @@ body {
     display: none;
 }
 
-/* Responsive CSS */
-@media screen and (max-width: 600px) {
-    .GodhZ {
-        padding: 50px;
-    }
-}
-
 /* Scroll=Popup */
 
 #scroll-popup .GodhZ {
@@ -119,6 +112,10 @@ body {
 }
 
 #scroll-popup .TImJU .elements-container {
+    width: calc(100% + 11px);
+    margin-right: -11px;
+    padding-right: 11px;
+    overflow-x: hidden;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -139,4 +136,14 @@ body {
 
 .simplebar-wrapper {
     height: 100% !important;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 600px) {
+    .GodhZ {
+        padding: 50px;
+    }
+    #scroll-popup .GodhZ {
+        padding: 20px;
+    }
 }

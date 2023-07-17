@@ -1,4 +1,5 @@
 .emoji-container {
+    width: 100% !important;
     margin-bottom: var(--form-div-margin-bottom);
 }
 .emoji-picker {
