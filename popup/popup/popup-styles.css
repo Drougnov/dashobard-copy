@@ -99,33 +99,44 @@ body {
 }
 
 #scroll-popup .ExGby {
+    width: 700px;
     display: flex;
     flex-direction: column;
     height: 80vh;
 }
 
 #scroll-popup .TImJU {
-    overflow-y: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#scroll-popup .TImJU::-webkit-scrollbar {
+    display: none;
 }
 
 #scroll-popup .TImJU .elements-container {
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#scroll-popup .elements-container::-webkit-scrollbar {
+    display: none;
 }
 
 #scroll-popup .TImJU .AYaOY {
     width: max-content;
 }
 
-#scroll-popup .TImJU,
-#scroll-popup .TImJU .elements-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+/* overwrite simplebar's style */
+.simplebar-placeholder {
+    display: flex !important;
 }
 
-#scroll-popup .TImJU::-webkit-scrollbar,
-#scroll-popup .TImJU .elements-container::-webkit-scrollbar {
-    display: none;
+.simplebar-wrapper {
+    height: 100% !important;
 }
