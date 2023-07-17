@@ -88,3 +88,37 @@ body {
         padding: 50px;
     }
 }
+
+/* Scroll=Popup */
+
+#scroll-popup .ExGby {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding-bottom: 20px;
+}
+
+#scroll-popup .TImJU {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+#scroll-popup .TImJU p {
+    overflow-y: scroll;
+}
+
+#scroll-popup .TImJU .AYaOY {
+    width: max-content;
+}
+
+#scroll-popup .TImJU,
+#scroll-popup .TImJU p {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#scroll-popup .TImJU::-webkit-scrollbar,
+#scroll-popup .TImJU p::-webkit-scrollbar {
+    display: none;
+}
