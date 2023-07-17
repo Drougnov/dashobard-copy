@@ -1,0 +1,64 @@
+.emoji-container {
+    margin-bottom: var(--form-div-margin-bottom);
+}
+.emoji-picker {
+    z-index: 9999;
+}
+.emoji-picker__search-icon {
+    top: 50% !important;
+}
+.emoji-picker__preview {
+    display: none !important;
+}
+.nice-select {
+    display: block;
+    border-width: var(--input-border-width) !important;
+    border-style: solid;
+    border-color: var(--input-border-color) !important;
+    float: unset !important;
+    margin-top: var(--input-margin-top);
+    margin-bottom: var(--input-margin-bottom);
+    border-radius: var(--input-border-radius) !important;
+    -webkit-border-radius: var(--input-border-radius) !important;
+    -moz-border-radius: var(--input-border-radius) !important;
+    -ms-border-radius: var(--input-border-radius) !important;
+    -o-border-radius: var(--input-border-radius) !important;
+}
+.nice-select:focus,
+.nice-select:active {
+    border-color: var(--input-active-border-color) !important;
+}
+.nice-select .current {
+    color: var(--input-placeholder-color);
+    font-size: var(--input-placeholder-font-size);
+}
+/* adding the full-width from the container will make options full-width */
+.full-width .nice-select .list,
+.full-width .nice-select .option {
+    width: 100% !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}

@@ -91,20 +91,27 @@ body {
 
 /* Scroll=Popup */
 
+#scroll-popup .GodhZ {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
 #scroll-popup .ExGby {
     display: flex;
     flex-direction: column;
     height: 80vh;
-    padding-bottom: 20px;
 }
 
 #scroll-popup .TImJU {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-#scroll-popup .TImJU p {
+#scroll-popup .TImJU .elements-container {
     overflow-y: scroll;
 }
 
@@ -113,12 +120,12 @@ body {
 }
 
 #scroll-popup .TImJU,
-#scroll-popup .TImJU p {
+#scroll-popup .TImJU .elements-container {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 #scroll-popup .TImJU::-webkit-scrollbar,
-#scroll-popup .TImJU p::-webkit-scrollbar {
+#scroll-popup .TImJU .elements-container::-webkit-scrollbar {
     display: none;
 }
