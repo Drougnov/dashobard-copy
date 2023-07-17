@@ -1,16 +1,22 @@
+/* emoji-picker */
 .emoji-container {
     width: 100% !important;
     margin-bottom: var(--form-div-margin-bottom);
 }
+
 .emoji-picker {
     z-index: 9999;
 }
+
 .emoji-picker__search-icon {
     top: 50% !important;
 }
+
 .emoji-picker__preview {
     display: none !important;
 }
+
+/* nice-select */
 .nice-select {
     display: block;
     border-width: var(--input-border-width) !important;
@@ -25,20 +31,24 @@
     -ms-border-radius: var(--input-border-radius) !important;
     -o-border-radius: var(--input-border-radius) !important;
 }
+
 .nice-select:focus,
 .nice-select:active {
     border-color: var(--input-active-border-color) !important;
 }
+
 .nice-select .current {
     color: var(--input-placeholder-color);
     font-size: var(--input-placeholder-font-size);
 }
+
 /* adding the full-width from the container will make options full-width */
 .full-width .nice-select .list,
 .full-width .nice-select .option {
     width: 100% !important;
 }
 
+/* table */
 table {
     border-collapse: collapse;
     width: 100%;

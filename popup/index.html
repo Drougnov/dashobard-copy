@@ -16,12 +16,13 @@
 
         <script src="menu/menu-scripts.js"></script>
         <link rel="stylesheet" href="menu/menu-styles.css" />
+
         <link
             rel="stylesheet"
             href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css"
         />
 
-        <!-- form-elements--style and script -->
+        <!-- nice-select style and script -->
         <link rel="stylesheet" href="../form.css" />
         <link
             rel="stylesheet"
@@ -36,12 +37,16 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
         <script>
             $(document).ready(function () {
                 $("select").niceSelect();
             });
         </script>
+
+        <!-- emoji-picker script -->
+        <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
+
+        <!-- duDatepicker style and script -->
         <link
             rel="stylesheet"
             type="text/css"
@@ -52,6 +57,7 @@
             src="https://cdn.jsdelivr.net/gh/dmuy/duDatepicker@2.0.5/dist/duDatepicker.js"
         ></script>
 
+        <!-- simplebar style and script -->
         <link
             rel="stylesheet"
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
@@ -306,11 +312,19 @@
         <br />
         <br />
 
+        <!------------- scroll-popup -------------->
+
+        <!-- overlay -->
         <div class="DuKSh EJVsl OtrSK cNGwx" id="scroll-popup">
+            <!-- wrapper -->
             <div class="GodhZ gsCWf EJVsl OtrSK CzomY">
+                <!-- container -->
                 <div class="ExGby HruDj">
+                    <!-- header -->
                     <div class="tSrNa gsCWf EJVsl zsSLy">
                         <h1 class="USKIn">Scroll!</h1>
+
+                        <!-- buttons -->
                         <div class="wcrwV gsCWf EJVsl">
                             <div
                                 class="AYaOY TNIio UYvZu gsCWf EJVsl OtrSK DeYlt"
@@ -335,8 +349,14 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- main-section -->
                     <div class="TImJU">
+                        <!-- elements-container -->
+
                         <div data-simplebar class="elements-container">
+                            <!-- form -->
+
                             <form
                                 method="post"
                                 action=""
@@ -705,6 +725,8 @@
                                 </div>
                                 <button type="submit">Submit</button>
                             </form>
+
+                            <!-- table -->
                             <table>
                                 <tr>
                                     <th>Column 1</th>
@@ -734,11 +756,13 @@
             </div>
         </div>
         <script>
+            //initiate duDatePicker
             var inputElement = document.querySelector(".duDatepicker-input");
             duDatepicker(inputElement, {
                 range: true,
             });
 
+            //initiate emoji picker
             window.addEventListener("DOMContentLoaded", () => {
                 EmojiButton(
                     document.querySelector("#emoji-button"),
