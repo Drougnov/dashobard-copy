@@ -60,7 +60,7 @@ To add the `red dot notification` to an icon, follow these steps:
     <!-- this <p> will be the toggle button for the dropdown-menu -->
     <p>text</p>
     <!-- add dropdown-menu container with a class 'menu-id' and id 'menu-id(same-number)' -->
-    <div id="menu_id4" class="menu-id">
+    <div id="menu_id1" class="menu-id">
         <!-- dropdown menu item -->
         <div class="menu-item menu-item-active">
             <!-- dropdown menu item left side (icon-container) -->
