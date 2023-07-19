@@ -44,11 +44,6 @@ function singleMenu(targetId, menuId, show = false) {
     });
 }
 
-// Call singleMenu function for each menu
-singleMenu("target_id1", "menu_id1", false);
-singleMenu("target_id2", "menu_id2", false);
-singleMenu("target_id3", "menu_id3", false);
-
 // Check the containers position to align the menus
 const dropdownContainers = document.querySelectorAll(".target-id");
 const dropdownMenus = document.querySelectorAll(".menu-id");

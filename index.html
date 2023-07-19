@@ -687,10 +687,13 @@
                 </section>
             </div>
         </div>
-        <script type="text/javascript">
-            let infScroll = new InfiniteScroll(".menu-id", {});
-        </script>
         <script src="dashboard.js"></script>
         <script src="single-menu-dropdown.js"></script>
+        <script>
+            // Call singleMenu function for each menu
+            singleMenu("target_id1", "menu_id1", false);
+            singleMenu("target_id2", "menu_id2", false);
+            singleMenu("target_id3", "menu_id3", false);
+        </script>
     </body>
 </html>
