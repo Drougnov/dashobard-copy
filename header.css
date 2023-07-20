@@ -151,14 +151,9 @@
     top: 0;
     width: 300px;
     height: 100vh;
-    background: white;
+    background: lightblue;
     text-align: left;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    padding: 1.5rem;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -179,4 +174,20 @@
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
+}
+
+.slide-in-menu .nav-btn {
+    width: max-content;
+}
+
+.slide-in-menu .menu-id {
+    left: -1.5rem;
+}
+
+.slide-in-menu .nav-left {
+    margin-top: 5rem;
+}
+
+.slide-in-menu .nav-links {
+    margin-left: 0;
 }
