@@ -42,15 +42,6 @@ function singleMenu(targetId, menuId, show = false) {
     menuElement.addEventListener("click", function (event) {
         event.stopPropagation();
     });
-
-    // Calculate half of the targetElement width
-    const targetHalfWidth = targetElement.offsetWidth / 2;
-
-    // Set a CSS variable with the half width value
-    targetElement.style.setProperty(
-        "--target-half-width",
-        targetHalfWidth + "px"
-    );
 }
 
 // Check the containers position to align the menus
