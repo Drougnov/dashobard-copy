@@ -30,7 +30,7 @@
         <title>Header</title>
     </head>
     <body>
-        <header class="HruDj">
+        <header class="header HruDj">
             <nav class="nav gsCWf EJVsl zsSLy">
                 <div class="nav-left gsCWf EJVsl">
                     <div class="nav-logo tRLtc"></div>
@@ -126,12 +126,7 @@
             </nav>
 
             <div class="slide-in-menu">
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Deserunt ut tenetur alias velit veniam, itaque mollitia odit
-                    temporibus numquam fuga, quasi optio! Quo voluptates
-                    incidunt atque, ipsam nam consequatur impedit.
-                </div>
+                <p>Slide-in menu</p>
             </div>
         </header>
 
@@ -140,10 +135,6 @@
 
         <!-- single-menu dropdown scripts -->
         <script src="single-menu-dropdown.js"></script>
-        <script>
-            // Call singleMenu function for each menu
-            singleMenu("target_id1", "menu_id1", false);
-        </script>
 
         <!-- nice-select scripts -->
         <script
@@ -152,7 +143,12 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+
         <script>
+            // Call singleMenu function for each menu
+            singleMenu("target_id1", "menu_id1", false);
+
+            // initialize nice select
             $(document).ready(function () {
                 $("select").niceSelect();
             });

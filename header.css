@@ -148,8 +148,9 @@
 /* slide-in menu */
 .slide-in-menu {
     position: absolute;
-    left: 1.5rem;
+    top: 0;
     width: 300px;
+    height: 100vh;
     background: white;
     text-align: left;
     padding: 0.75rem 1.5rem;
@@ -159,24 +160,23 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     z-index: 9999;
-    animation: slide-in-from-left 0.5s linear forwards;
-    -webkit-animation: slide-in-from-left 0.5s linear forwards;
 }
 
-@keyframes slide-in-from-left {
-    from {
-        transform: translateX(calc(-100% - 1.5rem));
-        -webkit-transform: translateX(calc(-100% - 1.5rem));
-        -moz-transform: translateX(calc(-100% - 1.5rem));
-        -ms-transform: translateX(calc(-100% - 1.5rem));
-        -o-transform: translateX(calc(-100% - 1.5rem));
-    }
-    to {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
+.nav-active .slide-in-menu {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
