@@ -5,13 +5,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="stream.css" />
+        <link rel="stylesheet" href="single-menu-dropdown.css" />
         <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
+
+        <!-- simplebar style and script -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+        />
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
         <title>Stream</title>
     </head>
     <body>
         <div class="container">
             <!-- image-section -->
-            <div class="left-container tRLtc"></div>
+            <div class="left-container tRLtc">
+                <div class="toggle">
+                    <div class="toggle-icon-container">
+                        <svg
+                            class="icon-full-screen toggle-icon"
+                            viewBox="0 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            fill="#000000"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <defs></defs>
+                                <g
+                                    id="Page-1"
+                                    stroke="none"
+                                    stroke-width="1"
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                >
+                                    <g
+                                        id="Dribbble-Light-Preview"
+                                        transform="translate(-300.000000, -4199.000000)"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="icons"
+                                            transform="translate(56.000000, 160.000000)"
+                                        >
+                                            <path
+                                                d="M262.4445,4039 L256.0005,4039 L256.0005,4041 L262.0005,4041 L262.0005,4047 L264.0005,4047 L264.0005,4039.955 L264.0005,4039 L262.4445,4039 Z M262.0005,4057 L256.0005,4057 L256.0005,4059 L262.4445,4059 L264.0005,4059 L264.0005,4055.955 L264.0005,4051 L262.0005,4051 L262.0005,4057 Z M246.0005,4051 L244.0005,4051 L244.0005,4055.955 L244.0005,4059 L246.4445,4059 L252.0005,4059 L252.0005,4057 L246.0005,4057 L246.0005,4051 Z M246.0005,4047 L244.0005,4047 L244.0005,4039.955 L244.0005,4039 L246.4445,4039 L252.0005,4039 L252.0005,4041 L246.0005,4041 L246.0005,4047 Z"
+                                                id="full_screen-[#904]"
+                                            ></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg
+                            class="icon-exit-full-screen toggle-icon"
+                            viewBox="0 0 20 20"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            fill="#000000"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>exit_full_screen [#905]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g
+                                    id="Page-1"
+                                    stroke="none"
+                                    stroke-width="1"
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                >
+                                    <g
+                                        id="Dribbble-Light-Preview"
+                                        transform="translate(-260.000000, -4199.000000)"
+                                        fill="#000000"
+                                    >
+                                        <g
+                                            id="icons"
+                                            transform="translate(56.000000, 160.000000)"
+                                        >
+                                            <path
+                                                d="M218,4047 L224,4047 L224,4045 L218,4045 L218,4039 L216,4039 L216,4043.959 L216,4047 L218,4047 Z M218,4053 L224,4053 L224,4051 L218,4051 L216,4051 L216,4051.959 L216,4059 L218,4059 L218,4053 Z M210,4059 L212,4059 L212,4051.959 L212,4051 L210,4051 L204,4051 L204,4053 L210,4053 L210,4059 Z M210,4039 L212,4039 L212,4043.959 L212,4047 L210,4047 L204,4047 L204,4045 L210,4045 L210,4039 Z"
+                                                id="exit_full_screen-[#905]"
+                                            ></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
             <!-- chatbox-section -->
             <div class="right-container">
@@ -130,7 +227,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room__icon-container">
+                        <div
+                            class="room__icon-container target-id"
+                            id="target_id2"
+                        >
                             <svg
                                 class="icon-share DeYlt"
                                 width="24"
@@ -190,6 +290,62 @@
                                     ></path>
                                 </g>
                             </svg>
+                            <div class="menu-id" id="menu_id2">
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            class="HNdzs icon-diamond"
+                                            id="icon-diamond"
+                                            width="24px"
+                                            height="24px"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M2.009,7.956C2.008,7.971,2,7.984,2,8l0,.013c.009.721.677,1.107,9.175,13.556a1,1,0,0,0,1.644,0C22.167,7.967,21.99,8.563,22,8.013L22,8c0-.016-.008-.029-.009-.044-.025-.563-.474-.906-3.134-5.471A1,1,0,0,0,18,2H6a1,1,0,0,0-.857.485C2.363,7.256,2.032,7.423,2.009,7.956ZM12,19.243,4.908,9H19.092ZM6.566,4H17.434l1.8,3H4.766Z"
+                                                class="tRLtc"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span>Facebook</span>
+                                </div>
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            class="HNdzs icon-diamond"
+                                            id="icon-diamond"
+                                            width="24px"
+                                            height="24px"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M2.009,7.956C2.008,7.971,2,7.984,2,8l0,.013c.009.721.677,1.107,9.175,13.556a1,1,0,0,0,1.644,0C22.167,7.967,21.99,8.563,22,8.013L22,8c0-.016-.008-.029-.009-.044-.025-.563-.474-.906-3.134-5.471A1,1,0,0,0,18,2H6a1,1,0,0,0-.857.485C2.363,7.256,2.032,7.423,2.009,7.956ZM12,19.243,4.908,9H19.092ZM6.566,4H17.434l1.8,3H4.766Z"
+                                                class="tRLtc"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span>Google</span>
+                                </div>
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            class="HNdzs icon-diamond"
+                                            id="icon-diamond"
+                                            width="24px"
+                                            height="24px"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M2.009,7.956C2.008,7.971,2,7.984,2,8l0,.013c.009.721.677,1.107,9.175,13.556a1,1,0,0,0,1.644,0C22.167,7.967,21.99,8.563,22,8.013L22,8c0-.016-.008-.029-.009-.044-.025-.563-.474-.906-3.134-5.471A1,1,0,0,0,18,2H6a1,1,0,0,0-.857.485C2.363,7.256,2.032,7.423,2.009,7.956ZM12,19.243,4.908,9H19.092ZM6.566,4H17.434l1.8,3H4.766Z"
+                                                class="tRLtc"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span>Twitter</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="room__icon-container">
                             <svg
@@ -402,27 +558,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- mobile-chatbox -->
-                    <div class="mobile-chatbox">
-                        <div class="mobile-chatbox__top">
-                            <h3>Live Chat</h3>
-                            <span>6k watching</span>
-                        </div>
-                        <div class="mobile-chatbox__bottom">
-                            <div class="mobile-chatbox__img-container">
-                                <img
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                    alt=""
-                                />
-                            </div>
-                            <form action="#" class="mobile-chatbox__form">
-                                <input
-                                    type="text"
-                                    placeholder="Chat as @profilename"
-                                />
-                            </form>
-                        </div>
-                    </div>
                     <!-- input-container -->
                     <form class="input-container">
                         <div class="emoji-container">
@@ -459,24 +594,42 @@
                     </form>
                 </div>
             </div>
+            <!-- mobile-chatbox -->
+            <div class="mobile-chatbox">
+                <div class="mobile-chatbox__top">
+                    <h3>Live Chat</h3>
+                    <span>6k watching</span>
+                </div>
+                <div class="mobile-chatbox__bottom">
+                    <div class="mobile-chatbox__img-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                            alt=""
+                        />
+                    </div>
+                    <form action="#" class="mobile-chatbox__form">
+                        <input type="text" placeholder="Chat as @profilename" />
+                    </form>
+                </div>
+            </div>
         </div>
-        <!-- extra section -->
-        <div>
-            <div class="bio hidden">
+        <!-- more-room -->
+        <div class="more-room">
+            <div class="bio">
                 <h1>Bio</h1>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Rerum, dicta.
                 </p>
             </div>
-            <div class="description hidden">
+            <div class="description">
                 <h1>description</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis, possimus!
                 </p>
             </div>
-            <div class="icon-container hidden">
+            <div class="icon-container">
                 <svg
                     class="icon-close DeYlt"
                     viewBox="0 0 24 24"
@@ -515,11 +668,8 @@
                 quisquam iure quaerat nulla eveniet reiciendis cupiditate
                 deserunt corrupti eius quia.
             </p>
-            <button class="toggle-btn">Toggle view</button>
-            <div class="more-room" style="height: 100vh">
-                <h1>More room</h1>
-            </div>
         </div>
+        <script src="single-menu-dropdown.js"></script>
         <script>
             // -------------------------------------set emoji picker--------------------------------------
             window.addEventListener("DOMContentLoaded", () => {
@@ -532,7 +682,7 @@
             });
 
             //----------------------------------toggle full-width / 2 column--------------------------------
-            const toggleBtn = document.querySelector(".toggle-btn");
+            const toggleBtn = document.querySelector(".toggle");
             const container = document.querySelector(".container");
 
             toggleBtn.addEventListener("click", () => {
@@ -565,69 +715,8 @@
             updateProgressBar(collectedAmount, totalAmount);
 
             //----------------------------------------Menu Dropdown------------------------------------------
-            function singleMenu(target_id, menu_id, show = false) {
-                var targetElement = document.getElementById(target_id);
-                var menuElement = document.getElementById(menu_id);
-                var iconClose = menuElement.querySelector(".icon-close");
-
-                // Initial state
-                if (show) {
-                    menuElement.style.display = "block";
-                    targetElement.classList.add("active");
-                } else {
-                    menuElement.style.display = "none";
-                    targetElement.classList.remove("active");
-                }
-
-                targetElement.addEventListener("click", () => {
-                    show = !show; // Toggle the value of the 'show' variable
-
-                    if (show) {
-                        menuElement.style.display = "block";
-                        targetElement.classList.add("active");
-                    } else {
-                        menuElement.style.display = "none";
-                        targetElement.classList.remove("active");
-                    }
-                });
-
-                // Close menu if clicked outside of container
-                document.addEventListener("click", (event) => {
-                    if (!targetElement.contains(event.target)) {
-                        // Hide the menu
-                        show = false;
-                        menuElement.style.display = "none";
-                        targetElement.classList.remove("active");
-                    }
-                });
-                iconClose.addEventListener("click", (event) => {
-                    event.stopPropagation();
-                    show = false;
-                    menuElement.style.display = "none";
-                    targetElement.classList.remove("active");
-                });
-
-                menuElement.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                });
-            }
-
             singleMenu("target_id1", "menu_id1", false);
-
-            // Check the containers position to align the menus
-            const dropdownContainers = document.querySelectorAll(".target-id");
-            const dropdownMenus = document.querySelectorAll(".menu-id");
-
-            dropdownContainers.forEach((container) => {
-                const rect = container.getBoundingClientRect();
-                const viewportWidth = window.innerWidth;
-                const dropdownMenu = container.querySelector(".menu-id");
-
-                // add class if the dropdown-menu is within 300px right of the screen
-                if (rect.right > viewportWidth - 300) {
-                    dropdownMenu.classList.add("right");
-                }
-            });
+            singleMenu("target_id2", "menu_id2", false);
 
             // Scroll to more room section on button click
             const moreRoomContainer = document.querySelector(".more-room");
@@ -636,6 +725,7 @@
             moreRoomButtons.forEach((btn) => {
                 btn.addEventListener("click", () => {
                     console.log("clicked");
+                    moreRoomContainer.style.display = "block";
                     moreRoomContainer.scrollIntoView({
                         behavior: "smooth",
                     });
@@ -643,12 +733,13 @@
             });
 
             // form submission
-            const form = document.querySelector(".input-container");
+            const form = document.querySelector(".mobile-chatbox__form");
             const chatBoxContainer =
                 document.querySelector(".chatbox-container");
 
             form.addEventListener("submit", (e) => {
                 e.preventDefault();
+                console.log("submitted");
                 chatBoxContainer.classList.add("active");
             });
         </script>
