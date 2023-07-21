@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="stream.css" />
+
+        <!-- single menu dropdown style -->
         <link rel="stylesheet" href="single-menu-dropdown.css" />
+
+        <!-- emoji picker script -->
         <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
 
         <!-- simplebar style and script -->
@@ -14,107 +18,110 @@
             href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
         />
         <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
         <title>Stream</title>
     </head>
     <body>
         <div class="container">
-            <!-- image-section -->
+            <!-- left-section -->
             <div class="left-container tRLtc">
+                <!-- full screen toggle container -->
                 <div class="toggle">
-                    <div class="toggle-icon-container">
-                        <svg
-                            class="icon-full-screen toggle-icon"
-                            viewBox="0 0 20 20"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            fill="#000000"
-                        >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <!-- enter full-screen icon -->
+                    <svg
+                        class="icon-full-screen toggle-icon"
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        fill="#000000"
+                    >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <defs></defs>
                             <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <defs></defs>
+                                id="Page-1"
+                                stroke="none"
+                                stroke-width="1"
+                                fill="none"
+                                fill-rule="evenodd"
+                            >
                                 <g
-                                    id="Page-1"
-                                    stroke="none"
-                                    stroke-width="1"
-                                    fill="none"
-                                    fill-rule="evenodd"
+                                    id="Dribbble-Light-Preview"
+                                    transform="translate(-300.000000, -4199.000000)"
+                                    fill="#000000"
                                 >
                                     <g
-                                        id="Dribbble-Light-Preview"
-                                        transform="translate(-300.000000, -4199.000000)"
-                                        fill="#000000"
+                                        id="icons"
+                                        transform="translate(56.000000, 160.000000)"
                                     >
-                                        <g
-                                            id="icons"
-                                            transform="translate(56.000000, 160.000000)"
-                                        >
-                                            <path
-                                                d="M262.4445,4039 L256.0005,4039 L256.0005,4041 L262.0005,4041 L262.0005,4047 L264.0005,4047 L264.0005,4039.955 L264.0005,4039 L262.4445,4039 Z M262.0005,4057 L256.0005,4057 L256.0005,4059 L262.4445,4059 L264.0005,4059 L264.0005,4055.955 L264.0005,4051 L262.0005,4051 L262.0005,4057 Z M246.0005,4051 L244.0005,4051 L244.0005,4055.955 L244.0005,4059 L246.4445,4059 L252.0005,4059 L252.0005,4057 L246.0005,4057 L246.0005,4051 Z M246.0005,4047 L244.0005,4047 L244.0005,4039.955 L244.0005,4039 L246.4445,4039 L252.0005,4039 L252.0005,4041 L246.0005,4041 L246.0005,4047 Z"
-                                                id="full_screen-[#904]"
-                                            ></path>
-                                        </g>
+                                        <path
+                                            d="M262.4445,4039 L256.0005,4039 L256.0005,4041 L262.0005,4041 L262.0005,4047 L264.0005,4047 L264.0005,4039.955 L264.0005,4039 L262.4445,4039 Z M262.0005,4057 L256.0005,4057 L256.0005,4059 L262.4445,4059 L264.0005,4059 L264.0005,4055.955 L264.0005,4051 L262.0005,4051 L262.0005,4057 Z M246.0005,4051 L244.0005,4051 L244.0005,4055.955 L244.0005,4059 L246.4445,4059 L252.0005,4059 L252.0005,4057 L246.0005,4057 L246.0005,4051 Z M246.0005,4047 L244.0005,4047 L244.0005,4039.955 L244.0005,4039 L246.4445,4039 L252.0005,4039 L252.0005,4041 L246.0005,4041 L246.0005,4047 Z"
+                                            id="full_screen-[#904]"
+                                        ></path>
                                     </g>
                                 </g>
                             </g>
-                        </svg>
-                        <svg
-                            class="icon-exit-full-screen toggle-icon"
-                            viewBox="0 0 20 20"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            fill="#000000"
-                        >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        </g>
+                    </svg>
+                    <!-- exit full-screen icon -->
+                    <svg
+                        class="icon-exit-full-screen toggle-icon"
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        fill="#000000"
+                    >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>exit_full_screen [#905]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
                             <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>exit_full_screen [#905]</title>
-                                <desc>Created with Sketch.</desc>
-                                <defs></defs>
+                                id="Page-1"
+                                stroke="none"
+                                stroke-width="1"
+                                fill="none"
+                                fill-rule="evenodd"
+                            >
                                 <g
-                                    id="Page-1"
-                                    stroke="none"
-                                    stroke-width="1"
-                                    fill="none"
-                                    fill-rule="evenodd"
+                                    id="Dribbble-Light-Preview"
+                                    transform="translate(-260.000000, -4199.000000)"
+                                    fill="#000000"
                                 >
                                     <g
-                                        id="Dribbble-Light-Preview"
-                                        transform="translate(-260.000000, -4199.000000)"
-                                        fill="#000000"
+                                        id="icons"
+                                        transform="translate(56.000000, 160.000000)"
                                     >
-                                        <g
-                                            id="icons"
-                                            transform="translate(56.000000, 160.000000)"
-                                        >
-                                            <path
-                                                d="M218,4047 L224,4047 L224,4045 L218,4045 L218,4039 L216,4039 L216,4043.959 L216,4047 L218,4047 Z M218,4053 L224,4053 L224,4051 L218,4051 L216,4051 L216,4051.959 L216,4059 L218,4059 L218,4053 Z M210,4059 L212,4059 L212,4051.959 L212,4051 L210,4051 L204,4051 L204,4053 L210,4053 L210,4059 Z M210,4039 L212,4039 L212,4043.959 L212,4047 L210,4047 L204,4047 L204,4045 L210,4045 L210,4039 Z"
-                                                id="exit_full_screen-[#905]"
-                                            ></path>
-                                        </g>
+                                        <path
+                                            d="M218,4047 L224,4047 L224,4045 L218,4045 L218,4039 L216,4039 L216,4043.959 L216,4047 L218,4047 Z M218,4053 L224,4053 L224,4051 L218,4051 L216,4051 L216,4051.959 L216,4059 L218,4059 L218,4053 Z M210,4059 L212,4059 L212,4051.959 L212,4051 L210,4051 L204,4051 L204,4053 L210,4053 L210,4059 Z M210,4039 L212,4039 L212,4043.959 L212,4047 L210,4047 L204,4047 L204,4045 L210,4045 L210,4039 Z"
+                                            id="exit_full_screen-[#905]"
+                                        ></path>
                                     </g>
                                 </g>
                             </g>
-                        </svg>
-                    </div>
+                        </g>
+                    </svg>
                 </div>
             </div>
 
-            <!-- chatbox-section -->
+            <!-- right-section -->
             <div class="right-container">
                 <!-- top-right-section -->
                 <div class="top-right-container">
                     <span>Room title</span>
+
                     <!-- room-container -->
                     <div class="room-container">
                         <div class="room-container__left">
@@ -124,6 +131,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="room__info-container">
                                 <span class="room__info-name"
                                     >@Profile_Name</span
@@ -133,12 +141,14 @@
                                 >
                             </div>
                         </div>
+
                         <div class="room-container__right">
                             <button class="more-btn UJQCM more-room-btn">
                                 More Rooms
                             </button>
                         </div>
                     </div>
+
                     <!-- icon-container -->
                     <div class="room__icons">
                         <div
@@ -171,8 +181,10 @@
                                     </g>
                                 </g>
                             </svg>
-                            <div id="menu_id1" class="menu-id">
-                                <div class="menu-id__top">
+
+                            <!-- single menu dropdown (keyhole icon dropdown) -->
+                            <div id="menu_id1" class="menu-id menu-settings">
+                                <div class="menu-settings__top">
                                     <div class="room-container__left">
                                         <div class="room__img-container">
                                             <img
@@ -180,6 +192,7 @@
                                                 alt=""
                                             />
                                         </div>
+
                                         <div class="room__info-container">
                                             <span class="room__info-name"
                                                 >@Profile_Name</span
@@ -189,6 +202,7 @@
                                             >
                                         </div>
                                     </div>
+
                                     <div class="icon-container">
                                         <svg
                                             class="icon-close DeYlt"
@@ -220,6 +234,7 @@
                                         </svg>
                                     </div>
                                 </div>
+
                                 <div class="menu-item-container">
                                     <div class="menu-item">Follow</div>
                                     <div class="menu-item">Report</div>
@@ -227,6 +242,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div
                             class="room__icon-container target-id"
                             id="target_id2"
@@ -290,6 +306,8 @@
                                     ></path>
                                 </g>
                             </svg>
+
+                            <!-- single menu dropdown -->
                             <div class="menu-id" id="menu_id2">
                                 <div class="menu-item menu-item-active">
                                     <div class="menu-item-icon">
@@ -307,8 +325,10 @@
                                             />
                                         </svg>
                                     </div>
+
                                     <span>Facebook</span>
                                 </div>
+
                                 <div class="menu-item menu-item-active">
                                     <div class="menu-item-icon">
                                         <svg
@@ -325,8 +345,10 @@
                                             />
                                         </svg>
                                     </div>
+
                                     <span>Google</span>
                                 </div>
+
                                 <div class="menu-item menu-item-active">
                                     <div class="menu-item-icon">
                                         <svg
@@ -343,10 +365,12 @@
                                             />
                                         </svg>
                                     </div>
+
                                     <span>Twitter</span>
                                 </div>
                             </div>
                         </div>
+
                         <div class="room__icon-container">
                             <svg
                                 class="icon-heart DeYlt"
@@ -371,10 +395,12 @@
                             </svg>
                         </div>
                     </div>
-                    <!-- more button form mobile -->
+
+                    <!-- more button for mobile -->
                     <button class="more-btn-mobile UJQCM more-room-btn">
                         More Rooms
                     </button>
+
                     <!-- goal-section -->
                     <div class="goal-container">
                         <div>
@@ -395,6 +421,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- chatbox-container -->
                 <div class="chatbox-container">
                     <!-- message-container -->
@@ -406,6 +433,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Alicia Padlock</span>
                                 <p class="text">
@@ -413,6 +441,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-right">
                             <div class="img-container">
                                 <img
@@ -420,6 +449,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">You</span>
                                 <p class="text">
@@ -427,6 +457,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="notification">
                             <div class="icon-container">
                                 <svg
@@ -454,8 +485,10 @@
                                     />
                                 </svg>
                             </div>
+
                             <span>You have unread notification!</span>
                         </div>
+
                         <div class="message message-left">
                             <div class="img-container">
                                 <img
@@ -463,6 +496,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Sri Veronica</span>
                                 <p class="text">
@@ -471,6 +505,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-left">
                             <div class="img-container">
                                 <img
@@ -478,6 +513,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Alicia Padlock</span>
                                 <p class="text">
@@ -485,6 +521,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-right">
                             <div class="img-container">
                                 <img
@@ -492,6 +529,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">You</span>
                                 <p class="text">
@@ -499,6 +537,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-left">
                             <div class="img-container">
                                 <img
@@ -506,6 +545,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Sri Veronica</span>
                                 <p class="text">
@@ -514,6 +554,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-left">
                             <div class="img-container">
                                 <img
@@ -521,6 +562,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Alicia Padlock</span>
                                 <p class="text">
@@ -528,6 +570,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-right">
                             <div class="img-container">
                                 <img
@@ -535,6 +578,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">You</span>
                                 <p class="text">
@@ -542,6 +586,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="message message-left">
                             <div class="img-container">
                                 <img
@@ -549,6 +594,7 @@
                                     alt=""
                                 />
                             </div>
+
                             <div class="text-container">
                                 <span class="name">Sri Veronica</span>
                                 <p class="text">
@@ -558,6 +604,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- input-container -->
                     <form class="input-container">
                         <div class="emoji-container">
@@ -566,11 +613,13 @@
                                 id="emoji-button"
                             ></div>
                         </div>
+
                         <input
                             type="text"
                             placeholder="Type message here..."
                             class="input-message emoji-input"
                         />
+
                         <button
                             type="submit"
                             aria-label="send message"
@@ -594,12 +643,14 @@
                     </form>
                 </div>
             </div>
+
             <!-- mobile-chatbox -->
             <div class="mobile-chatbox">
                 <div class="mobile-chatbox__top">
                     <h3>Live Chat</h3>
                     <span>6k watching</span>
                 </div>
+
                 <div class="mobile-chatbox__bottom">
                     <div class="mobile-chatbox__img-container">
                         <img
@@ -607,13 +658,15 @@
                             alt=""
                         />
                     </div>
+
                     <form action="#" class="mobile-chatbox__form">
                         <input type="text" placeholder="Chat as @profilename" />
                     </form>
                 </div>
             </div>
         </div>
-        <!-- more-room -->
+
+        <!-- extra section -->
         <div class="more-room">
             <div class="bio">
                 <h1>Bio</h1>
@@ -622,6 +675,7 @@
                     Rerum, dicta.
                 </p>
             </div>
+
             <div class="description">
                 <h1>description</h1>
                 <p>
@@ -629,6 +683,7 @@
                     Perspiciatis, possimus!
                 </p>
             </div>
+
             <div class="icon-container">
                 <svg
                     class="icon-close DeYlt"
@@ -656,6 +711,7 @@
                     </g>
                 </svg>
             </div>
+
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
                 repellat est alias dignissimos ea quasi, eum iusto ex quisquam
@@ -669,9 +725,13 @@
                 deserunt corrupti eius quia.
             </p>
         </div>
+
+        <!-- single menu dropdown script -->
         <script src="single-menu-dropdown.js"></script>
+
         <script>
             // -------------------------------------set emoji picker--------------------------------------
+
             window.addEventListener("DOMContentLoaded", () => {
                 EmojiButton(
                     document.querySelector("#emoji-button"),
@@ -682,6 +742,7 @@
             });
 
             //----------------------------------toggle full-width / 2 column--------------------------------
+
             const toggleBtn = document.querySelector(".toggle");
             const container = document.querySelector(".container");
 
@@ -695,10 +756,12 @@
                 container.classList.toggle("full-width", shouldAddClass);
             }
 
+            // Call function initially and on screen resize
             window.addEventListener("resize", checkScreenSize);
             checkScreenSize();
 
             //--------------------Function to update the progress bar dynamically---------------------------
+
             function updateProgressBar(collectedAmount, totalAmount) {
                 const progressPercentage =
                     (collectedAmount / totalAmount) * 100;
@@ -714,11 +777,13 @@
             document.querySelector(".goal-amount").textContent = totalAmount;
             updateProgressBar(collectedAmount, totalAmount);
 
-            //----------------------------------------Menu Dropdown------------------------------------------
+            //----------------------------Initialize single menu dropdown----------------------------------
+
             singleMenu("target_id1", "menu_id1", false);
             singleMenu("target_id2", "menu_id2", false);
 
-            // Scroll to more room section on button click
+            // -------------------------Scroll to more room section on button click-------------------------
+
             const moreRoomContainer = document.querySelector(".more-room");
             const moreRoomButtons = document.querySelectorAll(".more-room-btn");
 
@@ -732,7 +797,7 @@
                 });
             });
 
-            // form submission
+            // -----------------------------------form submission--------------------------------------
             const form = document.querySelector(".mobile-chatbox__form");
             const chatBoxContainer =
                 document.querySelector(".chatbox-container");
