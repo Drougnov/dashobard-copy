@@ -1,4 +1,4 @@
-// -------------------------set emoji picker---------------------------------
+// -------------------------------set emoji picker-----------------------------------
 
 window.addEventListener("DOMContentLoaded", () => {
     EmojiButton(document.querySelector("#emoji-button"), function (emoji) {
@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//------------------------toggle full-width / 2 column-------------------------
+//--------------------------toggle full-width / 2 column-----------------------------
 
 const toggleBtn = document.querySelector(".toggle");
 const wrapper = document.querySelector(".wrapper");
@@ -25,7 +25,7 @@ function checkScreenSize() {
 window.addEventListener("resize", checkScreenSize);
 checkScreenSize();
 
-//--------------------Update the progress bar dynamically-------------------------
+//-----------------------Update the progress bar dynamically---------------------------
 
 function updateProgressBar(collectedAmount, totalAmount) {
     const progressPercentage = (collectedAmount / totalAmount) * 100;
@@ -40,12 +40,12 @@ document.querySelector(".goal-reached").textContent = collectedAmount;
 document.querySelector(".goal-amount").textContent = totalAmount;
 updateProgressBar(collectedAmount, totalAmount);
 
-//----------------------------Initialize single menu dropdown----------------------------------
+//-------------------------Initialize single menu dropdown-----------------------------
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
 
-// -------------------------Scroll to more room section on button click-------------------------
+// ---------------------Scroll to more room section on button click--------------------
 
 const moreRoomContainer = document.querySelector(".more-room");
 const moreRoomButtons = document.querySelectorAll(".more-room-btn");
