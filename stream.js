@@ -98,3 +98,11 @@ function setActiveButton(tabId) {
     const button = document.getElementById(`${tabId}-btn`);
     button.classList.add("active");
 }
+
+// -------------------------stop refreshing on send message-----------------------------
+
+const sendMessageForm = document.querySelector(".input-container");
+
+sendMessageForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
