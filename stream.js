@@ -44,6 +44,8 @@ updateProgressBar(collectedAmount, totalAmount);
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
+singleMenu("target_id3", "menu_id3", false);
+singleMenu("target_id4", "menu_id4", false);
 
 // ---------------------Scroll to more room section on button click--------------------
 
@@ -62,20 +64,6 @@ moreRoomButtons.forEach((btn) => {
     });
 });
 
-// -------------------handle mobile chatbox form submission----------------------------
-
-const form = document.querySelector(".mobile-chatbox__form");
-const chatTabButton = document.querySelector("#chat-button");
-const chatTabContainer = document.querySelector("#chat-tab");
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    showTab("chat");
-    chatTabContainer.scrollIntoView({
-        behavior: "smooth",
-    });
-});
-
 // -----------------------------------tab section--------------------------------------
 
 function hideAllTabs() {
@@ -84,12 +72,15 @@ function hideAllTabs() {
         tab.classList.remove("active");
     });
 }
+
 function showTab(tabId) {
     hideAllTabs();
     const tab = document.getElementById(`${tabId}-tab`);
     tab.classList.add("active");
     setActiveButton(tabId);
+    addClassToBottomContainer();
 }
+
 function setActiveButton(tabId) {
     const buttons = document.querySelectorAll(".tab-button");
     buttons.forEach((btn) => {
@@ -99,10 +90,68 @@ function setActiveButton(tabId) {
     button.classList.add("active");
 }
 
-// -------------------------stop refreshing on send message-----------------------------
+// ----------------------------------mobile chatbox---------------------------------------
+
+const bottomContainer = document.querySelector(".bottom-container");
+const mobileChatbox = document.querySelector(".mobile-chatbox");
+
+// scroll to chat tab on mobile chatbox click
+const chatTabContainer = document.querySelector("#chat-tab");
+
+mobileChatbox.addEventListener("click", (e) => {
+    showTab("chat");
+    chatTabContainer.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+
+// Add class to bottomContainer if chat tab is open
+const chatTab = document.getElementById("chat-tab");
+
+function addClassToBottomContainer() {
+    if (chatTab.classList.contains("active")) {
+        bottomContainer.classList.add("chat-active");
+    } else {
+        bottomContainer.classList.remove("chat-active");
+    }
+}
+
+addClassToBottomContainer();
+
+// -------------------------add message with input value-----------------------------
 
 const sendMessageForm = document.querySelector(".input-container");
+const messageContainer = document.querySelector(".message-container");
+const messageInput = document.querySelector(".input-message");
 
 sendMessageForm.addEventListener("submit", (e) => {
+    // stop auto refreshing on submit
     e.preventDefault();
+
+    // Create a new div element
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("message", "message-right");
+    newDiv.innerHTML = `<div class="img-container">
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                    alt=""
+                                />
+                            </div>
+
+                            <div class="text-container">
+                                <span class="name">You</span>
+                                <p class="text">
+                                    ${messageInput.value}
+                                </p>
+                                <span class="time">3:50 PM</span>
+                            </div>`;
+
+    // Get the first child element of the container (if any)
+    const firstChild = messageContainer.firstChild;
+
+    // Insert the new div before the first child (if any), or at the top
+    messageContainer.insertBefore(newDiv, firstChild);
+
+    // Clear input value on submit
+    messageInput.value = "";
 });
