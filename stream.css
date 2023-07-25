@@ -848,6 +848,9 @@
     .wrapper.full-width .input-message::placeholder {
         color: black;
     }
+    .wrapper.full-width .message .time {
+    color: black;
+    }
 
     .bottom-container {
         display: block;
