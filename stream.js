@@ -28,9 +28,13 @@ checkScreenSize();
 //-----------------------Update the progress bar dynamically---------------------------
 
 function updateProgressBar(collectedAmount, totalAmount) {
+    console.log(collectedAmount, totalAmount);
     const progressPercentage = (collectedAmount / totalAmount) * 100;
-    const progressBar = document.getElementById("my-progress-bar");
-    progressBar.style.width = progressPercentage + "%";
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach((progressBar) => {
+        progressBar.style.width = progressPercentage + "%";
+    });
 }
 
 let collectedAmount = 200;
@@ -61,6 +65,7 @@ moreRoomButtons.forEach((btn) => {
         moreRoomContainer.scrollIntoView({
             behavior: "smooth",
         });
+        showTab("rooms");
     });
 });
 
@@ -154,4 +159,20 @@ sendMessageForm.addEventListener("submit", (e) => {
 
     // Clear input value on submit
     messageInput.value = "";
+});
+
+// -----------------------------Close dropdown on icon-close click----------------------------
+
+const closeIcon = document.querySelectorAll(".icon-close");
+
+closeIcon.forEach((icon) => {
+    icon.addEventListener("click", () => {
+        const menuIdContainer = icon.closest(".menu-id");
+        const targetIdContainer = icon.closest(".target-id");
+
+        if (menuIdContainer) {
+            menuIdContainer.style.display = "none";
+            targetIdContainer.classList.remove("active");
+        }
+    });
 });

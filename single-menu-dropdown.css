@@ -68,3 +68,9 @@
 .menu-item.menu-item-active .menu-item-icon {
     display: flex;
 }
+
+@media (max-width: 600px) {
+    .menu-id {
+        width: 250px;
+    }
+}
