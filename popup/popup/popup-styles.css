@@ -154,6 +154,13 @@ body {
     display: flex;
     margin-top: 5rem;
     padding: 1rem;
+    position: relative;
+}
+
+.plan-carousel-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .plan {
@@ -162,14 +169,13 @@ body {
     background: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     z-index: 0;
     overflow: hidden;
@@ -177,44 +183,50 @@ body {
 
 .plus-plan {
     height: unset;
-    margin-top: -30px;
+    margin-top: -40px;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
+.plans-container-one .plus-plan {
+    margin-top: -50px;
+}
+
 .plus-plan::after {
     position: absolute;
     top: 0;
+    left: 0;
     content: "";
     width: 100%;
     height: 8px;
     background: #2ecc71;
 }
 
-.plan__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+.plans-container-one .plus-plan::after {
+    display: none;
+}
+
+.plans-container .plan__header {
+    width: calc(100% + 3rem);
+    height: 30px;
+    background: #fb5ba2;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    margin-bottom: 1rem;
 }
 
 .plans-container-two .plan__header {
-    width: calc(100% + 3rem);
     height: 100px;
     background: url(https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
-    margin-top: -1.5rem;
 }
 
 .plans-container-two .plus-plan .plan__header {
     margin-top: -1rem;
 }
 
-.plans-container-two .plan__header h1,
-.plans-container-two .plan__header span {
-    color: white;
-    text-shadow: 1px 1px 3px black;
+.plan__title {
+    font-size: 3rem !important;
 }
 
 .plan-price {
@@ -246,17 +258,56 @@ body {
     width: 100%;
 }
 
+/* carousel splide.js */
+
+.carousel-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#column-carousel-heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.splide__arrow {
+    transform: translateY(calc(-50% + 30px)) !important;
+    -webkit-transform: translateY(calc(-50% + 30px)) !important;
+    -moz-transform: translateY(calc(-50% + 30px)) !important;
+    -ms-transform: translateY(calc(-50% + 30px)) !important;
+    -o-transform: translateY(calc(-50% + 30px)) !important;
+}
+
+.splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background: #f2f2f2;
+    border: 1px solid black;
+}
+
+.splide__pagination {
+    display: none !important;
+}
+
 /* Responsive CSS */
-@media (max-width: 1190px) {
+/* @media (max-width: 1190px) {
     .plans-container {
-        flex-direction: column;
+        align-items: flex-end;
         gap: 1.5rem;
+        overflow: hidden;
     }
 
-    .plus-plan {
+    .plan {
+        min-width: calc(50% - 0.5rem);
+    }
+
+    .plus-plan,
+    .plans-container-one .plus-plan {
         margin-top: 0;
     }
-}
+} */
 
 @media screen and (max-width: 600px) {
     .GodhZ {
