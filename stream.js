@@ -134,6 +134,7 @@ sendMessageForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     // Create a new div element
+    if(messageInput.value != ''){
     const newDiv = document.createElement("div");
     newDiv.classList.add("message", "message-right");
     newDiv.innerHTML = `<div class="img-container">
@@ -159,6 +160,9 @@ sendMessageForm.addEventListener("submit", (e) => {
 
     // Clear input value on submit
     messageInput.value = "";
+    }else{
+        return;
+    }
 });
 
 // -----------------------------Close dropdown on icon-close click----------------------------
