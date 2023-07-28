@@ -290,6 +290,14 @@
         >
             Show Scroll Popup
         </button>
+        <button
+            onclick="initiate_popup({
+ 'target': '#plan-popup',
+ 'overlay_color': 'rgb(0 170 255 / 58%)'
+});"
+        >
+            Show Plan Popup
+        </button>
 
         <br />
         <br />
@@ -337,763 +345,6 @@
                         <!-- elements-container -->
 
                         <div data-simplebar class="elements-container">
-                            <!-- 3 box container -->
-
-                            <div class="plans-container">
-                                <div class="plan basic-plan">
-                                    <h1 class="plan__title">Basic</h1>
-                                    <div class="plan__pricing">
-                                        <span class="plan-price">$0.99</span>
-                                        <span>/ month</span>
-                                    </div>
-                                    <ul class="plan__feature-list">
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                    </ul>
-                                    <button class="plan__choose-btn">
-                                        Choose Plan
-                                    </button>
-                                </div>
-                                <div class="plan plus-plan">
-                                    <h1 class="plan__title">Plus</h1>
-                                    <div class="plan__pricing">
-                                        <span class="plan-price">$0.99</span>
-                                        <span>/ month</span>
-                                    </div>
-                                    <ul class="plan__feature-list">
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                    </ul>
-                                    <button class="plan__choose-btn">
-                                        Choose Plan
-                                    </button>
-                                </div>
-                                <div class="plan pro-plan">
-                                    <h1 class="plan__title">Pro</h1>
-                                    <div class="plan__pricing">
-                                        <span class="plan-price">$0.99</span>
-                                        <span>/ month</span>
-                                    </div>
-                                    <ul class="plan__feature-list">
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="plan__feature-list__icon-container"
-                                            >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <g
-                                                        id="SVGRepo_bgCarrier"
-                                                        stroke-width="0"
-                                                    ></g>
-                                                    <g
-                                                        id="SVGRepo_tracerCarrier"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path
-                                                            d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
-                                                            stroke="#000000"
-                                                            stroke-width="2.5"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <span
-                                                class="plan__feature-list__text"
-                                                >Dashboard</span
-                                            >
-                                        </li>
-                                    </ul>
-                                    <button class="plan__choose-btn">
-                                        Choose Plan
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- form -->
-
                             <form
                                 method="post"
                                 action=""
@@ -1487,6 +738,1510 @@
                                 </tr>
                             </table>
                         </div>
+                        <button class="AYaOY">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------- plan-popup --------------->
+
+        <div class="DuKSh EJVsl OtrSK cNGwx" id="plan-popup">
+            <!-- wrapper -->
+            <div class="GodhZ gsCWf EJVsl OtrSK CzomY">
+                <!-- container -->
+                <div class="ExGby HruDj">
+                    <!-- header -->
+                    <div class="tSrNa gsCWf EJVsl zsSLy">
+                        <h1 class="USKIn">Scroll!</h1>
+
+                        <!-- buttons -->
+                        <div class="wcrwV gsCWf EJVsl">
+                            <div
+                                class="AYaOY TNIio UYvZu gsCWf EJVsl OtrSK DeYlt"
+                            >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g>
+                                        <path
+                                            d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16"
+                                            stroke="#000000"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- main-section -->
+                    <div class="TImJU">
+                        <!-- version 1 -->
+                        <div class="plans-container">
+                            <div class="plan basic-plan">
+                                <h1 class="plan__title">Basic</h1>
+                                <div class="plan__pricing">
+                                    <span class="plan-price">$0.99</span>
+                                    <span>/ month</span>
+                                </div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                            <div class="plan plus-plan">
+                                <h1 class="plan__title">Plus</h1>
+                                <div class="plan__pricing">
+                                    <span class="plan-price">$0.99</span>
+                                    <span>/ month</span>
+                                </div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                            <div class="plan pro-plan">
+                                <h1 class="plan__title">Pro</h1>
+                                <div class="plan__pricing">
+                                    <span class="plan-price">$0.99</span>
+                                    <span>/ month</span>
+                                </div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <!-- version 2 -->
+                        <div class="plans-container plans-container-two">
+                            <div class="plan basic-plan">
+                                <div class="plan__header tRLtc"></div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                            <div class="plan plus-plan">
+                                <div class="plan__header tRLtc"></div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                            <div class="plan pro-plan">
+                                <div class="plan__header tRLtc"></div>
+                                <ul class="plan__feature-list">
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="plan__feature-list__icon-container"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g
+                                                    id="SVGRepo_bgCarrier"
+                                                    stroke-width="0"
+                                                ></g>
+                                                <g
+                                                    id="SVGRepo_tracerCarrier"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"
+                                                        stroke="#000000"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span class="plan__feature-list__text"
+                                            >Dashboard</span
+                                        >
+                                    </li>
+                                </ul>
+                                <button class="plan__choose-btn">
+                                    Choose Plan
+                                </button>
+                            </div>
+                        </div>
+
                         <button class="AYaOY">OK</button>
                     </div>
                 </div>
