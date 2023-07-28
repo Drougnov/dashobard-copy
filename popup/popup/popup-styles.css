@@ -197,14 +197,28 @@ body {
 }
 
 .plan__header {
-    width: calc(100% + 3rem);
-    height: 100px;
-    margin-top: -1.5rem;
-    background: url(https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-.plus-plan .plan__header {
+.plans-container-two .plan__header {
+    width: calc(100% + 3rem);
+    height: 100px;
+    background: url(https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    margin-top: -1.5rem;
+}
+
+.plans-container-two .plus-plan .plan__header {
     margin-top: -1rem;
+}
+
+.plans-container-two .plan__header h1,
+.plans-container-two .plan__header span {
+    color: white;
+    text-shadow: 1px 1px 3px black;
 }
 
 .plan__feature-list {
