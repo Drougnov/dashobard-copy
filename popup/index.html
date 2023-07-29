@@ -301,7 +301,7 @@
             onclick="initiate_popup({
  'target': '#plan-popup',
  'overlay_color': 'rgb(0 170 255 / 58%)'
-});"
+});initiateSplideElements()"
         >
             Show Plan Popup
         </button>
@@ -2878,56 +2878,48 @@
                         document.querySelector(".emoji-input").value += emoji;
                     }
                 );
+                initiateSplideElements();
             });
 
             //initiate splide.js
-            new Splide(".column-carousel", {
-                type: "loop",
-                perMove: 1,
-                gap: "1rem",
-                mediaQuery: "min",
-                destroy: false,
-                perPage: 1,
-                breakpoints: {
-                    800: {
-                        perPage: 2,
-                    },
-                    1200: {
-                        perPage: 3,
-                    },
-                },
-            }).mount();
+            function initiateSplideElements() {
+                var elms = document.getElementsByClassName("plans-container");
 
-            new Splide(".plans-container-one", {
-                perMove: 1,
-                gap: "1.5rem",
-                mediaQuery: "min",
-                destroy: false,
-                perPage: 1,
-                breakpoints: {
-                    800: {
-                        perPage: 2,
-                    },
-                    1200: {
-                        perPage: 3,
-                    },
-                },
-            }).mount();
+                for (var i = 0; i < elms.length; i++) {
+                    new Splide(elms[i], {
+                        perMove: 1,
+                        gap: "1.5rem",
+                        mediaQuery: "min",
+                        destroy: false,
+                        perPage: 1,
+                        breakpoints: {
+                            800: {
+                                perPage: 2,
+                            },
+                            1200: {
+                                perPage: 3,
+                            },
+                        },
+                    }).mount();
+                }
 
-            new Splide(".plans-container-two", {
-                perMove: 1,
-                gap: "1rem",
-                mediaQuery: "min",
-                perPage: 1,
-                breakpoints: {
-                    800: {
-                        perPage: 2,
+                new Splide(".column-carousel", {
+                    type: "loop",
+                    perMove: 1,
+                    gap: "1rem",
+                    mediaQuery: "min",
+                    destroy: false,
+                    perPage: 1,
+                    breakpoints: {
+                        800: {
+                            perPage: 2,
+                        },
+                        1200: {
+                            perPage: 3,
+                        },
                     },
-                    1200: {
-                        perPage: 3,
-                    },
-                },
-            }).mount();
+                }).mount();
+            }
         </script>
     </body>
 </html>
