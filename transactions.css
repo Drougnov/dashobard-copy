@@ -6,6 +6,7 @@
 
 .wrapper {
     background: #f4f4f4;
+    padding: 40px;
 }
 
 /* header */
@@ -31,6 +32,10 @@
     display: block;
     padding: 0 32px 0 64px;
     color: #1a1d1f;
+}
+
+.income__item:first-child {
+    padding-left: 0;
 }
 
 .income__item:not(:first-child) {
@@ -62,6 +67,7 @@
 }
 
 .income__counter {
+    min-width: 238px;
     font-size: 48px;
     font-weight: 600;
     line-height: 1;
