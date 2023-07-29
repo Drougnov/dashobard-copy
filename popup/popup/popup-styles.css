@@ -234,9 +234,13 @@ body {
     font-size: 3rem !important;
 }
 
-.plan-price {
+.plan__price {
     font-size: 20px;
     font-weight: 700;
+}
+
+.plan__text {
+    margin-bottom: 0 !important;
 }
 
 .plan__feature-list {
@@ -244,8 +248,6 @@ body {
     flex-direction: column;
     gap: 0.75rem;
     list-style-type: none;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .plan__feature-list li {
@@ -265,17 +267,13 @@ body {
 
 /* splide js style override(plan-carousel) */
 
-.plan-carousel-wrapper.splide__list {
-    margin-left: 4px !important;
-}
-
-.plans-container.splide.is-initialized:not(.is-active) .splide__list {
-    display: flex !important;
-    padding: 40px 8px 8px 8px !important;
+.splide__track {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
 }
 
 .plans-container.splide.is-active .splide__list {
-    padding: 40px 0 8px 8px !important;
+    padding: 40px 0 8px 0 !important;
 }
 
 .splide__arrow {
@@ -284,6 +282,18 @@ body {
     -moz-transform: translateY(calc(-50% + 30px)) !important;
     -ms-transform: translateY(calc(-50% + 30px)) !important;
     -o-transform: translateY(calc(-50% + 30px)) !important;
+}
+
+.splide__arrow:disabled {
+    opacity: 0 !important;
+}
+
+.splide__arrow--prev {
+    left: -1rem !important;
+}
+
+.splide__arrow--next {
+    right: -1rem !important;
 }
 
 .splide__pagination {
@@ -312,16 +322,6 @@ body {
 }
 
 /* Responsive CSS */
-@media (min-width: 1200px) {
-    .plans-container .splide__slide {
-        flex-shrink: unset !important;
-    }
-
-    .plan-carousel-wrapper.splide__list {
-        margin-left: 0 !important;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .GodhZ {
         padding: 50px;
