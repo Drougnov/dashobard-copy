@@ -268,8 +268,8 @@ body {
 /* splide js style override(plan-carousel) */
 
 .splide__track {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 .plans-container.splide.is-active .splide__list {
