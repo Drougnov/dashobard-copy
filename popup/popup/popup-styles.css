@@ -150,17 +150,18 @@ body {
 }
 
 .plans-container {
-    width: 100%;
-    display: flex;
     margin-top: 5rem;
-    padding: 1rem;
     position: relative;
 }
 
-.plan-carousel-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+.plan-carousel-btn-container {
+    display: none;
+}
+
+.plan-carousel-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .plan {
@@ -183,14 +184,15 @@ body {
 
 .plus-plan {
     height: unset;
-    margin-top: -40px;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-.plans-container-one .plus-plan {
-    margin-top: -50px;
+/* extra height to plus plans */
+
+.plans-container-two .plus-plan {
+    padding-bottom: 50px;
 }
 
 .plus-plan::after {
@@ -219,6 +221,9 @@ body {
 .plans-container-two .plan__header {
     height: 100px;
     background: url(https://images.unsplash.com/photo-1512386233331-f023884a92e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .plans-container-two .plus-plan .plan__header {
@@ -258,7 +263,34 @@ body {
     width: 100%;
 }
 
-/* carousel splide.js */
+/* splide js style override(plan-carousel) */
+
+.plan-carousel-wrapper.splide__list {
+    margin-left: 4px !important;
+}
+
+.plans-container.splide.is-initialized:not(.is-active) .splide__list {
+    display: flex !important;
+    padding: 40px 8px 8px 8px !important;
+}
+
+.plans-container.splide.is-active .splide__list {
+    padding: 40px 0 8px 8px !important;
+}
+
+.splide__arrow {
+    transform: translateY(calc(-50% + 30px)) !important;
+    -webkit-transform: translateY(calc(-50% + 30px)) !important;
+    -moz-transform: translateY(calc(-50% + 30px)) !important;
+    -ms-transform: translateY(calc(-50% + 30px)) !important;
+    -o-transform: translateY(calc(-50% + 30px)) !important;
+}
+
+.splide__pagination {
+    display: none !important;
+}
+
+/* column carousel */
 
 .carousel-wrapper {
     margin-top: 5rem;
@@ -270,15 +302,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.splide__arrow {
-    transform: translateY(calc(-50% + 30px)) !important;
-    -webkit-transform: translateY(calc(-50% + 30px)) !important;
-    -moz-transform: translateY(calc(-50% + 30px)) !important;
-    -ms-transform: translateY(calc(-50% + 30px)) !important;
-    -o-transform: translateY(calc(-50% + 30px)) !important;
-}
-
-.splide__slide {
+.carousel-wrapper .splide__slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,27 +311,16 @@ body {
     border: 1px solid black;
 }
 
-.splide__pagination {
-    display: none !important;
-}
-
 /* Responsive CSS */
-/* @media (max-width: 1190px) {
-    .plans-container {
-        align-items: flex-end;
-        gap: 1.5rem;
-        overflow: hidden;
+@media (min-width: 1200px) {
+    .plans-container .splide__slide {
+        flex-shrink: unset !important;
     }
 
-    .plan {
-        min-width: calc(50% - 0.5rem);
+    .plan-carousel-wrapper.splide__list {
+        margin-left: 0 !important;
     }
-
-    .plus-plan,
-    .plans-container-one .plus-plan {
-        margin-top: 0;
-    }
-} */
+}
 
 @media screen and (max-width: 600px) {
     .GodhZ {
