@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css"
+        />
+        <link rel="stylesheet" href="transactions.css" />
+
+        <!-- jquery cdn -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- nice-select style and script -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+            integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+            integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script>
+            $(document).ready(function () {
+                $("select").niceSelect();
+            });
+        </script>
+        <title>Transactions</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="income__list">
+                    <div class="income__item">
+                        <div class="income__label">
+                            Funds
+                            <div class="tooltip">
+                                <svg
+                                    class="icon-info"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g
+                                        id="SVGRepo_bgCarrier"
+                                        stroke-width="0"
+                                    ></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8ZM13 17V11H11V17H13Z"
+                                            fill="#6F767E"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="income__counter">$128,789</div>
+                    </div>
+
+                    <div class="income__item">
+                        <div class="income__label">
+                            Earning
+                            <div class="tooltip">
+                                <svg
+                                    class="icon-info"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g
+                                        id="SVGRepo_bgCarrier"
+                                        stroke-width="0"
+                                    ></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8ZM13 17V11H11V17H13Z"
+                                            fill="#6F767E"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="income__counter">$128,789</div>
+                    </div>
+
+                    <div class="income__item">
+                        <div class="income__label">
+                            Fees
+                            <div class="tooltip">
+                                <svg
+                                    class="icon-info"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g
+                                        id="SVGRepo_bgCarrier"
+                                        stroke-width="0"
+                                    ></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8ZM13 17V11H11V17H13Z"
+                                            fill="#6F767E"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="income__counter">$338.98</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="main__head">
+                    <div class="main__title">Transactions</div>
+                    <select class="select" style="display: none">
+                        <option>Last 30 days</option>
+                        <option>This month</option>
+                        <option>All time</option>
+                    </select>
+                    <div class="nice-select select" tabindex="0">
+                        <span class="current">Last 30 days</span>
+                        <ul class="list">
+                            <li
+                                data-value="Last 30 days"
+                                class="option selected"
+                            >
+                                Last 30 days
+                            </li>
+                            <li data-value="This month" class="option">
+                                This month
+                            </li>
+                            <li data-value="All time" class="option">
+                                All time
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="main__button">Download SCV</button>
+                </div>
+
+                <div class="transactions__wrapper">
+                    <div class="transactions__table">
+                        <div class="transactions__row">
+                            <div class="transactions__col">Date</div>
+                            <div class="transactions__col">Type</div>
+                            <div class="transactions__col">Detail</div>
+                            <div class="transactions__col">Price</div>
+                            <div class="transactions__col">Amount</div>
+                        </div>
+
+                        <div class="transactions__row">
+                            <div class="transactions__col">14 Oct 2021</div>
+                            <div class="transactions__col">
+                                <div
+                                    class="transactions__status status-green-dark"
+                                >
+                                    Sale
+                                </div>
+                            </div>
+                            <div class="transactions__col">
+                                <div class="transactions__product">
+                                    Fleet - Travel shopping UI Design kit
+                                </div>
+                                <div class="transactions__invoice">
+                                    Invoice: UI8-8934AS
+                                </div>
+                            </div>
+                            <div class="transactions__col">$98.00</div>
+                            <div class="transactions__col">
+                                <div class="transactions__amount">+$88.20</div>
+                            </div>
+                        </div>
+
+                        <div class="transactions__row">
+                            <div class="transactions__col">14 Oct 2021</div>
+                            <div class="transactions__col">
+                                <div
+                                    class="transactions__status status-green-dark"
+                                >
+                                    Sale
+                                </div>
+                            </div>
+                            <div class="transactions__col">
+                                <div class="transactions__product">
+                                    Fleet - Travel shopping UI Design kit
+                                </div>
+                                <div class="transactions__invoice">
+                                    Invoice: UI8-8934AS
+                                </div>
+                            </div>
+                            <div class="transactions__col">$123.00</div>
+                            <div class="transactions__col">
+                                <div class="transactions__amount">+$88.20</div>
+                            </div>
+                        </div>
+
+                        <div class="transactions__row">
+                            <div class="transactions__col">14 Oct 2021</div>
+                            <div class="transactions__col">
+                                <div
+                                    class="transactions__status status-red-dark"
+                                >
+                                    Author fee
+                                </div>
+                            </div>
+                            <div class="transactions__col">
+                                <div class="transactions__product">
+                                    Fleet - Travel shopping UI Design kit
+                                </div>
+                                <div class="transactions__invoice">
+                                    Invoice: UI8-8934AS
+                                </div>
+                            </div>
+                            <div class="transactions__col">$123.00</div>
+                            <div class="transactions__col">
+                                <div
+                                    class="transactions__amount transactions__amount_negative"
+                                >
+                                    -$9.80
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

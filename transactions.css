@@ -1,0 +1,299 @@
+:root {
+    --container-background-white: #fcfcfc;
+    --text-color-black: #1a1d1f;
+    --text-color-gray: #6f767e;
+}
+
+.wrapper {
+    background: #f4f4f4;
+}
+
+/* header */
+
+.header {
+    background: var(--container-background-white);
+    margin-bottom: 8px;
+    padding: 24px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    position: relative;
+}
+
+.income__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.income__label {
+    color: var(--text-color-gray);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.23077;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.tooltip {
+    display: inline-block;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.tooltip .icon-info {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.income__counter {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.03rem;
+}
+
+/* main */
+
+.main {
+    background: var(--container-background-white);
+    padding: 24px;
+    position: relative;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.main__head {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.main__title {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.02rem;
+    padding-left: 32px;
+    margin-right: auto;
+    position: relative;
+}
+
+.main__title::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 32px;
+    background: #b1e5fc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+/* nice-select */
+
+.select {
+    width: 140px !important;
+    height: 40px !important;
+    background: none;
+    padding: 0 40px 0 16px;
+    border: none !important;
+    border-radius: 12px !important;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    -ms-border-radius: 12px !important;
+    -o-border-radius: 12px !important;
+    float: none !important;
+    opacity: 1;
+    box-shadow: inset 0 0 0 2px #efefef;
+}
+
+.select:hover {
+    box-shadow: inset 0 0 0 2px #9a9fa5;
+}
+
+.select span {
+    color: var(--text-color-black);
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 40px !important;
+}
+
+.select::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12.707 15.707l-.094.083a1 1 0 0 1-1.32-.083h0l-6-6-.083-.094a1 1 0 0 1 1.497-1.32h0L12 13.585l5.293-5.292.094-.083a1 1 0 0 1 1.32 1.497h0l-6 6z' fill='%236f767e'/%3E%3C/svg%3E")
+        no-repeat 50% 50%/24px auto;
+    background-size: 16px auto;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.select.open::before {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.select::after {
+    display: none !important;
+}
+
+.select .option {
+    min-height: auto !important;
+    color: var(--text-color-gray) !important;
+    font-size: 14px;
+    font-weight: 600 !important;
+    line-height: 1.71429 !important;
+    padding: 4px 16px;
+}
+
+.select .option.focus {
+    color: var(--text-color-black) !important;
+}
+
+.select .option.selected {
+    color: #2a85ff !important;
+}
+
+.main__button {
+    height: 40px;
+    color: var(--container-background-white);
+    background: #2a85ff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 0 16px;
+    margin-left: 16px;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+/* table */
+
+.transactions__wrapper {
+    background: var(--container-background-white);
+    margin: 0 -24px;
+}
+
+.transactions__table {
+    width: 100%;
+    display: table;
+}
+
+.transactions__row {
+    display: table-row;
+}
+
+.transactions__col {
+    display: table-cell;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71429;
+    padding: 10px 16px;
+}
+
+.transactions__col:first-child {
+    padding-left: 24px;
+}
+
+.transactions__row:first-child .transactions__col {
+    color: var(--text-color-gray);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33333;
+    padding-bottom: 16px;
+    padding-top: 8px;
+}
+
+.transactions__row:nth-child(2n) .transactions__col {
+    background: rgba(239, 239, 239, 0.35);
+}
+
+.transactions__col:last-child {
+    padding-right: 24px;
+}
+
+/* type */
+
+.transactions__status {
+    color: var(--text-color-black);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.status-green-dark {
+    background: #b5e4ca;
+}
+
+.status-red-dark {
+    background: #ffbc99;
+}
+
+/* detail */
+
+.transactions__product {
+    color: #33383f;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71429;
+}
+
+.transactions__invoice {
+    color: var(--text-color-gray);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33333;
+    margin-top: 4px;
+}
+
+/* amount */
+
+.transactions__amount {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71429;
+}
+
+.transactions__amount_negative {
+    color: #ff6a55;
+}
