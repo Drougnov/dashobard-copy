@@ -144,13 +144,18 @@ body {
     text-align: center;
 }
 
+#plan-popup .GodhZ {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 #plan-popup .ExGby {
     width: 100%;
     max-width: 1200px;
 }
 
 .plans-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
     position: relative;
 }
 
