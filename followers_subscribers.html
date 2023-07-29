@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <title>Followers & Subscribers</title>
+        <style>
+            .chart-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+            }
+            .chart {
+                width: 100%;
+                max-width: 650px;
+            }
+
+            @media (max-width: 800px) {
+                .chart-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chart-container">
+            <div class="chart" id="followers-chart"></div>
+            <div class="chart" id="subscribers-chart"></div>
+        </div>
+        <script>
+            // follwers-chart
+            var followersOptions = {
+                series: [
+                    {
+                        name: "Followers",
+                        data: [
+                            100, 150, 100, 300, 200, 100, 150, 250, 300, 200,
+                            100, 400,
+                        ],
+                    },
+                ],
+                chart: {
+                    height: 350,
+                    type: "line",
+                    zoom: {
+                        enabled: false,
+                    },
+                },
+                dataLabels: {
+                    enabled: false,
+                },
+                stroke: {
+                    curve: "straight",
+                },
+                title: {
+                    text: "Followers by Month",
+                    align: "left",
+                },
+                grid: {
+                    row: {
+                        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+                        opacity: 0.5,
+                    },
+                },
+                xaxis: {
+                    categories: [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec",
+                    ],
+                },
+            };
+
+            var followersChart = new ApexCharts(
+                document.querySelector("#followers-chart"),
+                followersOptions
+            );
+            followersChart.render();
+
+            // subscriber-chart
+            var subscribersOptions = {
+                series: [
+                    {
+                        name: "Subscribers",
+                        data: [
+                            100, 150, 100, 300, 200, 100, 150, 250, 300, 200,
+                            100, 400,
+                        ],
+                    },
+                ],
+                chart: {
+                    height: 350,
+                    type: "line",
+                    zoom: {
+                        enabled: false,
+                    },
+                },
+                dataLabels: {
+                    enabled: false,
+                },
+                stroke: {
+                    curve: "straight",
+                },
+                title: {
+                    text: "Subscribers by Month",
+                    align: "left",
+                },
+                grid: {
+                    row: {
+                        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+                        opacity: 0.5,
+                    },
+                },
+                xaxis: {
+                    categories: [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec",
+                    ],
+                },
+            };
+
+            var subscribersChart = new ApexCharts(
+                document.querySelector("#subscribers-chart"),
+                subscribersOptions
+            );
+            subscribersChart.render();
+        </script>
+    </body>
+</html>
