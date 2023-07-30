@@ -22,13 +22,11 @@ function checkScreenSize() {
 }
 
 // Call function initially and on screen resize
-window.addEventListener("resize", checkScreenSize);
 checkScreenSize();
 
 //-----------------------Update the progress bar dynamically---------------------------
 
 function updateProgressBar(collectedAmount, totalAmount) {
-    console.log(collectedAmount, totalAmount);
     const progressPercentage = (collectedAmount / totalAmount) * 100;
     const progressBars = document.querySelectorAll(".progress-bar");
 
@@ -48,8 +46,6 @@ updateProgressBar(collectedAmount, totalAmount);
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
-singleMenu("target_id3", "menu_id3", false);
-singleMenu("target_id4", "menu_id4", false);
 
 // ---------------------Scroll to more room section on button click--------------------
 
@@ -59,7 +55,6 @@ const bioContainer = document.querySelector(".bio-container");
 
 moreRoomButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-        console.log("clicked");
         moreRoomContainer.style.display = "block";
         bioContainer.style.display = "none";
         moreRoomContainer.scrollIntoView({
@@ -134,10 +129,10 @@ sendMessageForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     // Create a new div element
-    if(messageInput.value != ''){
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("message", "message-right");
-    newDiv.innerHTML = `<div class="img-container">
+    if (messageInput.value != "") {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("message", "message-right");
+        newDiv.innerHTML = `<div class="img-container">
                                 <img
                                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                                     alt=""
@@ -152,15 +147,15 @@ sendMessageForm.addEventListener("submit", (e) => {
                                 <span class="time">3:50 PM</span>
                             </div>`;
 
-    // Get the first child element of the container (if any)
-    const firstChild = messageContainer.firstChild;
+        // Get the first child element of the container (if any)
+        const firstChild = messageContainer.firstChild;
 
-    // Insert the new div before the first child (if any), or at the top
-    messageContainer.insertBefore(newDiv, firstChild);
+        // Insert the new div before the first child (if any), or at the top
+        messageContainer.insertBefore(newDiv, firstChild);
 
-    // Clear input value on submit
-    messageInput.value = "";
-    }else{
+        // Clear input value on submit
+        messageInput.value = "";
+    } else {
         return;
     }
 });
@@ -179,4 +174,63 @@ closeIcon.forEach((icon) => {
             targetIdContainer.classList.remove("active");
         }
     });
+});
+
+// -------------------move purple container based on screen size-------------------------
+
+// Function to move elements inside the left container
+function moveElementsToContainer() {
+    const leftContainer = document.querySelector(".left-container");
+    const purpleContainer = document.querySelector(".purple-container");
+    const tabButtonContainer = document.querySelector(".tab-button-container");
+
+    leftContainer.appendChild(purpleContainer);
+    leftContainer.appendChild(tabButtonContainer);
+}
+
+// Function to move elements back to their original position
+function moveElementsBack() {
+    const bottomContainer = document.querySelector(".bottom-container");
+    const purpleContainer = document.querySelector(".purple-container");
+    const tabButtonContainer = document.querySelector(".tab-button-container");
+
+    bottomContainer.insertBefore(
+        tabButtonContainer,
+        bottomContainer.firstChild
+    );
+    bottomContainer.insertBefore(purpleContainer, bottomContainer.firstChild);
+}
+
+// Function to check if the viewport width is 1000px and move the elements if required
+function checkViewportWidth() {
+    if (window.innerWidth <= 1000) {
+        moveElementsToContainer();
+    } else {
+        moveElementsBack();
+    }
+}
+
+// Add event listener to check the viewport width on window resize
+window.addEventListener("resize", () => {
+    checkScreenSize();
+    checkViewportWidth();
+});
+
+// Initial check when the page loads
+checkViewportWidth();
+
+// ----------------------handle chatbox button click------------------------------------------
+
+// Function to toggle the "active" class on the buttons
+function toggleActiveClass() {
+    const buttons = document.querySelectorAll(".chatbox-button");
+
+    buttons.forEach((button) => {
+        button.classList.toggle("active");
+    });
+}
+
+// Add event listener to each button for the click event
+document.querySelectorAll(".chatbox-button").forEach((button) => {
+    button.addEventListener("click", toggleActiveClass);
 });
