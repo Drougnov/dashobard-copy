@@ -322,3 +322,25 @@ main#content {
         padding-bottom: calc(25px / 2) !important;
     }
 }
+
+@media (max-width: 767px) {
+    .woocommerce-cart-form__cart-item {
+        margin-bottom: 0;
+    }
+
+    .woocommerce-cart-form .product-thumbnail {
+        display: block !important;
+    }
+
+    .woocommerce-cart-form .product-thumbnail img {
+        width: 70px !important;
+    }
+
+    .woocommerce-cart-form .shop_table td {
+        padding-right: 0 !important;
+    }
+
+    .woocommerce-cart-form .input-text.qty {
+        text-align: right;
+    }
+}
