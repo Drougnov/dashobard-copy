@@ -1,6 +1,93 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+input,
+button,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-family: "Poppins", sans-serif !important;
+}
+
 .wrapper {
     background: #f2f2f2;
 }
+
 .top-container {
     height: 100vh;
     display: flex;
@@ -112,12 +199,18 @@
 
 .message-navbar__left {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: baseline;
+    gap: 0.25rem;
 }
-.message-navbar__left span {
-    font-weight: 600;
+.message-navbar__left-heading {
+    font-size: 20px;
+    font-weight: 700;
 }
+.message-navbar__viewers-count {
+    font-size: 12px;
+    color: #808080;
+}
+
 .message-navbar .icon-container {
     background: transparent;
 }
@@ -130,24 +223,29 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .wrapper.full-width .chatbox-button-container {
-    padding-top: 1rem;
     background: transparent;
 }
 
 .chatbox-button {
     width: 100%;
     font-weight: 600;
-    padding: 8px 32px !important;
+    padding: 14px 32px !important;
+    border: none;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
 }
 .chatbox-button.active {
-    color: black !important;
-    background: white !important;
-    border: none;
+    color: black;
+    background: white;
 }
 
 /* ----------message-container--------- */
@@ -330,7 +428,7 @@
     background: white;
     display: flex;
     align-items: center;
-    padding-left: 0.25rem;
+    padding-left: 0.5rem;
     padding-right: 6.5rem;
     margin-top: 1.5rem;
     border-radius: 2rem !important;
@@ -345,9 +443,9 @@
 }
 
 .input-container .img-container {
-    width: 60px;
-    min-width: 60px;
-    height: 60px;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -793,6 +891,11 @@
     }
     .wrapper.full-width .chatbox-container {
         min-height: unset;
+    }
+
+    .wrapper.full-width .message-container {
+        padding-top: 50px;
+        --top-mask-size: 50px;
     }
 
     .message .img-container {
