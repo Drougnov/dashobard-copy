@@ -136,11 +136,11 @@ sendMessageForm.addEventListener("submit", (e) => {
                             </div>
 
                             <div class="text-container">
-                                <span class="name">You</span>
-                                <p class="text">
-                                    ${messageInput.value}
-                                </p>
-                                <span class="time">3:50 PM</span>
+                                <div class="message-info">
+                                    <span class="name">Alicia Padlock</span>
+                                    <span class="time">3:50 PM</span>
+                                </div>
+                                <p class="text">${messageInput.value}</p>
                             </div>`;
 
         // Get the first child element of the container (if any)
