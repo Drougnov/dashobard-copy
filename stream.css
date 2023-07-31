@@ -266,7 +266,6 @@ video {
 }
 .wrapper.full-width .message-container {
     height: auto;
-    padding-top: 100px; /* keep the padding-top value and --top-mask-size same */
     -webkit-mask-image: linear-gradient(
         to bottom,
         transparent 0,
@@ -924,7 +923,6 @@ video {
     }
 
     .wrapper.full-width .message-container {
-        padding-top: 50px;
         --top-mask-size: 50px;
     }
 

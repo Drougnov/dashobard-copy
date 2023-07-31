@@ -162,6 +162,55 @@ sendMessageForm.addEventListener("submit", (e) => {
     }
 });
 
+// --------------------hide mask image if last message is visible--------------------
+
+// Function to check if the last element is visible within the container
+function isLastElementVisible() {
+    const lastMessage = messageContainer.lastElementChild;
+    if (!lastMessage) return false; // If there are no child elements, it's not visible
+
+    const containerRect = messageContainer.getBoundingClientRect();
+    const lastMessageRect = lastMessage.getBoundingClientRect();
+
+    return (
+        lastMessageRect.top >= containerRect.top &&
+        lastMessageRect.bottom <= containerRect.bottom
+    );
+}
+
+// Function to handle visibility changes of the last message
+function handleLastMessageVisibility() {
+    if (wrapper.classList.contains("full-width")) {
+        if (isLastElementVisible()) {
+            // The last element is fully visible
+            messageContainer.style.webkitMaskImage = "none";
+            messageContainer.style.maskImage = "none";
+        } else {
+            // The last element is not fully visible
+            messageContainer.style.webkitMaskImage = `linear-gradient(
+                to bottom,
+                transparent 0,
+                black var(--top-mask-size, 0px),
+                black calc(100% - var(--bottom-mask-size, 0px)),
+                transparent 100%
+            )`;
+            messageContainer.style.maskImage = `linear-gradient(
+                to bottom,
+                transparent 0,
+                black var(--top-mask-size, 0px),
+                black calc(100% - var(--bottom-mask-size, 0px)),
+                transparent 100%
+            )`;
+        }
+    }
+}
+
+// Check initial visibility of the last message
+handleLastMessageVisibility();
+
+// Listen for scroll events on the message container
+messageContainer.addEventListener("scroll", handleLastMessageVisibility);
+
 // -----------------------------Close dropdown on icon-close click----------------------------
 
 const closeIcon = document.querySelectorAll(".icon-close");
