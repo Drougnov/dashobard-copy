@@ -326,6 +326,8 @@ video {
 }
 
 .text-container {
+    display: flex;
+    flex-direction: column;
     width: max-content;
 }
 .message-right .text-container {
@@ -369,6 +371,7 @@ video {
     -o-border-radius: 0 15px 15px 15px;
 }
 .message-right .text {
+    margin-left: auto;
     border-radius: 15px 0 15px 15px;
     -webkit-border-radius: 15px 0 15px 15px;
     -moz-border-radius: 15px 0 15px 15px;
@@ -539,22 +542,38 @@ video {
 
 /* bottom-container */
 .bottom-container {
+    background: white;
     padding: 1rem;
     position: relative;
 }
 
 /* tab-button-container */
 .tab-button-container {
-    display: none;
     width: 100%;
+    background: white;
+    display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: 0.5rem;
+    padding: 1rem 0;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 .tab-button-container::-webkit-scrollbar {
+    display: none;
+}
+.tab-button {
+    color: black;
+    background: transparent;
+    border: none;
+}
+.tab-button:hover {
+    background: #efefef;
+}
+.tab-button.active {
+    background: #d9d9d9;
+}
+#chat-btn {
     display: none;
 }
 
@@ -564,7 +583,7 @@ video {
     background: #fb5ba2;
     width: calc(100% + 2rem);
     height: max-content;
-    padding: 1rem;
+    padding: 3rem 5rem;
     margin-top: -1rem;
     margin-left: -1rem;
 }
@@ -844,8 +863,15 @@ video {
     width: var(--progress-percentage);
 }
 
-.more-room {
+/* tab container */
+
+#bio-tab,
+#rooms-tab {
     display: none;
+}
+#bio-tab.active,
+#rooms-tab.active {
+    display: block;
 }
 
 /* ------------------------------mobile chatbox holder------------------------------- */
@@ -947,12 +973,12 @@ video {
         display: block;
     }
 
-    .wrapper.full-width .tab-button-container {
-        display: flex;
-    }
     .tab-button {
         white-space: nowrap;
         cursor: pointer;
+    }
+    #chat-btn {
+        display: block;
     }
     .tab-button.active {
         color: var(--button-hover-text-color);
@@ -985,9 +1011,8 @@ video {
         color: black;
     }
     .wrapper.full-width .message-container {
-        padding-top: unset;
-        -webkit-mask-image: none;
-        mask-image: none;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
     }
     .wrapper.full-width .input-message {
         color: black !important;
@@ -1022,6 +1047,10 @@ video {
 
     .mobile-chatbox .input-container {
         margin-top: 0;
+    }
+
+    .tab-button-container {
+        padding: 1rem;
     }
 }
 
