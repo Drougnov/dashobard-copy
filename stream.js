@@ -37,31 +37,27 @@ function updateProgressBar(collectedAmount, totalAmount) {
 
 let collectedAmount = 200;
 let totalAmount = 2000;
-
-document.querySelector(".goal-reached").textContent = collectedAmount;
-document.querySelector(".goal-amount").textContent = totalAmount;
 updateProgressBar(collectedAmount, totalAmount);
 
 //-------------------------Initialize single menu dropdown-----------------------------
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
+singleMenu("target_id3", "menu_id3", false);
 
 // ---------------------Scroll to more room section on button click--------------------
 
 const moreRoomContainer = document.querySelector(".more-room");
-const moreRoomButtons = document.querySelectorAll(".more-room-btn");
+const moreRoomButton = document.querySelector(".room-card__more-room-btn");
 const bioContainer = document.querySelector(".bio-container");
 
-moreRoomButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        moreRoomContainer.style.display = "block";
-        bioContainer.style.display = "none";
-        moreRoomContainer.scrollIntoView({
-            behavior: "smooth",
-        });
-        showTab("rooms");
+moreRoomButton.addEventListener("click", () => {
+    moreRoomContainer.style.display = "block";
+    bioContainer.style.display = "none";
+    moreRoomContainer.scrollIntoView({
+        behavior: "smooth",
     });
+    showTab("rooms");
 });
 
 // -----------------------------------tab section--------------------------------------
@@ -155,6 +151,12 @@ sendMessageForm.addEventListener("submit", (e) => {
 
         // Clear input value on submit
         messageInput.value = "";
+
+        // Auto-scroll to the new message
+        messageContainer.scrollTo({
+            top: messageContainer.scrollHeight,
+            behavior: "smooth",
+        });
     } else {
         return;
     }
@@ -222,15 +224,22 @@ checkViewportWidth();
 // ----------------------handle chatbox button click------------------------------------------
 
 // Function to toggle the "active" class on the buttons
-function toggleActiveClass() {
-    const buttons = document.querySelectorAll(".chatbox-button");
 
-    buttons.forEach((button) => {
-        button.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+    var toggleButton = document.getElementById("toggleButton");
+    const creditText = document.querySelector(".chatbox-button__credit");
+
+    toggleButton.addEventListener("click", function () {
+        var buttonText =
+            toggleButton.querySelector("span:first-child").textContent;
+        if (buttonText === "Go Private") {
+            toggleButton.querySelector("span:first-child").textContent =
+                "Go Public";
+            creditText.style.display = "none";
+        } else {
+            toggleButton.querySelector("span:first-child").textContent =
+                "Go Private";
+            creditText.style.display = "block";
+        }
     });
-}
-
-// Add event listener to each button for the click event
-document.querySelectorAll(".chatbox-button").forEach((button) => {
-    button.addEventListener("click", toggleActiveClass);
 });

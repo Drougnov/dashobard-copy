@@ -174,10 +174,12 @@
 
                         <!-- chatbox-button-container -->
                         <div class="chatbox-button-container">
-                            <button class="chatbox-button active">
-                                Public
+                            <button class="chatbox-button" id="toggleButton">
+                                <span>Go Private</span>
+                                <span class="chatbox-button__credit"
+                                    >150 Tokens Credit | 10 Tokens / 30ses</span
+                                >
                             </button>
-                            <button class="chatbox-button">Go Private</button>
                         </div>
 
                         <!-- message-container -->
@@ -369,7 +371,7 @@
                                 </div>
                             </div>
 
-                            <div class="message message-left">
+                            <div class="message message-left message-last">
                                 <div class="img-container">
                                     <img
                                         src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -444,349 +446,453 @@
             <div class="bottom-container">
                 <!-- purple-container -->
                 <div class="purple-container">
-                    <!-- room profile container -->
-                    <div class="room-profile-container">
-                        <div class="room__img-container">
+                    <div class="room-card">
+                        <div class="room-card__image-container">
                             <img
+                                class="room-card__image"
                                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                                 alt=""
                             />
                         </div>
+                        <div class="room-card__content">
+                            <div class="room-card__top">
+                                <div class="room-card__user-info">
+                                    <span class="room-card__user-name">
+                                        Alicia Veronica
+                                    </span>
 
-                        <div class="room__info-container">
-                            <div class="room__info-top">
-                                <span class="room__info-name">
-                                    Alicia Veronica
-                                </span>
-
-                                <span class="room__info-username"
-                                    >@aliciaveronica</span
-                                >
-                            </div>
-
-                            <div class="room__info-bottom">
-                                <div class="room__info-followers">
-                                    <span class="room__info-followers--number"
-                                        >10K</span
-                                    >
-                                    <span class="room__info-followers--text"
-                                        >Followers</span
+                                    <span class="room-card__user-username"
+                                        >@aliciaveronica</span
                                     >
                                 </div>
-
-                                <div class="room__info-followers">
-                                    <span class="room__info-followers--number"
-                                        >49</span
+                                <!-- icon-container -->
+                                <div class="room-card__icons">
+                                    <div
+                                        class="room__icon-container target-id"
+                                        id="target_id1"
                                     >
-                                    <span class="room__info-followers--text"
-                                        >Followings</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="room__button-container">
-                            <button class="room__follow-btn">Follow</button>
-
-                            <button class="room__settings">
-                                <svg
-                                    class="icon-settings DeYlt"
-                                    width="24px"
-                                    height="24px"
-                                    viewBox="0 0 24 24"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                >
-                                    <g
-                                        id="web-app"
-                                        stroke="none"
-                                        stroke-width="1"
-                                        fill="white"
-                                        fill-rule="evenodd"
-                                    >
-                                        <g id="elipsis-v">
-                                            <path
-                                                d="M12,20 C10.8954305,20 10,19.1045695 10,18 C10,16.8954305 10.8954305,16 12,16 C13.1045695,16 14,16.8954305 14,18 C14,19.1045695 13.1045695,20 12,20 Z M12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 Z M12,8 C10.8954305,8 10,7.1045695 10,6 C10,4.8954305 10.8954305,4 12,4 C13.1045695,4 14,4.8954305 14,6 C14,7.1045695 13.1045695,8 12,8 Z"
-                                                id="Shape"
-                                                class="tRLtc"
-                                            ></path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- icon and more-room container -->
-                    <div class="room-bottom-container">
-                        <!-- icon-container -->
-                        <div class="room__icons">
-                            <div
-                                class="room__icon-container target-id"
-                                id="target_id1"
-                            >
-                                <svg
-                                    class="icon-keyhole DeYlt"
-                                    width="24"
-                                    height="24"
-                                    fill="black"
-                                    version="1.1"
-                                    id="Capa_1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 28.457 28.456"
-                                    xml:space="preserve"
-                                >
-                                    <g
-                                        id="SVGRepo_bgCarrier"
-                                        stroke-width="0"
-                                    ></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g>
-                                            <path
-                                                d="M21.015,6.986c0,2.627-1.449,4.916-3.593,6.108c3.991,15.362,3.991,15.362,3.991,15.362s-13.619,0-14.144,0 c4.145-14.989,0,0,4.145-14.989C8.853,12.433,7.042,9.92,7.042,6.986C7.042,3.127,10.169,0,14.028,0 C17.888,0,21.015,3.127,21.015,6.986z"
-                                            ></path>
-                                        </g>
-                                    </g>
-                                </svg>
-
-                                <!-- single menu dropdown (keyhole icon dropdown) -->
-                                <div
-                                    id="menu_id1"
-                                    class="menu-id menu-settings"
-                                >
-                                    <div class="menu-settings__top">
-                                        <div class="room-container__left">
-                                            <div class="room__img-container">
-                                                <img
-                                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                                                    alt=""
-                                                />
-                                            </div>
-
-                                            <div class="room__info-container">
-                                                <span class="room__info-name"
-                                                    >@Profile_Name</span
-                                                >
-                                                <span
-                                                    class="room__info-followers"
-                                                    >Followers: 10K</span
-                                                >
-                                            </div>
-                                        </div>
-
-                                        <div class="icon-container">
-                                            <svg
-                                                class="icon-close DeYlt"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g
-                                                    id="SVGRepo_bgCarrier"
-                                                    stroke-width="0"
-                                                ></g>
-                                                <g
-                                                    id="SVGRepo_tracerCarrier"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                ></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <g id="Menu / Close_LG">
-                                                        <path
-                                                            id="Vector"
-                                                            d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
-                                                            stroke="#000000"
-                                                            stroke-width="2"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        ></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-item-container">
-                                        <div class="menu-item">Follow</div>
-                                        <div class="menu-item">Report</div>
-                                        <div class="menu-item">Block</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="room__icon-container target-id"
-                                id="target_id2"
-                            >
-                                <svg
-                                    class="icon-share DeYlt"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g
-                                        id="SVGRepo_bgCarrier"
-                                        stroke-width="0"
-                                    ></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M8.68439 10.6578L15.3124 7.34378M15.3156 16.6578L8.69379 13.3469M21 6C21 7.65685 19.6569 9 18 9C16.3431 9 15 7.65685 15 6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.3431 16.3431 15 18 15C19.6569 15 21 16.3431 21 18Z"
-                                            stroke="black"
-                                            stroke-width="1.5"
-                                        ></path>
-                                    </g>
-                                </svg>
-
-                                <!-- single menu dropdown -->
-                                <div class="menu-id" id="menu_id2">
-                                    <div class="menu-item menu-item-active">
-                                        <div class="menu-item-icon">
-                                            <svg
-                                                width="10"
-                                                height="10"
-                                                viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    fill="#3B5998"
-                                                    fill-rule="evenodd"
-                                                    d="M9.945 22v-8.834H7V9.485h2.945V6.54c0-3.043 1.926-4.54 4.64-4.54 1.3 0 2.418.097 2.744.14v3.18h-1.883c-1.476 0-1.82.703-1.82 1.732v2.433h3.68l-.736 3.68h-2.944L13.685 22"
-                                                ></path>
-                                            </svg>
-                                        </div>
-
-                                        <span>Facebook</span>
-                                    </div>
-
-                                    <div class="menu-item menu-item-active">
-                                        <div class="menu-item-icon">
-                                            <svg
-                                                class="unq_MQNCa"
-                                                width="10"
-                                                height="10"
-                                                viewBox="0 0 32 32"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M30.001 16.31c0-1.15-.095-1.99-.301-2.861H16.287v5.195h7.873c-.159 1.291-1.016 3.236-2.92 4.542l-.027.174 4.24 3.22.294.029c2.699-2.443 4.254-6.036 4.254-10.298z"
-                                                    fill="#4285F4"
-                                                    class="tRLtc"
-                                                ></path>
-                                                <path
-                                                    d="M16.286 30c3.857 0 7.095-1.245 9.46-3.391l-4.507-3.423c-1.207.825-2.826 1.4-4.953 1.4A8.584 8.584 0 0 1 8.16 18.77l-.167.014-4.41 3.344-.058.157C5.874 26.857 10.7 30 16.286 30z"
-                                                    fill="#34A853"
-                                                    class="tRLtc"
-                                                ></path>
-                                                <path
-                                                    d="M8.16 18.769A8.463 8.463 0 0 1 7.684 16c0-.964.174-1.898.46-2.769l-.008-.185L3.67 9.647l-.146.069A13.786 13.786 0 0 0 2 16c0 2.256.556 4.387 1.524 6.285l4.635-3.516z"
-                                                    fill="#FBBC05"
-                                                    class="tRLtc"
-                                                ></path>
-                                                <path
-                                                    d="M16.286 7.413c2.683 0 4.492 1.136 5.524 2.085l4.032-3.858C23.366 3.384 20.144 2 16.286 2 10.7 2 5.874 5.142 3.524 9.715l4.62 3.516c1.158-3.375 4.365-5.818 8.142-5.818z"
-                                                    fill="#EB4335"
-                                                    class="tRLtc"
-                                                ></path>
-                                            </svg>
-                                        </div>
-
-                                        <span>Google</span>
-                                    </div>
-
-                                    <div class="menu-item menu-item-active">
-                                        <div class="menu-item-icon">
-                                            <svg
-                                                class="unq_qGjSF"
-                                                width="10"
-                                                height="10"
-                                                viewBox="0 -4 48 48"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g
-                                                    fill="#00AAEC"
-                                                    class="tRLtc"
-                                                    fill-rule="evenodd"
-                                                >
+                                        <svg
+                                            class="icon-keyhole DeYlt"
+                                            width="24"
+                                            height="24"
+                                            fill="black"
+                                            version="1.1"
+                                            id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 28.457 28.456"
+                                            xml:space="preserve"
+                                        >
+                                            <g
+                                                id="SVGRepo_bgCarrier"
+                                                stroke-width="0"
+                                            ></g>
+                                            <g
+                                                id="SVGRepo_tracerCarrier"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
                                                     <path
-                                                        d="M48 4.735a19.235 19.235 0 0 1-5.655 1.59A10.076 10.076 0 0 0 46.675.74a19.395 19.395 0 0 1-6.257 2.447C38.627 1.225 36.066 0 33.231 0c-5.435 0-9.844 4.521-9.844 10.098 0 .791.085 1.56.254 2.3C15.456 11.974 8.2 7.96 3.34 1.842A10.281 10.281 0 0 0 2.01 6.925c0 3.502 1.738 6.593 4.38 8.405a9.668 9.668 0 0 1-4.462-1.26v.124c0 4.894 3.395 8.977 7.903 9.901a9.39 9.39 0 0 1-2.595.356c-.634 0-1.254-.061-1.854-.18 1.254 4.01 4.888 6.932 9.199 7.01-3.37 2.71-7.618 4.325-12.23 4.325-.795 0-1.58-.047-2.35-.139C4.359 38.327 9.537 40 15.096 40c18.115 0 28.019-15.385 28.019-28.73 0-.439-.009-.878-.026-1.308A20.211 20.211 0 0 0 48 4.735"
-                                                        class="tRLtc"
+                                                        d="M21.015,6.986c0,2.627-1.449,4.916-3.593,6.108c3.991,15.362,3.991,15.362,3.991,15.362s-13.619,0-14.144,0 c4.145-14.989,0,0,4.145-14.989C8.853,12.433,7.042,9.92,7.042,6.986C7.042,3.127,10.169,0,14.028,0 C17.888,0,21.015,3.127,21.015,6.986z"
                                                     ></path>
                                                 </g>
-                                            </svg>
-                                        </div>
+                                            </g>
+                                        </svg>
 
-                                        <span>Twitter</span>
+                                        <!-- single menu dropdown (keyhole icon dropdown) -->
+                                        <div
+                                            id="menu_id1"
+                                            class="menu-id menu-settings"
+                                        >
+                                            <div class="menu-settings__top">
+                                                <div
+                                                    class="room-container__left"
+                                                >
+                                                    <div
+                                                        class="room__img-container"
+                                                    >
+                                                        <img
+                                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                                            alt=""
+                                                        />
+                                                    </div>
+
+                                                    <div
+                                                        class="room__info-container"
+                                                    >
+                                                        <span
+                                                            class="room__info-name"
+                                                            >@Profile_Name</span
+                                                        >
+                                                        <span
+                                                            class="room__info-followers"
+                                                            >Followers:
+                                                            10K</span
+                                                        >
+                                                    </div>
+                                                </div>
+
+                                                <div class="icon-container">
+                                                    <svg
+                                                        class="icon-close DeYlt"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <g
+                                                            id="SVGRepo_bgCarrier"
+                                                            stroke-width="0"
+                                                        ></g>
+                                                        <g
+                                                            id="SVGRepo_tracerCarrier"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        ></g>
+                                                        <g
+                                                            id="SVGRepo_iconCarrier"
+                                                        >
+                                                            <g
+                                                                id="Menu / Close_LG"
+                                                            >
+                                                                <path
+                                                                    id="Vector"
+                                                                    d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001"
+                                                                    stroke="#000000"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                ></path>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            <div class="menu-item-container">
+                                                <div class="menu-item">
+                                                    Follow
+                                                </div>
+                                                <div class="menu-item">
+                                                    Report
+                                                </div>
+                                                <div class="menu-item">
+                                                    Block
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="room__icon-container target-id"
+                                        id="target_id2"
+                                    >
+                                        <svg
+                                            class="icon-share DeYlt"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g
+                                                id="SVGRepo_bgCarrier"
+                                                stroke-width="0"
+                                            ></g>
+                                            <g
+                                                id="SVGRepo_tracerCarrier"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path
+                                                    d="M8.68439 10.6578L15.3124 7.34378M15.3156 16.6578L8.69379 13.3469M21 6C21 7.65685 19.6569 9 18 9C16.3431 9 15 7.65685 15 6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.3431 16.3431 15 18 15C19.6569 15 21 16.3431 21 18Z"
+                                                    stroke="black"
+                                                    stroke-width="1.5"
+                                                ></path>
+                                            </g>
+                                        </svg>
+
+                                        <!-- single menu dropdown -->
+                                        <div class="menu-id" id="menu_id2">
+                                            <div
+                                                class="menu-item menu-item-active"
+                                            >
+                                                <div class="menu-item-icon">
+                                                    <svg
+                                                        width="10"
+                                                        height="10"
+                                                        viewBox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            fill="#3B5998"
+                                                            fill-rule="evenodd"
+                                                            d="M9.945 22v-8.834H7V9.485h2.945V6.54c0-3.043 1.926-4.54 4.64-4.54 1.3 0 2.418.097 2.744.14v3.18h-1.883c-1.476 0-1.82.703-1.82 1.732v2.433h3.68l-.736 3.68h-2.944L13.685 22"
+                                                        ></path>
+                                                    </svg>
+                                                </div>
+
+                                                <span>Facebook</span>
+                                            </div>
+
+                                            <div
+                                                class="menu-item menu-item-active"
+                                            >
+                                                <div class="menu-item-icon">
+                                                    <svg
+                                                        class="unq_MQNCa"
+                                                        width="10"
+                                                        height="10"
+                                                        viewBox="0 0 32 32"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M30.001 16.31c0-1.15-.095-1.99-.301-2.861H16.287v5.195h7.873c-.159 1.291-1.016 3.236-2.92 4.542l-.027.174 4.24 3.22.294.029c2.699-2.443 4.254-6.036 4.254-10.298z"
+                                                            fill="#4285F4"
+                                                            class="tRLtc"
+                                                        ></path>
+                                                        <path
+                                                            d="M16.286 30c3.857 0 7.095-1.245 9.46-3.391l-4.507-3.423c-1.207.825-2.826 1.4-4.953 1.4A8.584 8.584 0 0 1 8.16 18.77l-.167.014-4.41 3.344-.058.157C5.874 26.857 10.7 30 16.286 30z"
+                                                            fill="#34A853"
+                                                            class="tRLtc"
+                                                        ></path>
+                                                        <path
+                                                            d="M8.16 18.769A8.463 8.463 0 0 1 7.684 16c0-.964.174-1.898.46-2.769l-.008-.185L3.67 9.647l-.146.069A13.786 13.786 0 0 0 2 16c0 2.256.556 4.387 1.524 6.285l4.635-3.516z"
+                                                            fill="#FBBC05"
+                                                            class="tRLtc"
+                                                        ></path>
+                                                        <path
+                                                            d="M16.286 7.413c2.683 0 4.492 1.136 5.524 2.085l4.032-3.858C23.366 3.384 20.144 2 16.286 2 10.7 2 5.874 5.142 3.524 9.715l4.62 3.516c1.158-3.375 4.365-5.818 8.142-5.818z"
+                                                            fill="#EB4335"
+                                                            class="tRLtc"
+                                                        ></path>
+                                                    </svg>
+                                                </div>
+
+                                                <span>Google</span>
+                                            </div>
+
+                                            <div
+                                                class="menu-item menu-item-active"
+                                            >
+                                                <div class="menu-item-icon">
+                                                    <svg
+                                                        class="unq_qGjSF"
+                                                        width="10"
+                                                        height="10"
+                                                        viewBox="0 -4 48 48"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <g
+                                                            fill="#00AAEC"
+                                                            class="tRLtc"
+                                                            fill-rule="evenodd"
+                                                        >
+                                                            <path
+                                                                d="M48 4.735a19.235 19.235 0 0 1-5.655 1.59A10.076 10.076 0 0 0 46.675.74a19.395 19.395 0 0 1-6.257 2.447C38.627 1.225 36.066 0 33.231 0c-5.435 0-9.844 4.521-9.844 10.098 0 .791.085 1.56.254 2.3C15.456 11.974 8.2 7.96 3.34 1.842A10.281 10.281 0 0 0 2.01 6.925c0 3.502 1.738 6.593 4.38 8.405a9.668 9.668 0 0 1-4.462-1.26v.124c0 4.894 3.395 8.977 7.903 9.901a9.39 9.39 0 0 1-2.595.356c-.634 0-1.254-.061-1.854-.18 1.254 4.01 4.888 6.932 9.199 7.01-3.37 2.71-7.618 4.325-12.23 4.325-.795 0-1.58-.047-2.35-.139C4.359 38.327 9.537 40 15.096 40c18.115 0 28.019-15.385 28.019-28.73 0-.439-.009-.878-.026-1.308A20.211 20.211 0 0 0 48 4.735"
+                                                                class="tRLtc"
+                                                            ></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+
+                                                <span>Twitter</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="room__icon-container">
+                                        <svg
+                                            class="icon-heart DeYlt"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g
+                                                id="SVGRepo_bgCarrier"
+                                                stroke-width="0"
+                                            ></g>
+                                            <g
+                                                id="SVGRepo_tracerCarrier"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path
+                                                    d="M12.39 20.87a.696.696 0 0 1-.78 0C9.764 19.637 2 14.15 2 8.973c0-6.68 7.85-7.75 10-3.25 2.15-4.5 10-3.43 10 3.25 0 5.178-7.764 10.664-9.61 11.895z"
+                                                    fill="black"
+                                                ></path>
+                                            </g>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="room__icon-container">
-                                <svg
-                                    class="icon-heart DeYlt"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
+                            <div class="room-card__bottom">
+                                <div class="room-card__followers-info">
+                                    <div class="room-card__followers">
+                                        <span
+                                            class="room-card__followers-number"
+                                            >10K</span
+                                        >
+                                        <span class="room-card__followers-text"
+                                            >Followers</span
+                                        >
+                                    </div>
+                                    <button class="room-card__follow-btn">
+                                        Follow
+                                    </button>
+                                </div>
+                                <button class="room-card__more-room-btn">
+                                    More Rooms
+                                </button>
+                            </div>
+                            <!-- goal-section -->
+                            <div class="goal-container">
+                                <p class="goal-description">
+                                    Goal:
+                                    <span class="goal-name">Sing a song</span> /
+                                    <span class="goal-tokens">2000</span> tokens
+                                </p>
+                                <div class="progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar tRLtc"></div>
+                                    </div>
+                                    <p class="progress-status">
+                                        <span class="progress-percentage"
+                                            >10%</span
+                                        >
+                                        /
+                                        <span class="progress-tokens">100</span>
+                                        Tokens
+                                    </p>
+                                </div>
+                                <div class="goal-tip">
+                                    <p class="goal-tip-text">
+                                        Latest Tipper:
+                                        <span class="goal-tipper-name"
+                                            >abc</span
+                                        >
+                                        <span class="goal-tip-amount"
+                                            >10tk</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            aria-label="settings"
+                            class="room-card__settings target-id"
+                            id="target_id3"
+                        >
+                            <svg
+                                class="icon-settings DeYlt"
+                                viewBox="0 0 24 24"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                                <g
+                                    id="icon-settings__dot"
+                                    stroke="none"
+                                    stroke-width="1"
+                                    fill-rule="evenodd"
                                 >
-                                    <g
-                                        id="SVGRepo_bgCarrier"
-                                        stroke-width="0"
-                                    ></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
+                                    <g id="elipsis-v">
                                         <path
-                                            d="M12.39 20.87a.696.696 0 0 1-.78 0C9.764 19.637 2 14.15 2 8.973c0-6.68 7.85-7.75 10-3.25 2.15-4.5 10-3.43 10 3.25 0 5.178-7.764 10.664-9.61 11.895z"
-                                            fill="black"
+                                            d="M12,20 C10.8954305,20 10,19.1045695 10,18 C10,16.8954305 10.8954305,16 12,16 C13.1045695,16 14,16.8954305 14,18 C14,19.1045695 13.1045695,20 12,20 Z M12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 Z M12,8 C10.8954305,8 10,7.1045695 10,6 C10,4.8954305 10.8954305,4 12,4 C13.1045695,4 14,4.8954305 14,6 C14,7.1045695 13.1045695,8 12,8 Z"
+                                            id="Shape"
+                                            class="tRLtc"
                                         ></path>
                                     </g>
-                                </svg>
-                            </div>
-                        </div>
+                                </g>
+                            </svg>
+                            <!-- single menu dropdown -->
+                            <div class="menu-id" id="menu_id3">
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                fill="#3B5998"
+                                                fill-rule="evenodd"
+                                                d="M9.945 22v-8.834H7V9.485h2.945V6.54c0-3.043 1.926-4.54 4.64-4.54 1.3 0 2.418.097 2.744.14v3.18h-1.883c-1.476 0-1.82.703-1.82 1.732v2.433h3.68l-.736 3.68h-2.944L13.685 22"
+                                            ></path>
+                                        </svg>
+                                    </div>
 
-                        <!-- more button -->
-                        <button class="more-room-btn">More Rooms</button>
-                    </div>
+                                    <span>Facebook</span>
+                                </div>
 
-                    <!-- goal-section -->
-                    <div class="goal-container">
-                        <div class="goal__text-container">
-                            <p class="goal-title">
-                                (Goal Title) Goal:
-                                <span class="goal-reached">100</span>/<span
-                                    class="goal-amount"
-                                    >2000</span
-                                >tk
-                            </p>
-                            <div class="goal-tip">
-                                <p class="goal-tip-text">
-                                    Latest Tipper:
-                                    <span class="goal-tipper">abc</span>
-                                    <span class="goal-tip-amount">10</span>tk
-                                </p>
-                                <span class="goal-tip-percent">10%</span>
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            class="unq_MQNCa"
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M30.001 16.31c0-1.15-.095-1.99-.301-2.861H16.287v5.195h7.873c-.159 1.291-1.016 3.236-2.92 4.542l-.027.174 4.24 3.22.294.029c2.699-2.443 4.254-6.036 4.254-10.298z"
+                                                fill="#4285F4"
+                                                class="tRLtc"
+                                            ></path>
+                                            <path
+                                                d="M16.286 30c3.857 0 7.095-1.245 9.46-3.391l-4.507-3.423c-1.207.825-2.826 1.4-4.953 1.4A8.584 8.584 0 0 1 8.16 18.77l-.167.014-4.41 3.344-.058.157C5.874 26.857 10.7 30 16.286 30z"
+                                                fill="#34A853"
+                                                class="tRLtc"
+                                            ></path>
+                                            <path
+                                                d="M8.16 18.769A8.463 8.463 0 0 1 7.684 16c0-.964.174-1.898.46-2.769l-.008-.185L3.67 9.647l-.146.069A13.786 13.786 0 0 0 2 16c0 2.256.556 4.387 1.524 6.285l4.635-3.516z"
+                                                fill="#FBBC05"
+                                                class="tRLtc"
+                                            ></path>
+                                            <path
+                                                d="M16.286 7.413c2.683 0 4.492 1.136 5.524 2.085l4.032-3.858C23.366 3.384 20.144 2 16.286 2 10.7 2 5.874 5.142 3.524 9.715l4.62 3.516c1.158-3.375 4.365-5.818 8.142-5.818z"
+                                                fill="#EB4335"
+                                                class="tRLtc"
+                                            ></path>
+                                        </svg>
+                                    </div>
+
+                                    <span>Google</span>
+                                </div>
+
+                                <div class="menu-item menu-item-active">
+                                    <div class="menu-item-icon">
+                                        <svg
+                                            class="unq_qGjSF"
+                                            width="10"
+                                            height="10"
+                                            viewBox="0 -4 48 48"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g
+                                                fill="#00AAEC"
+                                                class="tRLtc"
+                                                fill-rule="evenodd"
+                                            >
+                                                <path
+                                                    d="M48 4.735a19.235 19.235 0 0 1-5.655 1.59A10.076 10.076 0 0 0 46.675.74a19.395 19.395 0 0 1-6.257 2.447C38.627 1.225 36.066 0 33.231 0c-5.435 0-9.844 4.521-9.844 10.098 0 .791.085 1.56.254 2.3C15.456 11.974 8.2 7.96 3.34 1.842A10.281 10.281 0 0 0 2.01 6.925c0 3.502 1.738 6.593 4.38 8.405a9.668 9.668 0 0 1-4.462-1.26v.124c0 4.894 3.395 8.977 7.903 9.901a9.39 9.39 0 0 1-2.595.356c-.634 0-1.254-.061-1.854-.18 1.254 4.01 4.888 6.932 9.199 7.01-3.37 2.71-7.618 4.325-12.23 4.325-.795 0-1.58-.047-2.35-.139C4.359 38.327 9.537 40 15.096 40c18.115 0 28.019-15.385 28.019-28.73 0-.439-.009-.878-.026-1.308A20.211 20.211 0 0 0 48 4.735"
+                                                    class="tRLtc"
+                                                ></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+
+                                    <span>Twitter</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="progress-container">
-                            <div class="progress-bar tRLtc"></div>
-                        </div>
+                        </button>
                     </div>
                 </div>
 
