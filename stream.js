@@ -267,19 +267,17 @@ checkViewportWidth();
 // Function to toggle the "active" class on the buttons
 
 document.addEventListener("DOMContentLoaded", function () {
-    var toggleButton = document.getElementById("toggleButton");
+    const toggleButton = document.getElementById("toggleButton");
+    const toggleButtonText = toggleButton.querySelector("span:first-child");
     const creditText = document.querySelector(".chatbox-button__credit");
 
     toggleButton.addEventListener("click", function () {
-        var buttonText =
-            toggleButton.querySelector("span:first-child").textContent;
-        if (buttonText === "Go Private") {
-            toggleButton.querySelector("span:first-child").textContent =
-                "Go Public";
+        if (toggleButtonText.textContent === "Go Private") {
+            console.log("yes");
+            toggleButtonText.textContent = "Go Public";
             creditText.style.display = "none";
         } else {
-            toggleButton.querySelector("span:first-child").textContent =
-                "Go Private";
+            toggleButtonText.textContent = "Go Private";
             creditText.style.display = "block";
         }
     });
