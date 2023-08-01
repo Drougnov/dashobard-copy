@@ -97,26 +97,175 @@
 
                         <!-- single-menu dropdown container -->
                         <div id="menu_id1" class="menu-id">
-                            <div class="form-field full-width">
-                                <input
-                                    type="hidden"
-                                    name="form_my_contact_form"
-                                    value="1"
-                                />
-                                <label for="product_type">Product Type</label>
+                            <form id="language1" action="#" method="POST">
                                 <select
-                                    name="product_type"
-                                    id="product_type"
-                                    required=""
+                                    name="language1"
+                                    onchange="document.getElementById('language').submit()"
                                 >
-                                    <option value="book">Book</option>
-                                    <option value="movie">Movie</option>
-                                    <option value="music">Music</option>
-                                    <option value="" disabled="">
-                                        Select a product type
+                                    <option value="en" selected="">
+                                        English (English)
                                     </option>
+                                    <option value="zh">
+                                        Chinese (Simplified) (中文)
+                                    </option>
+                                    <option value="zh-TW">
+                                        Chinese (Traditional) (中文繁體)
+                                    </option>
+                                    <option value="ja">
+                                        Japanese (日本語)
+                                    </option>
+                                    <option value="ko">Korean (한국어)</option>
+                                    <option value="af">
+                                        Afrikaans (Afrikaans)
+                                    </option>
+                                    <option value="sq">Albanian (Shqip)</option>
+                                    <option value="am">Amharic (አማርኛ)</option>
+                                    <option value="ar">Arabic (العربية)</option>
+                                    <option value="hy">
+                                        Armenian (Հայերեն)
+                                    </option>
+                                    <option value="az">
+                                        Azerbaijani (Azərbaycanca)
+                                    </option>
+                                    <option value="bn">Bengali (বাংলা)</option>
+                                    <option value="bs">
+                                        Bosnian (Bosanski)
+                                    </option>
+                                    <option value="bg">
+                                        Bulgarian (Български)
+                                    </option>
+                                    <option value="ca">Catalan (Català)</option>
+                                    <option value="hr">
+                                        Croatian (Hrvatski)
+                                    </option>
+                                    <option value="cs">Czech (Čeština)</option>
+                                    <option value="da">Danish (Dansk)</option>
+                                    <option value="fa-AF">Dari (دری)</option>
+                                    <option value="nl">
+                                        Dutch (Nederlands)
+                                    </option>
+                                    <option value="et">Estonian (Eesti)</option>
+                                    <option value="fa">
+                                        Farsi (Persian) (فارسی)
+                                    </option>
+                                    <option value="tl">
+                                        Filipino, Tagalog (Tagalog)
+                                    </option>
+                                    <option value="fi">Finnish (Suomi)</option>
+                                    <option value="fr">
+                                        French (Français)
+                                    </option>
+                                    <option value="fr-CA">
+                                        French (Canada) (Français canadien)
+                                    </option>
+                                    <option value="ka">
+                                        Georgian (ქართული)
+                                    </option>
+                                    <option value="de">German (Deutsch)</option>
+                                    <option value="el">Greek (Ελληνικά)</option>
+                                    <option value="gu">
+                                        Gujarati (ગુજરાતી)
+                                    </option>
+                                    <option value="ht">
+                                        Haitian Creole (Kreyòl ayisyen)
+                                    </option>
+                                    <option value="ha">Hausa (هَوُسَ)</option>
+                                    <option value="he">
+                                        Hebrew (עִבְרִית)
+                                    </option>
+                                    <option value="hi">Hindi (हिन्दी)</option>
+                                    <option value="hu">
+                                        Hungarian (Magyar)
+                                    </option>
+                                    <option value="is">
+                                        Icelandic (Íslenska)
+                                    </option>
+                                    <option value="id">
+                                        Indonesian (Bahasa Indonesia)
+                                    </option>
+                                    <option value="ga">Irish (Gaeilge)</option>
+                                    <option value="it">
+                                        Italian (Italiano)
+                                    </option>
+                                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                                    <option value="kk">Kazakh (Қазақ)</option>
+                                    <option value="lv">
+                                        Latvian (Latviešu)
+                                    </option>
+                                    <option value="lt">
+                                        Lithuanian (Lietuvių)
+                                    </option>
+                                    <option value="mk">
+                                        Macedonian (Македонски)
+                                    </option>
+                                    <option value="ms">
+                                        Malay (Bahasa Melayu)
+                                    </option>
+                                    <option value="ml">
+                                        Malayalam (മലയാളം)
+                                    </option>
+                                    <option value="mt">Maltese (Malti)</option>
+                                    <option value="mr">Marathi (मराठी)</option>
+                                    <option value="mn">
+                                        Mongolian (Монгол)
+                                    </option>
+                                    <option value="no">
+                                        Norwegian (Bokmål) (Norsk (bokmål))
+                                    </option>
+                                    <option value="ps">Pashto (پښتو)</option>
+                                    <option value="pl">Polish (Polski)</option>
+                                    <option value="pt">
+                                        Portuguese (Brazil) (Português (Brasil))
+                                    </option>
+                                    <option value="pt-PT">
+                                        Portuguese (Portugal) (Português
+                                        (Portugal))
+                                    </option>
+                                    <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+                                    <option value="ro">
+                                        Romanian (Română)
+                                    </option>
+                                    <option value="ru">
+                                        Russian (Русский)
+                                    </option>
+                                    <option value="sr">Serbian (Српски)</option>
+                                    <option value="si">Sinhala (සිංහල)</option>
+                                    <option value="sk">
+                                        Slovak (Slovenčina)
+                                    </option>
+                                    <option value="sl">
+                                        Slovenian (Slovenščina)
+                                    </option>
+                                    <option value="so">
+                                        Somali (Soomaali)
+                                    </option>
+                                    <option value="es">
+                                        Spanish (Español)
+                                    </option>
+                                    <option value="es-MX">
+                                        Spanish (Mexico) (Español (México))
+                                    </option>
+                                    <option value="sw">
+                                        Swahili (Kiswahili)
+                                    </option>
+                                    <option value="sv">
+                                        Swedish (Svenska)
+                                    </option>
+                                    <option value="ta">Tamil (தமிழ்)</option>
+                                    <option value="te">Telugu (తెలుగు)</option>
+                                    <option value="th">Thai (ไทย)</option>
+                                    <option value="tr">Turkish (Türkçe)</option>
+                                    <option value="uk">
+                                        Ukrainian (Українська)
+                                    </option>
+                                    <option value="ur">Urdu (اردو)</option>
+                                    <option value="uz">Uzbek (O'zbek)</option>
+                                    <option value="vi">
+                                        Vietnamese (Tiếng Việt)
+                                    </option>
+                                    <option value="cy">Welsh (Cymraeg)</option>
                                 </select>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
@@ -182,26 +331,175 @@
 
                         <!-- single-menu dropdown container -->
                         <div id="menu_id2" class="menu-id">
-                            <div class="form-field full-width">
-                                <input
-                                    type="hidden"
-                                    name="form_my_contact_form"
-                                    value="1"
-                                />
-                                <label for="product_type">Product Type</label>
+                            <form id="language2" action="#" method="POST">
                                 <select
-                                    name="product_type"
-                                    id="product_type"
-                                    required=""
+                                    name="language2"
+                                    onchange="document.getElementById('language').submit()"
                                 >
-                                    <option value="book">Book</option>
-                                    <option value="movie">Movie</option>
-                                    <option value="music">Music</option>
-                                    <option value="" disabled="">
-                                        Select a product type
+                                    <option value="en" selected="">
+                                        English (English)
                                     </option>
+                                    <option value="zh">
+                                        Chinese (Simplified) (中文)
+                                    </option>
+                                    <option value="zh-TW">
+                                        Chinese (Traditional) (中文繁體)
+                                    </option>
+                                    <option value="ja">
+                                        Japanese (日本語)
+                                    </option>
+                                    <option value="ko">Korean (한국어)</option>
+                                    <option value="af">
+                                        Afrikaans (Afrikaans)
+                                    </option>
+                                    <option value="sq">Albanian (Shqip)</option>
+                                    <option value="am">Amharic (አማርኛ)</option>
+                                    <option value="ar">Arabic (العربية)</option>
+                                    <option value="hy">
+                                        Armenian (Հայերեն)
+                                    </option>
+                                    <option value="az">
+                                        Azerbaijani (Azərbaycanca)
+                                    </option>
+                                    <option value="bn">Bengali (বাংলা)</option>
+                                    <option value="bs">
+                                        Bosnian (Bosanski)
+                                    </option>
+                                    <option value="bg">
+                                        Bulgarian (Български)
+                                    </option>
+                                    <option value="ca">Catalan (Català)</option>
+                                    <option value="hr">
+                                        Croatian (Hrvatski)
+                                    </option>
+                                    <option value="cs">Czech (Čeština)</option>
+                                    <option value="da">Danish (Dansk)</option>
+                                    <option value="fa-AF">Dari (دری)</option>
+                                    <option value="nl">
+                                        Dutch (Nederlands)
+                                    </option>
+                                    <option value="et">Estonian (Eesti)</option>
+                                    <option value="fa">
+                                        Farsi (Persian) (فارسی)
+                                    </option>
+                                    <option value="tl">
+                                        Filipino, Tagalog (Tagalog)
+                                    </option>
+                                    <option value="fi">Finnish (Suomi)</option>
+                                    <option value="fr">
+                                        French (Français)
+                                    </option>
+                                    <option value="fr-CA">
+                                        French (Canada) (Français canadien)
+                                    </option>
+                                    <option value="ka">
+                                        Georgian (ქართული)
+                                    </option>
+                                    <option value="de">German (Deutsch)</option>
+                                    <option value="el">Greek (Ελληνικά)</option>
+                                    <option value="gu">
+                                        Gujarati (ગુજરાતી)
+                                    </option>
+                                    <option value="ht">
+                                        Haitian Creole (Kreyòl ayisyen)
+                                    </option>
+                                    <option value="ha">Hausa (هَوُسَ)</option>
+                                    <option value="he">
+                                        Hebrew (עִבְרִית)
+                                    </option>
+                                    <option value="hi">Hindi (हिन्दी)</option>
+                                    <option value="hu">
+                                        Hungarian (Magyar)
+                                    </option>
+                                    <option value="is">
+                                        Icelandic (Íslenska)
+                                    </option>
+                                    <option value="id">
+                                        Indonesian (Bahasa Indonesia)
+                                    </option>
+                                    <option value="ga">Irish (Gaeilge)</option>
+                                    <option value="it">
+                                        Italian (Italiano)
+                                    </option>
+                                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                                    <option value="kk">Kazakh (Қазақ)</option>
+                                    <option value="lv">
+                                        Latvian (Latviešu)
+                                    </option>
+                                    <option value="lt">
+                                        Lithuanian (Lietuvių)
+                                    </option>
+                                    <option value="mk">
+                                        Macedonian (Македонски)
+                                    </option>
+                                    <option value="ms">
+                                        Malay (Bahasa Melayu)
+                                    </option>
+                                    <option value="ml">
+                                        Malayalam (മലയാളം)
+                                    </option>
+                                    <option value="mt">Maltese (Malti)</option>
+                                    <option value="mr">Marathi (मराठी)</option>
+                                    <option value="mn">
+                                        Mongolian (Монгол)
+                                    </option>
+                                    <option value="no">
+                                        Norwegian (Bokmål) (Norsk (bokmål))
+                                    </option>
+                                    <option value="ps">Pashto (پښتو)</option>
+                                    <option value="pl">Polish (Polski)</option>
+                                    <option value="pt">
+                                        Portuguese (Brazil) (Português (Brasil))
+                                    </option>
+                                    <option value="pt-PT">
+                                        Portuguese (Portugal) (Português
+                                        (Portugal))
+                                    </option>
+                                    <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+                                    <option value="ro">
+                                        Romanian (Română)
+                                    </option>
+                                    <option value="ru">
+                                        Russian (Русский)
+                                    </option>
+                                    <option value="sr">Serbian (Српски)</option>
+                                    <option value="si">Sinhala (සිංහල)</option>
+                                    <option value="sk">
+                                        Slovak (Slovenčina)
+                                    </option>
+                                    <option value="sl">
+                                        Slovenian (Slovenščina)
+                                    </option>
+                                    <option value="so">
+                                        Somali (Soomaali)
+                                    </option>
+                                    <option value="es">
+                                        Spanish (Español)
+                                    </option>
+                                    <option value="es-MX">
+                                        Spanish (Mexico) (Español (México))
+                                    </option>
+                                    <option value="sw">
+                                        Swahili (Kiswahili)
+                                    </option>
+                                    <option value="sv">
+                                        Swedish (Svenska)
+                                    </option>
+                                    <option value="ta">Tamil (தமிழ்)</option>
+                                    <option value="te">Telugu (తెలుగు)</option>
+                                    <option value="th">Thai (ไทย)</option>
+                                    <option value="tr">Turkish (Türkçe)</option>
+                                    <option value="uk">
+                                        Ukrainian (Українська)
+                                    </option>
+                                    <option value="ur">Urdu (اردو)</option>
+                                    <option value="uz">Uzbek (O'zbek)</option>
+                                    <option value="vi">
+                                        Vietnamese (Tiếng Việt)
+                                    </option>
+                                    <option value="cy">Welsh (Cymraeg)</option>
                                 </select>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
