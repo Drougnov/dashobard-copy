@@ -52,12 +52,10 @@ const moreRoomButton = document.querySelector(".room-card__more-room-btn");
 const bioContainer = document.querySelector(".bio-container");
 
 moreRoomButton.addEventListener("click", () => {
-    moreRoomContainer.style.display = "block";
-    bioContainer.style.display = "none";
+    showTab("rooms");
     moreRoomContainer.scrollIntoView({
         behavior: "smooth",
     });
-    showTab("rooms");
 });
 
 // -----------------------------------tab section--------------------------------------
@@ -232,8 +230,8 @@ closeIcon.forEach((icon) => {
 // Function to move elements inside the left container
 function moveElementsToContainer() {
     const leftContainer = document.querySelector(".left-container");
-    const purpleContainer = document.querySelector(".purple-container");
-    const tabButtonContainer = document.querySelector(".tab-button-container");
+    const purpleContainer = document.querySelector(".profile-meta-container");
+    const tabButtonContainer = document.querySelector(".tab-buttons");
 
     leftContainer.appendChild(purpleContainer);
     leftContainer.appendChild(tabButtonContainer);
@@ -242,8 +240,8 @@ function moveElementsToContainer() {
 // Function to move elements back to their original position
 function moveElementsBack() {
     const bottomContainer = document.querySelector(".bottom-container");
-    const purpleContainer = document.querySelector(".purple-container");
-    const tabButtonContainer = document.querySelector(".tab-button-container");
+    const purpleContainer = document.querySelector(".profile-meta-container");
+    const tabButtonContainer = document.querySelector(".tab-buttons");
 
     bottomContainer.insertBefore(
         tabButtonContainer,

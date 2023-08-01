@@ -470,6 +470,7 @@ video {
 .input-container .input-message {
     height: 4rem;
     background: transparent;
+    font-size: 12px !important;
     padding-left: 1rem !important;
     margin-top: 0 !important;
     border: none !important;
@@ -479,6 +480,7 @@ video {
 }
 .wrapper.full-width .input-message::placeholder {
     color: white;
+    font-size: 12px !important;
 }
 
 /* ---emoji-picker--- */
@@ -543,7 +545,6 @@ video {
 /* bottom-container */
 .bottom-container {
     background: white;
-    padding: 1rem;
     position: relative;
 }
 
@@ -577,15 +578,12 @@ video {
     display: none;
 }
 
-/* ----------purple-container--------- */
+/* ----------profile-meta-container--------- */
 
-.purple-container {
+.profile-meta-container {
     background: #fb5ba2;
-    width: calc(100% + 2rem);
     height: max-content;
     padding: 3rem 5rem;
-    margin-top: -1rem;
-    margin-left: -1rem;
 }
 
 .room-card {
@@ -620,8 +618,10 @@ video {
 }
 .room-card__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 1rem;
 }
 
 .room-card__user-info {
@@ -735,8 +735,10 @@ video {
 
 .room-card__bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 1rem;
 }
 
 .room-card__followers-info {
@@ -837,12 +839,13 @@ video {
 
 /* progress bar */
 .progress {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 .progress-bar-container {
-    width: 300px;
+    width: 100%;
     max-width: 300px;
     height: 8px;
     background-color: #90194e;
@@ -862,6 +865,9 @@ video {
 .goal-container.active .progress-bar {
     width: var(--progress-percentage);
 }
+.progress-status {
+    white-space: nowrap;
+}
 
 /* tab container */
 
@@ -879,7 +885,8 @@ video {
 .mobile-chatbox {
     width: 100%;
     height: max-content;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     display: none;
 }
 
@@ -969,7 +976,7 @@ video {
         gap: 0;
     }
 
-    .wrapper.full-width .left-container .purple-container {
+    .wrapper.full-width .left-container .profile-meta-container {
         display: block;
     }
 
@@ -1026,8 +1033,9 @@ video {
         display: none;
     }
 
-    .purple-container {
+    .profile-meta-container {
         width: 100%;
+        padding: 1.5rem;
         margin-top: 0;
         margin-left: 0;
     }
@@ -1043,9 +1051,37 @@ video {
     .mobile-chatbox .input-container {
         margin-top: 0;
     }
+}
 
-    .tab-button-container {
-        padding: 1rem;
+@media (max-width: 768px) {
+    .room-card {
+        gap: 1rem;
+    }
+
+    .room-card__user-name,
+    .room-card__followers-number {
+        font-size: 18px;
+    }
+    .room-card__user-username,
+    .room-card__followers-text,
+    .goal-container p,
+    .goal-container span {
+        font-size: 10px;
+    }
+
+    .room-card__follow-btn,
+    .room-card__more-room-btn {
+        height: 32px;
+        padding: 0 14px;
+    }
+
+    .room__icon-container {
+        width: 24px;
+        height: 24px;
+    }
+    .room__icon-container svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -1082,5 +1118,64 @@ video {
     }
     .emoji-picker__emojis {
         width: calc(1.3rem * 1.5 * 8) !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .input-container {
+        padding-right: 5rem;
+    }
+
+    .input-container .img-container {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .input-container .input-message {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .input-message,
+    .input-message::placeholder {
+        font-size: 12px !important;
+    }
+
+    .icon-send {
+        width: 20px;
+        height: 20px;
+    }
+
+    .emoji-container {
+        right: 52px;
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .emoji-container::after {
+        font-size: 20px;
+    }
+
+    .send-message {
+        right: 1rem;
+    }
+
+    .profile-meta-container {
+        position: relative;
+        padding: 1rem 0;
+    }
+
+    .room-card {
+        flex-direction: column;
+    }
+
+    .room-card__content {
+        width: 100%;
+    }
+
+    .room-card__settings#target_id3 {
+        position: absolute !important;
+        top: 1rem;
+        right: 1rem;
     }
 }
