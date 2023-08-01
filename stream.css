@@ -555,9 +555,12 @@ video {
 }
 
 /* tab-button-container */
+
+.tab-buttons {
+    background: white;
+}
 .tab-button-container {
     width: 100%;
-    background: white;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1185,7 +1188,7 @@ video {
         width: 100%;
     }
 
-    .room-card__settings#target_id3 {
+    .room-card__settings.target-id {
         position: absolute !important;
         top: 1rem;
         right: 1rem;
