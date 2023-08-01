@@ -45,20 +45,20 @@ To add the `red dot notification` to an icon, follow these steps:
 </div>
 ```
 
-2. Add the class `target_id` and an id `target_id(number)` to the `div`. The `number` should be unique and can be any value. Here's an example:
+2. Add the class `target_id` to the `div`. And add an id `target_id(number)` to the `div`'s child which will be the dropdown/menu toggle button. The `number` should be unique and can be any value. Here's an example:
 
 ```html
-<div class="target_id" id="target_id1">
-    <p>text</p>
+<div class="target_id">
+    <p id="target_id1">text</p>
 </div>
 ```
 
 3. Inside the `div`, add a `dropdown-menu container`. It should have the class `menu-id` and an id `menu-id(number)`. The `number` should match the `target_id`'s number. Here's the complete code:
 
 ```html
-<div class="target-id DeYlt" id="target_id1">
+<div class="target-id DeYlt">
     <!-- this <p> will be the toggle button for the dropdown-menu -->
-    <p>text</p>
+    <p id="target_id1">text</p>
     <!-- add dropdown-menu container with a class 'menu-id' and id 'menu-id(same-number)' -->
     <div id="menu_id1" class="menu-id">
         <!-- dropdown menu item -->

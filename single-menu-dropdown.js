@@ -31,17 +31,21 @@ function singleMenu(targetId, menuId, show = false) {
 
     // Close menu if clicked outside of container
     document.addEventListener("click", (event) => {
-        if (!targetElement.contains(event.target)) {
+        if (!targetElement.parentElement.contains(event.target)) {
             show = false;
             menuElement.style.display = "none";
             targetElement.classList.remove("active");
         }
     });
 
-    // Prevent menu from closing when clicked inside the menu element
-    menuElement.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
+    // Calculate half of the targetElement width
+    const targetHalfWidth = targetElement.parentElement.offsetWidth / 2;
+
+    // Set a CSS variable with the half width value
+    document.body.style.setProperty(
+        "--target-half-width",
+        targetHalfWidth + "px"
+    );
 }
 
 // Check the containers position to align the menus
