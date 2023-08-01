@@ -583,7 +583,7 @@ video {
 .profile-meta-container {
     background: #fb5ba2;
     height: max-content;
-    padding: 3rem 5rem;
+    padding: 3rem 0;
 }
 
 .room-card {
@@ -1000,6 +1000,11 @@ video {
         max-width: unset;
     }
 
+    .chatbox-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     /* revert message transparent backgrounds to normal */
     .wrapper.full-width .input-container {
         background: white;
@@ -1035,7 +1040,7 @@ video {
 
     .profile-meta-container {
         width: 100%;
-        padding: 1.5rem;
+        padding: 1.5rem 0;
         margin-top: 0;
         margin-left: 0;
     }
