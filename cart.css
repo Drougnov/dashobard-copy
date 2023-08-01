@@ -37,10 +37,19 @@ main#content {
 
 #content .page-content {
     max-width: 1100px;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 50px;
     margin: 0 auto;
+}
+
+/* notice wrapper */
+.page-content .woocommerce-message {
+    padding: 1.25em 2em 1.25em 3.5em;
+}
+.page-content .woocommerce-message::before {
+    top: 1.25em;
 }
 
 #content .woocommerce {
@@ -76,7 +85,8 @@ main#content {
 }
 
 .woocommerce-cart-form .shop_table th,
-.cart-collaterals .cart_totals h2 {
+.cart-collaterals .cart_totals h2,
+.woocommerce-cart-form .shop_table td::before {
     font-size: 13px;
     font-weight: 600 !important;
     text-align: center;
@@ -103,9 +113,11 @@ main#content {
 
 .woocommerce-cart-form .product-remove .remove {
     width: 16.1px;
+    height: 1.4em;
     color: #ff0000 !important;
     font-size: 20px;
     font-weight: 400;
+    line-height: 1.5 !important;
 }
 
 .woocommerce-cart-form .product-remove .remove:hover {
@@ -190,6 +202,10 @@ main#content {
     -o-border-radius: var(--global-woocommerce-input-border-radius);
 }
 
+.woocommerce-cart-form #coupon_code::placeholder {
+    font-weight: 500;
+}
+
 .woocommerce-cart-form .coupon .button {
     color: white;
     background-color: #cecece;
@@ -206,7 +222,8 @@ main#content {
 
 .woocommerce-cart-form
     .coupon_wrapper
-    button[name="update_cart"][value="Update cart"] {
+    button[name="update_cart"][value="Update cart"],
+.actions button[name="update_cart"][value="Update cart"] {
     display: none;
 }
 
@@ -246,7 +263,8 @@ main#content {
 }
 
 .cart-collaterals .cart-subtotal th,
-.cart-collaterals .order-total th {
+.cart-collaterals .order-total th,
+.woocommerce table.shop_table_responsive tr td::before {
     font-size: 13px;
     font-weight: 600 !important;
     text-transform: uppercase;
@@ -323,17 +341,28 @@ main#content {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .woocommerce-cart-form__cart-item {
         margin-bottom: 0;
     }
 
-    .woocommerce-cart-form .product-thumbnail {
+    .woocommerce-cart-form .product-remove .remove {
+        margin-left: auto;
+    }
+
+    .woocommerce-cart-form td.product-thumbnail {
         display: block !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .woocommerce-cart-form td.product-thumbnail::before {
+        display: none;
     }
 
     .woocommerce-cart-form .product-thumbnail img {
         width: 70px !important;
+        margin: -34px 0 1rem 0;
     }
 
     .woocommerce-cart-form .shop_table td {
