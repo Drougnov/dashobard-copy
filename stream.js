@@ -259,12 +259,6 @@ function checkViewportWidth() {
     }
 }
 
-// Add event listener to check the viewport width on window resize
-window.addEventListener("resize", () => {
-    checkScreenSize();
-    checkViewportWidth();
-});
-
 // Initial check when the page loads
 checkViewportWidth();
 
@@ -289,4 +283,19 @@ document.addEventListener("DOMContentLoaded", function () {
             creditText.style.display = "block";
         }
     });
+});
+
+// switch back to bio tab if chat-tab is active on bigger than 1000px screen
+
+function switchToBioTab() {
+    if (window.innerWidth > 1000 && chatTab.classList.contains("active")) {
+        showTab("bio");
+    }
+}
+
+// Add event listener to check the viewport width on window resize
+window.addEventListener("resize", () => {
+    checkScreenSize();
+    checkViewportWidth();
+    switchToBioTab();
 });
