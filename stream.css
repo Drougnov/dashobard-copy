@@ -1055,6 +1055,7 @@ video {
 
     .mobile-chatbox .input-container {
         margin-top: 0;
+        border: 1px solid #d9d9d9;
     }
 }
 
