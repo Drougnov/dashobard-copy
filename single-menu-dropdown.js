@@ -42,7 +42,7 @@ function singleMenu(targetId, menuId, show = false) {
     const targetHalfWidth = targetElement.parentElement.offsetWidth / 2;
 
     // Set a CSS variable with the half width value
-    document.body.style.setProperty(
+    targetElement.parentElement.style.setProperty(
         "--target-half-width",
         targetHalfWidth + "px"
     );
@@ -50,7 +50,6 @@ function singleMenu(targetId, menuId, show = false) {
 
 // Check the containers position to align the menus
 const dropdownContainers = document.querySelectorAll(".target-id");
-const dropdownMenus = document.querySelectorAll(".menu-id");
 
 dropdownContainers.forEach((container) => {
     const rect = container.getBoundingClientRect();
