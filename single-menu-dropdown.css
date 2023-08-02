@@ -23,7 +23,7 @@
     display: block;
     position: absolute;
     top: -7px;
-    left: calc(var(--target-half-width) + 1rem);
+    left: calc(var(--target-half-width) + 1.5rem);
     border: 8px solid white;
     border-color: transparent transparent white white;
     transform: translateX(-50%) rotate(135deg);
