@@ -199,6 +199,10 @@ form select {
     gap: 1.5rem;
 }
 
+.menu-id {
+    padding: var(--input-padding) !important;
+}
+
 .slide-in-menu .menu-id {
     left: -1.5rem;
 }
@@ -209,34 +213,4 @@ form select {
 
 .slide-in-menu .nav-links {
     margin-left: 0;
-}
-
-form select:not([data-no-appearance]) {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    background-image: url(https://fs.codelinden.com/wp-content/plugins/fansocial/assets/icons/arrow-down.svg) !important;
-    background-repeat: no-repeat !important;
-    background-size: 15px 15px !important;
-    background-position: calc(100% - 15px) center !important;
-}
-
-select {
-    background: var(--select-background-color);
-    border-color: var(--select-border-color);
-    width: 100%;
-    font-weight: var(--input-font-weight);
-    color: var(--input-font-color);
-    font-size: var(--input-font-size);
-    border-width: var(--input-border-width);
-    border-style: solid;
-    padding: var(--input-padding);
-    margin-top: var(--input-margin-top);
-    /* margin-bottom: var(--input-margin-bottom); */
-    transition: border-color 200ms ease-in-out;
-    border-radius: var(--input-border-radius);
-    -webkit-border-radius: var(--input-border-radius);
-    -moz-border-radius: var(--input-border-radius);
-    -ms-border-radius: var(--input-border-radius);
-    -o-border-radius: var(--input-border-radius);
 }

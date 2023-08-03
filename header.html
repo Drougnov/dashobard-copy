@@ -15,9 +15,6 @@
         <!-- single-menu dropdown style -->
         <link rel="stylesheet" href="single-menu-dropdown.css" />
 
-        <!-- custom form element style (nice-select) -->
-        <link rel="stylesheet" href="form.css" />
-
         <title>Header</title>
     </head>
     <body>
@@ -88,10 +85,15 @@
 
                         <!-- single-menu dropdown container -->
                         <div id="menu_id1" class="menu-id">
-                            <form id="language1" action="#" method="POST">
-                                <select
-                                    name="language1"
-                                    onchange="document.getElementById('language').submit()"
+                            <div class="form-field">
+                                <label for="user_language">language</label
+                                ><select
+                                    name="user_language"
+                                    id="user_language"
+                                    required=""
+                                    aria-required="true"
+                                    aria-label="language"
+                                    aria-describedby="user_language-description "
                                 >
                                     <option value="en" selected="">
                                         English (English)
@@ -256,7 +258,7 @@
                                     </option>
                                     <option value="cy">Welsh (Cymraeg)</option>
                                 </select>
-                            </form>
+                            </div>
                         </div>
                     </div>
 
@@ -351,10 +353,15 @@
 
                             <!-- single-menu dropdown container -->
                             <div id="menu_id2" class="menu-id">
-                                <form id="language2" action="#" method="POST">
-                                    <select
-                                        name="language2"
-                                        onchange="document.getElementById('language').submit()"
+                                <div class="form-field">
+                                    <label for="user_language">language</label
+                                    ><select
+                                        name="user_language"
+                                        id="user_language"
+                                        required=""
+                                        aria-required="true"
+                                        aria-label="language"
+                                        aria-describedby="user_language-description "
                                     >
                                         <option value="en" selected="">
                                             English (English)
@@ -580,7 +587,7 @@
                                             Welsh (Cymraeg)
                                         </option>
                                     </select>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
