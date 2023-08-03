@@ -155,9 +155,10 @@ form select {
     top: 0;
     width: 300px;
     height: 100vh;
-    background: lightblue;
+    background: white;
     text-align: left;
     padding: 1.5rem;
+    border: 1px solid #ccc;
     box-shadow: 0 0 10px 2px rgba(0, 30, 0, 0.15);
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -224,4 +225,16 @@ form select {
 .menu-id .form-field select:active {
     background-color: var(--select-valid-background-color) !important;
     border-color: var(--select-valid-border-color) !important;
+}
+
+@media (max-width: 1024px) {
+    .nav .nav-left .nav-link,
+    .nav .nav-left .nav-links,
+    .nav .nav-right .nav-login,
+    .nav .nav-right .nav-btn {
+        display: none !important;
+    }
+    .slide-in-menu .menu-id {
+        left: 0;
+    }
 }
