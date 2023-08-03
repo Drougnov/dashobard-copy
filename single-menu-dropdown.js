@@ -6,10 +6,12 @@ function singleMenu(targetId, menuId, show = false) {
     // Initial state
     if (show) {
         // show dropdown
+        menuElement.style.display = "block";
         targetElement.classList.add("active");
         menuElement.classList.add("active");
     } else {
         // hide dropdown
+        menuElement.style.display = "none";
         targetElement.classList.remove("active");
         menuElement.classList.remove("active");
     }
@@ -20,10 +22,12 @@ function singleMenu(targetId, menuId, show = false) {
 
         if (show) {
             // show dropdown
+            menuElement.style.display = "block";
             targetElement.classList.add("active");
             menuElement.classList.add("active");
         } else {
             // hide dropdown
+            menuElement.style.display = "none";
             targetElement.classList.remove("active");
             menuElement.classList.remove("active");
         }
@@ -33,6 +37,7 @@ function singleMenu(targetId, menuId, show = false) {
     document.addEventListener("click", (event) => {
         if (!targetElement.parentElement.contains(event.target)) {
             show = false;
+            menuElement.style.display = "none";
             targetElement.classList.remove("active");
             menuElement.classList.remove("active");
         }
@@ -117,6 +122,7 @@ function singleMenu(targetId, menuId, show = false) {
             );
             if (closeIconContainer) {
                 show = false;
+                menuElement.style.display = "none";
                 targetElement.classList.remove("active");
                 menuElement.classList.remove("active");
             }
