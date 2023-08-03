@@ -214,3 +214,14 @@ form select {
 .slide-in-menu .nav-links {
     margin-left: 0;
 }
+
+.menu-id .form-field select:valid {
+    background-color: var(--select-background-color) !important;
+    border-color: var(--select-border-color) !important;
+}
+
+.menu-id .form-field select:focus,
+.menu-id .form-field select:active {
+    background-color: var(--select-valid-background-color) !important;
+    border-color: var(--select-valid-border-color) !important;
+}
