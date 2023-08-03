@@ -227,7 +227,7 @@ form select {
     border-color: var(--select-valid-border-color) !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .nav .nav-left .nav-link,
     .nav .nav-left .nav-links,
     .nav .nav-right .nav-login,
