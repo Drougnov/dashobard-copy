@@ -373,3 +373,14 @@ main#content {
         text-align: right;
     }
 }
+
+/* -----------checkout------------------ */
+
+#content.post-42 {
+    display: none;
+}
+
+.checkout .woocommerce form .form-row-first,
+.checkout .woocommerce form .form-row-first {
+    width: 48%;
+}
