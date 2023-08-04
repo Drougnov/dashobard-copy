@@ -6,12 +6,10 @@ function singleMenu(targetId, menuId, show = false) {
     // Initial state
     if (show) {
         // show dropdown
-        menuElement.style.display = "block";
         targetElement.classList.add("active");
         menuElement.classList.add("active");
     } else {
         // hide dropdown
-        menuElement.style.display = "none";
         targetElement.classList.remove("active");
         menuElement.classList.remove("active");
     }
@@ -22,12 +20,10 @@ function singleMenu(targetId, menuId, show = false) {
 
         if (show) {
             // show dropdown
-            menuElement.style.display = "block";
             targetElement.classList.add("active");
             menuElement.classList.add("active");
         } else {
             // hide dropdown
-            menuElement.style.display = "none";
             targetElement.classList.remove("active");
             menuElement.classList.remove("active");
         }
@@ -37,7 +33,6 @@ function singleMenu(targetId, menuId, show = false) {
     document.addEventListener("click", (event) => {
         if (!targetElement.parentElement.contains(event.target)) {
             show = false;
-            menuElement.style.display = "none";
             targetElement.classList.remove("active");
             menuElement.classList.remove("active");
         }
@@ -99,7 +94,7 @@ function singleMenu(targetId, menuId, show = false) {
                 }
             });
         } else {
-            // If the screen size is greater than 991px, remove the added div with p tag
+            // If the screen size is greater than 991px, remove the close icon container
             menuItems.forEach((item) => {
                 const menuIdMobileTop = item.querySelector(
                     ".menu-id__mobile-top"
@@ -115,14 +110,13 @@ function singleMenu(targetId, menuId, show = false) {
     window.addEventListener("load", function () {
         addDivWithCloseIcon();
 
-        // Event listener for the close icon
+        // Event listener for the close icon container
         document.addEventListener("click", function (event) {
             const closeIconContainer = event.target.closest(
                 "#close-icon-container"
             );
             if (closeIconContainer) {
                 show = false;
-                menuElement.style.display = "none";
                 targetElement.classList.remove("active");
                 menuElement.classList.remove("active");
             }
