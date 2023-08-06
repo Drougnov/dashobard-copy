@@ -124,6 +124,7 @@ video {
 }
 .wrapper.full-width .left-container {
     width: 100%;
+    padding: 0;
 }
 
 .left-container__img-container {
@@ -136,6 +137,13 @@ video {
     -o-border-radius: 15px;
     overflow: hidden;
 }
+.wrapper.full-width .left-container__img-container {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
 .left-container__img-container img {
     width: 100%;
     height: 100%;
@@ -144,13 +152,17 @@ video {
 
 /* toggle-btn */
 .toggle {
-    position: absolute !important;
+    position: absolute;
     top: 3.5rem;
     right: 3.5rem;
     width: 24px;
     height: 24px;
     z-index: 10;
     cursor: pointer;
+}
+.wrapper.full-width .toggle {
+    top: 1.5rem;
+    right: 1.5rem;
 }
 .toggle-icon {
     position: absolute;
@@ -171,7 +183,7 @@ video {
 .right-container {
     width: 30%;
     min-width: 425px;
-    height: 100vh;
+    height: calc(100vh - (2 * var(--stream-section-border-width)));
     padding: var(--stream-section-padding);
     border-left: var(--stream-section-border-width) solid
         var(--stream-section-border-color);
@@ -186,7 +198,7 @@ video {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    height: 100vh;
+    border-left: none;
 }
 
 /* ------------------------------message-section (bottom-right)-------------------------- */
@@ -228,8 +240,11 @@ video {
     font-weight: 700;
 }
 
-.message-navbar .icon-container {
-    background: transparent;
+.message-navbar .icon-container:hover {
+    background: #d9d9d9;
+}
+.token-container {
+    margin-bottom: 0;
 }
 
 /* ----------chatbox-button-container--------- */
@@ -246,6 +261,7 @@ video {
 
 .wrapper.full-width .chatbox-button-container {
     background: transparent;
+    padding-top: 0;
 }
 
 .chatbox-button {
@@ -286,12 +302,15 @@ video {
     align-items: center;
     padding-bottom: 1rem;
 }
-
 .chatbox-tip-text,
 .chatbox-tip-text span {
     color: #808080;
     font-size: 13px;
     margin-bottom: 0;
+}
+.wrapper.full-width .chatbox-tip-text,
+.wrapper.full-width .chatbox-tip-text span {
+    color: white;
 }
 
 /* ----------message-container--------- */
@@ -709,7 +728,8 @@ video {
     flex-direction: column;
     gap: 0.25rem;
 }
-.room-card__user-name {
+.room-card__user-name,
+.room-card__followers-number {
     font-size: 25px;
     font-weight: 700;
 }
@@ -736,6 +756,13 @@ video {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     cursor: pointer;
+}
+.svg-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .room__icon-container svg {
     fill: black;
@@ -828,10 +855,6 @@ video {
     flex-direction: column;
     gap: 0.25rem;
     align-items: center;
-}
-.room-card__followers-number {
-    font-size: 25px;
-    font-weight: 700;
 }
 .room-card__followers-text {
     font-size: 13px;
@@ -996,6 +1019,8 @@ video {
         height: auto;
         min-height: 100vh;
         flex-direction: column;
+        border-top: none;
+        border-bottom: none;
     }
 
     .left-container {
@@ -1070,11 +1095,7 @@ video {
         position: unset;
         width: 100%;
         max-width: unset;
-    }
-
-    .chatbox-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-top: 0;
     }
 
     /* revert message transparent backgrounds to normal */
@@ -1113,8 +1134,6 @@ video {
     .profile-meta-container {
         width: 100%;
         padding: 1.5rem 0;
-        margin-top: 0;
-        margin-left: 0;
     }
 
     .wrapper.full-width .bottom-container .mobile-chatbox {
@@ -1161,15 +1180,26 @@ video {
         width: 16px;
         height: 16px;
     }
+
+    h4.goal-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
 
 @media (max-width: 600px) {
+    .title-container {
+        display: none;
+    }
+
     .wrapper.full-width .top-container {
         min-height: unset;
     }
 
     .left-container {
         min-height: unset;
+    }
+    .wrapper.full-width .left-container {
         padding-top: 50vh;
     }
     .left-container__img-container,
@@ -1250,10 +1280,7 @@ video {
     .room-card__content {
         width: 100%;
     }
-
-    .room-card__settings.target-id {
-        position: absolute !important;
-        top: 1rem;
-        right: 1rem;
+    .room-card__top {
+        gap: 1rem;
     }
 }
