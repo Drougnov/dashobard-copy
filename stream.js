@@ -43,20 +43,6 @@ updateProgressBar(collectedAmount, totalAmount);
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
-singleMenu("target_id3", "menu_id3", false);
-
-// ---------------------Scroll to more room section on button click--------------------
-
-const moreRoomContainer = document.querySelector(".more-room");
-const moreRoomButton = document.querySelector(".room-card__more-room-btn");
-const descriptionContainer = document.querySelector(".description-container");
-
-moreRoomButton.addEventListener("click", () => {
-    showTab("rooms");
-    moreRoomContainer.scrollIntoView({
-        behavior: "smooth",
-    });
-});
 
 // -----------------------------------tab section--------------------------------------
 

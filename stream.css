@@ -476,12 +476,12 @@ video {
 /* -----------input-container------------ */
 
 .input-container {
-    background: white;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
     padding-right: 6.5rem;
     margin-top: 1.5rem;
+    border: 1px solid var(--stream-section-border-color);
     border-radius: 2rem !important;
     -webkit-border-radius: 2rem !important;
     -moz-border-radius: 2rem !important;
@@ -667,9 +667,8 @@ video {
 .room-card__top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .room-card__user-info {
@@ -867,11 +866,6 @@ video {
 .goal-container span {
     font-size: 13px;
     margin-bottom: 0;
-}
-.goal-description,
-.goal-name,
-.goal-tokens {
-    font-weight: 600;
 }
 
 .goal-tip {
