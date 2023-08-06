@@ -49,7 +49,7 @@ singleMenu("target_id3", "menu_id3", false);
 
 const moreRoomContainer = document.querySelector(".more-room");
 const moreRoomButton = document.querySelector(".room-card__more-room-btn");
-const bioContainer = document.querySelector(".bio-container");
+const descriptionContainer = document.querySelector(".description-container");
 
 moreRoomButton.addEventListener("click", () => {
     showTab("rooms");
@@ -283,17 +283,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// switch back to bio tab if chat-tab is active on bigger than 1000px screen
+// switch back to description tab if chat-tab is active on bigger than 1000px screen
 
-function switchToBioTab() {
+function switchToDescriptionTab() {
     if (window.innerWidth > 1000 && chatTab.classList.contains("active")) {
-        showTab("bio");
+        showTab("description");
     }
 }
 
-// Add event listener to check the viewport width on window resize
+// Call functions on window resize
 window.addEventListener("resize", () => {
     checkScreenSize();
     checkViewportWidth();
-    switchToBioTab();
+    switchToDescriptionTab();
 });

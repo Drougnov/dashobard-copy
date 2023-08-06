@@ -84,14 +84,35 @@ video {
     font-family: "Poppins", sans-serif !important;
 }
 
-.wrapper {
-    background: #f2f2f2;
+:root {
+    --stream-section-border-width: 3px;
+    --stream-section-border-color: #ccc;
+    --stream-section-padding: 24px;
 }
+
+/* -----------------------------stream title container----------------------------- */
+
+.title-container {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    padding: var(--stream-section-padding);
+}
+.viewers-count {
+    font-size: 12px;
+    color: #808080;
+}
+
+/* -----------------------------video and chat container----------------------------- */
 
 .top-container {
     height: 100vh;
     display: flex;
     position: relative;
+    border-top: var(--stream-section-border-width) solid
+        var(--stream-section-border-color);
+    border-bottom: var(--stream-section-border-width) solid
+        var(--stream-section-border-color);
 }
 
 /* -----------------------------left section (video-container)----------------------------- */
@@ -99,7 +120,7 @@ video {
 .left-container {
     width: 70%;
     position: relative;
-    overflow: hidden;
+    padding: var(--stream-section-padding);
 }
 .wrapper.full-width .left-container {
     width: 100%;
@@ -108,6 +129,12 @@ video {
 .left-container__img-container {
     width: 100%;
     height: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    overflow: hidden;
 }
 .left-container__img-container img {
     width: 100%;
@@ -118,8 +145,8 @@ video {
 /* toggle-btn */
 .toggle {
     position: absolute !important;
-    top: 1rem;
-    right: 1rem;
+    top: 3.5rem;
+    right: 3.5rem;
     width: 24px;
     height: 24px;
     z-index: 10;
@@ -145,7 +172,9 @@ video {
     width: 30%;
     min-width: 425px;
     height: 100vh;
-    overflow: auto;
+    padding: var(--stream-section-padding);
+    border-left: var(--stream-section-border-width) solid
+        var(--stream-section-border-color);
     scrollbar-width: none;
     overflow: scroll;
 }
@@ -166,15 +195,10 @@ video {
     width: 100%;
     height: 100%;
     min-height: 300px;
-    background: #f2f2f2;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-    box-shadow: 0 0 10px 2px rgba(0, 30, 0, 0.15);
     position: relative;
 }
 .wrapper.full-width .chatbox-container {
@@ -185,13 +209,10 @@ video {
 
 /* message-navbar */
 .message-navbar {
-    width: calc(100% + 4rem);
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    margin-left: -2rem;
 }
 .wrapper.full-width .message-navbar {
     display: none;
@@ -206,10 +227,6 @@ video {
     font-size: 20px;
     font-weight: 700;
 }
-.message-navbar__viewers-count {
-    font-size: 12px;
-    color: #808080;
-}
 
 .message-navbar .icon-container {
     background: transparent;
@@ -219,10 +236,8 @@ video {
 
 .chatbox-button-container {
     width: 100%;
-    background: #f2f2f2;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
     padding-top: 1rem;
@@ -234,6 +249,7 @@ video {
 }
 
 .chatbox-button {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -590,9 +606,10 @@ video {
 /* ----------profile-meta-container--------- */
 
 .profile-meta-container {
-    background: #fb5ba2;
     height: max-content;
     padding: 3rem 0;
+    border-bottom: var(--stream-section-border-width) solid
+        var(--stream-section-border-color);
 }
 
 .room-card {
@@ -639,12 +656,10 @@ video {
     gap: 0.25rem;
 }
 .room-card__user-name {
-    color: white;
     font-size: 25px;
     font-weight: 700;
 }
 .room-card__user-username {
-    color: white;
     font-size: 13px;
 }
 
@@ -660,7 +675,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: #fb5ba2;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -761,19 +776,17 @@ video {
     align-items: center;
 }
 .room-card__followers-number {
-    color: white;
     font-size: 25px;
     font-weight: 700;
 }
 .room-card__followers-text {
-    color: white;
     font-size: 13px;
 }
 .room-card__follow-btn,
 .room-card__more-room-btn {
     height: 42px;
-    color: #fb5ba2;
-    background: white;
+    color: white;
+    background: #fb5ba2;
 }
 .room-card__follow-btn {
     padding-left: 40px;
@@ -831,7 +844,6 @@ video {
 .goal-container p,
 .goal-container span {
     font-size: 13px;
-    color: white !important;
     margin-bottom: 0;
 }
 .goal-description,
@@ -857,14 +869,14 @@ video {
     width: 100%;
     max-width: 300px;
     height: 8px;
-    background-color: #90194e;
+    background-color: #efefef;
     border-radius: 5px;
     overflow: hidden;
 }
 .progress-bar {
     width: 0%;
     height: 100%;
-    background-color: white;
+    background-color: #fb5ba2;
     transition: all 0.3s linear;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
@@ -880,12 +892,14 @@ video {
 
 /* tab container */
 
-#bio-tab,
-#rooms-tab {
+#description-tab,
+#rooms-tab,
+#rules-tab {
     display: none;
 }
-#bio-tab.active,
-#rooms-tab.active {
+#description-tab.active,
+#rooms-tab.active,
+#rules-tab.active {
     display: block;
 }
 
@@ -1064,7 +1078,7 @@ video {
 
     .mobile-chatbox .input-container {
         margin-top: 0;
-        border: 1px solid #d9d9d9;
+        border: 1px solid var(--stream-section-border-color);
     }
 }
 

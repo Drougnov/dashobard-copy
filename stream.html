@@ -23,6 +23,12 @@
     </head>
     <body>
         <div class="wrapper">
+            <!-- New stream title container -->
+            <div class="title-container">
+                <h1>New stream</h1>
+                <span class="viewers-count">6k watching</span>
+            </div>
+
             <!-- top container (video & chat) -->
             <div class="top-container">
                 <!-- left-section -->
@@ -137,7 +143,8 @@
                                 <span class="message-navbar__left-heading"
                                     >Live Chat</span
                                 >
-                                <span class="message-navbar__viewers-count"
+                                <span
+                                    class="message-navbar__viewers-count viewers-count"
                                     >6k watching</span
                                 >
                             </div>
@@ -175,12 +182,14 @@
 
                         <!-- chatbox-button-container -->
                         <div class="chatbox-button-container">
+                            <button class="chatbox-button">Tip</button>
+                            <button class="chatbox-button">Wallet</button>
                             <button class="chatbox-button" id="toggleButton">
                                 <span>Go Private</span>
                             </button>
-                            <span class="chatbox-button__credit"
+                            <!-- <span class="chatbox-button__credit"
                                 >150 Tokens Credit | 10 Tokens / 30ses</span
-                            >
+                            > -->
                         </div>
 
                         <!-- message-container -->
@@ -915,11 +924,11 @@
                     <div class="ifugj bx_1200">
                         <div class="tab-button-container">
                             <button
-                                id="bio-btn"
+                                id="description-btn"
                                 class="tab-button active UJQCM"
-                                onclick="showTab('bio')"
+                                onclick="showTab('description')"
                             >
-                                Bio
+                                Description
                             </button>
 
                             <button
@@ -927,7 +936,15 @@
                                 class="tab-button UJQCM"
                                 onclick="showTab('rooms')"
                             >
-                                Rooms
+                                More Rooms
+                            </button>
+
+                            <button
+                                id="rules-btn"
+                                class="tab-button UJQCM"
+                                onclick="showTab('rules')"
+                            >
+                                Rules
                             </button>
 
                             <button
@@ -962,9 +979,31 @@
                             </p>
                         </div>
 
-                        <!-- bio-container -->
-                        <div class="bio-container tab-menu active" id="bio-tab">
-                            <h1>Bio</h1>
+                        <!-- description-container -->
+                        <div
+                            class="description-container tab-menu active"
+                            id="description-tab"
+                        >
+                            <h1>Description</h1>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Tempora aspernatur commodi
+                                quam vero aperiam delectus culpa illum quod,
+                                maiores in reiciendis rerum error laborum sit
+                                labore! Molestiae reprehenderit soluta minima
+                                exercitationem minus voluptatum eius nulla
+                                aspernatur dolore a quos adipisci, rerum eaque
+                                quo asperiores libero autem, vitae optio! Fuga,
+                                dolor.
+                            </p>
+                        </div>
+
+                        <!-- rules-container -->
+                        <div
+                            class="rules-container tab-menu active"
+                            id="rules-tab"
+                        >
+                            <h1>Rules</h1>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur
                                 adipisicing elit. Tempora aspernatur commodi
