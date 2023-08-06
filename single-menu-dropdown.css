@@ -1,5 +1,6 @@
 .target-id {
     position: relative !important;
+    cursor: pointer;
 }
 .menu-id {
     position: absolute;
@@ -9,7 +10,7 @@
     width: 300px;
     background: white;
     text-align: left;
-    padding: 0.75rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -28,7 +29,7 @@
     display: block;
     position: absolute;
     top: -7px;
-    left: calc(var(--target-half-width) + 1.5rem);
+    left: calc(var(--target-half-width) + 1rem);
     border: 8px solid white;
     border-color: transparent transparent white white;
     transform: translateX(-50%) rotate(135deg);
@@ -40,7 +41,7 @@
 }
 .menu-id.right::before {
     left: unset;
-    right: var(--target-half-width);
+    right: calc(var(--target-half-width) + 1rem);
 }
 .menu-id__mobile-top {
     display: none;
