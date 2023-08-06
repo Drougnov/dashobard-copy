@@ -41,7 +41,7 @@
 }
 .menu-id.right::before {
     left: unset;
-    right: calc(var(--target-half-width) + 1rem);
+    right: var(--target-half-width);
 }
 .menu-id__mobile-top {
     display: none;
@@ -122,10 +122,10 @@
     }
     .menu-id__mobile-top {
         width: 100%;
-        height: 60px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding-bottom: 1.5rem;
     }
     .menu-id__mobile-top #close-icon-container {
         width: 18px;

@@ -204,10 +204,6 @@ form select {
     padding: var(--input-padding) !important;
 }
 
-.slide-in-menu .menu-id {
-    left: -1.5rem;
-}
-
 .slide-in-menu .nav-left {
     margin-top: 5rem;
 }
