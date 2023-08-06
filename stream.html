@@ -20,6 +20,13 @@
         <!-- emoji picker script -->
         <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
         <title>Stream</title>
+
+        <!-- splide style and script -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+        />
     </head>
     <body>
         <div class="wrapper">
@@ -473,12 +480,41 @@
                 <div class="profile-meta-container">
                     <div class="ifugj bx_1200">
                         <div class="room-card">
-                            <div class="room-card__image-container">
+                            <div class="room-card__image-container target-id">
                                 <img
-                                    class="room-card__image"
+                                    id="target_id3"
+                                    class="room-card__image target-id-button"
                                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                                     alt=""
                                 />
+                                <div id="menu_id3" class="menu-id">
+                                    <div class="carousel-container">
+                                        <div
+                                            class="splide"
+                                            role="group"
+                                            aria-label="carousel"
+                                        >
+                                            <div class="splide__track">
+                                                <ul class="splide__list">
+                                                    <li class="splide__slide">
+                                                        Slide 01
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        Slide 02
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        Slide 03
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="streamer-name">Name</h3>
+                                    <span class="streamer-age">Age</span>
+                                    <span class="streamer-country"
+                                        >Country</span
+                                    >
+                                </div>
                             </div>
                             <div class="room-card__content">
                                 <div class="room-card__top">

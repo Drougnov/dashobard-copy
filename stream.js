@@ -43,6 +43,7 @@ updateProgressBar(collectedAmount, totalAmount);
 
 singleMenu("target_id1", "menu_id1", false);
 singleMenu("target_id2", "menu_id2", false);
+singleMenu("target_id3", "menu_id3", false);
 
 // -----------------------------------tab section--------------------------------------
 
@@ -266,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// switch back to description tab if chat-tab is active on bigger than 1000px screen
+// ------switch back to description tab if chat-tab is active on bigger than 1000px screen-----
 
 function switchToDescriptionTab() {
     if (window.innerWidth > 1000 && chatTab.classList.contains("active")) {
@@ -279,4 +280,16 @@ window.addEventListener("resize", () => {
     checkScreenSize();
     checkViewportWidth();
     switchToDescriptionTab();
+});
+
+// -------------------------------Initiate splide.js-------------------------------
+
+window.addEventListener("DOMContentLoaded", () => {
+    new Splide(".splide", {
+        perMove: 1,
+        gap: "1rem",
+        mediaQuery: "min",
+        destroy: false,
+        perPage: 1,
+    }).mount();
 });
