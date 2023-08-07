@@ -123,7 +123,9 @@ video {
 
 /* title-container */
 .title-container {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
     padding-bottom: var(--stream-section-padding);
 }
 .wrapper.full-width .title-container {
@@ -132,6 +134,10 @@ video {
 .stream-title {
     font-size: 20px;
     line-height: 1;
+}
+.viewers-count {
+    font-size: 12px;
+    color: #808080;
 }
 
 /* img-container */
