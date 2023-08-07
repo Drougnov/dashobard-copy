@@ -13,6 +13,7 @@ const wrapper = document.querySelector(".wrapper");
 
 toggleBtn.addEventListener("click", () => {
     wrapper.classList.toggle("full-width");
+    scrollToBottomMessage();
 });
 
 // Toggle class based on screen size
@@ -124,6 +125,14 @@ const sendMessageForm = document.querySelector(".input-container");
 const messageContainer = document.querySelector(".message-container");
 const messageInput = document.querySelector(".input-message");
 
+// Auto-scroll to the new message
+function scrollToBottomMessage() {
+    messageContainer.scrollTo({
+        top: messageContainer.scrollHeight,
+        behavior: "smooth",
+    });
+}
+
 sendMessageForm.addEventListener("submit", (e) => {
     // stop auto refreshing on submit
     e.preventDefault();
@@ -156,11 +165,7 @@ sendMessageForm.addEventListener("submit", (e) => {
         // Clear input value on submit
         messageInput.value = "";
 
-        // Auto-scroll to the new message
-        messageContainer.scrollTo({
-            top: messageContainer.scrollHeight,
-            behavior: "smooth",
-        });
+        scrollToBottomMessage();
     } else {
         return;
     }
