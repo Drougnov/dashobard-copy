@@ -192,6 +192,27 @@ video {
     display: none;
 }
 
+/* pin-icon-container */
+.pin-icon-container {
+    position: absolute;
+    top: var(--stream-section-padding);
+    right: var(--stream-section-padding);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.icon-pin {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
 /* --------------------------right section (chatbox-container)------------------------- */
 
 .right-container {
@@ -1011,18 +1032,22 @@ video {
 /* ------------------------------mobile chatbox holder------------------------------- */
 
 .mobile-chatbox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: max-content;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    background: white;
+    padding: var(--stream-section-padding);
+    padding-top: 0;
     display: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
-.mobile-chatbox__bottom {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 .mobile-chatbox__img-container {
     width: 45px;
     min-width: 45px;
@@ -1104,6 +1129,28 @@ video {
     .wrapper.full-width .top-container {
         flex-direction: column;
         gap: 0;
+    }
+
+    /* if pinned */
+    .wrapper.full-width .left-container.pinned {
+        padding-top: 100vh;
+    }
+    .left-container.pinned .left-container__img-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .pin-icon-container {
+        display: block;
+    }
+    .left-container.pinned .pin-icon-container {
+        position: fixed;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
     }
 
     .wrapper.full-width .left-container .profile-meta-container {
@@ -1223,16 +1270,12 @@ video {
     .left-container {
         min-height: unset;
     }
-    .wrapper.full-width .left-container {
+    .wrapper.full-width .left-container.pinned {
         padding-top: 50vh;
     }
     .left-container__img-container,
     .wrapper.full-width .left-container__img-container {
-        position: fixed;
-        top: 0;
-        left: 0;
         height: 50vh;
-        z-index: 99999;
     }
 
     .emoji-picker {

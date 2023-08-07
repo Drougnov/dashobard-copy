@@ -18,11 +18,14 @@ toggleBtn.addEventListener("click", () => {
 // Toggle class based on screen size
 function checkScreenSize() {
     var shouldAddClass = window.innerWidth <= 1200;
-    wrapper.classList.toggle("full-width", shouldAddClass);
+    if (shouldAddClass) {
+        wrapper.classList.add("full-width");
+    }
 }
 
 // Call function initially and on screen resize
 checkScreenSize();
+window.addEventListener("resize", checkScreenSize);
 
 //-----------------------Update the progress bar dynamically---------------------------
 
@@ -99,6 +102,21 @@ function addClassToBottomContainer() {
 }
 
 addClassToBottomContainer();
+
+// set bottom container's padding-bottom equal to mobile-chatbox's height
+
+function setBottomContainerPadding() {
+    if (window.innerWidth <= 1000) {
+        const mobileChatboxHeight = mobileChatbox.offsetHeight;
+        bottomContainer.style.paddingBottom = mobileChatboxHeight + "px";
+    } else {
+        bottomContainer.style.paddingBottom = "0";
+    }
+}
+
+// Call the function initially and on screen resize
+setBottomContainerPadding();
+window.addEventListener("resize", setBottomContainerPadding);
 
 // -------------------------add message with input value-----------------------------
 
@@ -249,6 +267,7 @@ function checkViewportWidth() {
 
 // Initial check when the page loads
 checkViewportWidth();
+window.addEventListener("resize", checkViewportWidth);
 
 // ----------------------handle chatbox button click------------------------------------------
 
@@ -275,13 +294,7 @@ function switchToDescriptionTab() {
         showTab("description");
     }
 }
-
-// Call functions on window resize
-window.addEventListener("resize", () => {
-    checkScreenSize();
-    checkViewportWidth();
-    switchToDescriptionTab();
-});
+window.addEventListener("resize", switchToDescriptionTab);
 
 // -------------------------------Initiate splide.js-------------------------------
 
@@ -293,4 +306,13 @@ window.addEventListener("DOMContentLoaded", () => {
         destroy: false,
         perPage: 1,
     }).mount();
+});
+
+//-------------------------------handle pin icon click----------------------------------
+
+const pinIcon = document.querySelector(".pin-icon-container");
+const videoContainer = document.querySelector(".left-container");
+
+pinIcon.addEventListener("click", () => {
+    videoContainer.classList.toggle("pinned");
 });
