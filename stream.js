@@ -76,10 +76,11 @@ function setActiveButton(tabId) {
     button.classList.add("active");
 }
 
-// ----------------------------------mobile chatbox---------------------------------------
+// -------------------------handle chatbox button click----------------------------------
 
 const bottomContainer = document.querySelector(".bottom-container");
 const mobileChatbox = document.querySelector(".mobile-chatbox");
+const messageInput = document.querySelector(".input-message");
 
 // scroll to chat tab on mobile chatbox click
 const chatTabContainer = document.querySelector("#chat-tab");
@@ -89,6 +90,7 @@ mobileChatbox.addEventListener("click", (e) => {
     chatTabContainer.scrollIntoView({
         behavior: "smooth",
     });
+    messageInput.focus();
 });
 
 // Add class to bottomContainer if chat tab is open
@@ -123,7 +125,6 @@ window.addEventListener("resize", setBottomContainerPadding);
 
 const sendMessageForm = document.querySelector(".input-container");
 const messageContainer = document.querySelector(".message-container");
-const messageInput = document.querySelector(".input-message");
 
 // Auto-scroll to the new message
 function scrollToBottomMessage() {
@@ -274,8 +275,6 @@ function checkViewportWidth() {
 checkViewportWidth();
 window.addEventListener("resize", checkViewportWidth);
 
-// ----------------------handle chatbox button click------------------------------------------
-
 // Function to toggle the "active" class on the buttons
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -292,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ------switch back to description tab if chat-tab is active on bigger than 1000px screen-----
+// -------switch back to description tab if chat-tab is active on bigger than 1000px screen------
 
 function switchToDescriptionTab() {
     if (window.innerWidth > 1000 && chatTab.classList.contains("active")) {
