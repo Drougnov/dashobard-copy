@@ -327,6 +327,33 @@ body {
 }
 
 /* Responsive CSS */
+@media only screen and (max-width: 1024px) {
+    .DuKSh {
+        display: block !important;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        transform: translate(0, 100%);
+        -webkit-transform: translate(0, 100%);
+        -moz-transform: translate(0, 100%);
+        -ms-transform: translate(0, 100%);
+        -o-transform: translate(0, 100%);
+        transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+        -webkit-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+        -moz-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+        -ms-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+        z-index: 1002;
+    }
+    .DuKSh.gsCWf {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+}
+
 @media screen and (max-width: 600px) {
     .GodhZ {
         padding: 50px;
