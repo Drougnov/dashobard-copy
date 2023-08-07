@@ -102,10 +102,17 @@ video {
         var(--stream-section-border-color);
 }
 
+.wrapper.full-width .top-container {
+    border-top: none;
+    border-bottom: none;
+}
+
 /* -----------------------------left section (video-container)----------------------------- */
 
 .left-container {
     width: 70%;
+    display: flex;
+    flex-direction: column;
     padding: var(--stream-section-padding);
     position: relative;
 }
@@ -116,18 +123,15 @@ video {
 
 /* title-container */
 .title-container {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
+    display: block;
+    padding-bottom: var(--stream-section-padding);
 }
 .wrapper.full-width .title-container {
-    top: 1.5rem;
-    left: 1.5rem;
+    display: none;
 }
 .stream-title {
-    color: white;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1;
 }
 
 /* img-container */
@@ -157,7 +161,7 @@ video {
 /* toggle-btn */
 .toggle {
     position: absolute;
-    top: 3rem;
+    top: 5rem;
     right: 3rem;
     width: 24px;
     height: 24px;
@@ -270,8 +274,9 @@ video {
 }
 
 .wrapper.full-width .chatbox-button-container {
+    order: 4;
     background: transparent;
-    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .chatbox-button {
@@ -311,6 +316,9 @@ video {
     justify-content: space-between;
     align-items: center;
     padding-bottom: var(--stream-section-padding);
+}
+.wrapper.full-width .chatbox-tip-container {
+    display: none;
 }
 .chatbox-tip-text,
 .chatbox-tip-text span {
@@ -625,7 +633,7 @@ video {
 
 .tab-buttons {
     background: white;
-    padding: var(--stream-section-padding) 0;
+    padding: var(--stream-section-padding);
 }
 .tab-button-container {
     width: 100%;
@@ -658,7 +666,7 @@ video {
 
 .profile-meta-container {
     height: max-content;
-    padding: var(--stream-section-padding) 0;
+    padding: var(--stream-section-padding);
     border-bottom: var(--stream-section-border-width) solid
         var(--stream-section-border-color);
 }
@@ -671,9 +679,9 @@ video {
 }
 
 .room-card__image-container {
-    width: 80px;
-    min-width: 80px;
-    height: 80px;
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
 }
 .room-card__image {
     width: 100%;
@@ -865,7 +873,6 @@ video {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    align-items: center;
 }
 .room-card__followers-text {
     font-size: 13px;
@@ -950,7 +957,7 @@ video {
 }
 .progress-bar-container {
     width: 100%;
-    max-width: 300px;
+    max-width: 550px;
     height: 8px;
     background-color: #efefef;
     border-radius: 5px;
@@ -973,7 +980,12 @@ video {
     white-space: nowrap;
 }
 
-/* tab container */
+/* page content container (tab content) */
+
+.page-content-container {
+    padding: var(--stream-section-padding);
+    padding-top: 0;
+}
 
 #description-tab,
 #rooms-tab,
@@ -984,6 +996,10 @@ video {
 #rooms-tab.active,
 #rules-tab.active {
     display: block;
+}
+/* optional */
+.tab-menu p {
+    margin-bottom: 0;
 }
 
 /* ------------------------------mobile chatbox holder------------------------------- */
