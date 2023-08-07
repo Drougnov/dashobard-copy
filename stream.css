@@ -85,22 +85,9 @@ video {
 }
 
 :root {
-    --stream-section-border-width: 4px;
+    --stream-section-border-width: 1px;
     --stream-section-border-color: #ccc;
-    --stream-section-padding: 24px;
-}
-
-/* -----------------------------stream title container----------------------------- */
-
-.title-container {
-    display: flex;
-    align-items: baseline;
-    gap: 0.25rem;
-    padding: var(--stream-section-padding);
-}
-.viewers-count {
-    font-size: 12px;
-    color: #808080;
+    --stream-section-padding: 20px;
 }
 
 /* -----------------------------video and chat container----------------------------- */
@@ -119,14 +106,31 @@ video {
 
 .left-container {
     width: 70%;
-    position: relative;
     padding: var(--stream-section-padding);
+    position: relative;
 }
 .wrapper.full-width .left-container {
     width: 100%;
     padding: 0;
 }
 
+/* title-container */
+.title-container {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
+.wrapper.full-width .title-container {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+.stream-title {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* img-container */
 .left-container__img-container {
     width: 100%;
     height: 100%;
@@ -153,8 +157,8 @@ video {
 /* toggle-btn */
 .toggle {
     position: absolute;
-    top: 3.5rem;
-    right: 3.5rem;
+    top: 3rem;
+    right: 3rem;
     width: 24px;
     height: 24px;
     z-index: 10;
@@ -247,6 +251,12 @@ video {
     margin-bottom: 0;
 }
 
+/* overwrite single-menu dropdown's padding */
+
+.menu-id {
+    padding: var(--stream-section-padding) !important;
+}
+
 /* ----------chatbox-button-container--------- */
 
 .chatbox-button-container {
@@ -255,8 +265,8 @@ video {
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: var(--stream-section-padding);
+    padding-bottom: var(--stream-section-padding);
 }
 
 .wrapper.full-width .chatbox-button-container {
@@ -300,7 +310,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: var(--stream-section-padding);
 }
 .chatbox-tip-text,
 .chatbox-tip-text span {
@@ -615,13 +625,13 @@ video {
 
 .tab-buttons {
     background: white;
+    padding: var(--stream-section-padding) 0;
 }
 .tab-button-container {
     width: 100%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 0;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -648,7 +658,7 @@ video {
 
 .profile-meta-container {
     height: max-content;
-    padding: 3rem 0;
+    padding: var(--stream-section-padding) 0;
     border-bottom: var(--stream-section-border-width) solid
         var(--stream-section-border-color);
 }
@@ -657,7 +667,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: var(--stream-section-padding);
 }
 
 .room-card__image-container {
@@ -684,6 +694,7 @@ video {
     justify-content: center;
     align-items: center;
     border: 1px solid var(--stream-section-border-color);
+    margin-bottom: var(--stream-section-padding) !important;
 }
 .splide__arrow {
     transition: all 0s;
@@ -714,13 +725,13 @@ video {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--stream-section-padding);
 }
 .room-card__top {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 2rem;
+    gap: var(--stream-section-padding);
 }
 
 .room-card__user-info {
@@ -812,7 +823,7 @@ video {
 .menu-settings .menu-item {
     justify-content: center;
     gap: 1rem;
-    padding: 12px;
+    padding: var(--stream-section-padding);
     border-bottom: 2px solid var(--input-border-color);
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -848,7 +859,7 @@ video {
 
 .room-card__followers-info {
     display: flex;
-    gap: 1rem;
+    gap: var(--stream-section-padding);
 }
 .room-card__followers {
     display: flex;
@@ -1133,7 +1144,6 @@ video {
 
     .profile-meta-container {
         width: 100%;
-        padding: 1.5rem 0;
     }
 
     .wrapper.full-width .bottom-container .mobile-chatbox {
@@ -1151,10 +1161,6 @@ video {
 }
 
 @media (max-width: 768px) {
-    .room-card {
-        gap: 1rem;
-    }
-
     .room-card__user-name,
     .room-card__followers-number {
         font-size: 18px;
@@ -1188,10 +1194,6 @@ video {
 }
 
 @media (max-width: 600px) {
-    .title-container {
-        display: none;
-    }
-
     .wrapper.full-width .top-container {
         min-height: unset;
     }
@@ -1266,11 +1268,6 @@ video {
 
     .send-message {
         right: 1rem;
-    }
-
-    .profile-meta-container {
-        position: relative;
-        padding: 1rem 0;
     }
 
     .room-card {
