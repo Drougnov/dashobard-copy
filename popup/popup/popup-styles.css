@@ -351,12 +351,23 @@ body {
 #slidein-popup .GodhZ {
     padding: 0;
 }
+
 #slidein-popup .ExGby {
     height: 100vh;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-
+#slidein-popup .ExGby::-webkit-scrollbar {
+    display: none;
+}
+#slidein-popup .tSrNa {
+    flex: 0 0 auto;
+}
 #slidein-popup .TImJU {
+    flex: 1;
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
