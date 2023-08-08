@@ -426,9 +426,12 @@ body {
         z-index: 1002;
     }
 
+    .DuKSh#slidein-popup {
+        box-shadow: none;
+    }
+
     .DuKSh.gsCWf,
     .DuKSh.gsCWf#slidein-popup {
-        box-shadow: 0 0 100px 60px rgba(0, 0, 0, 0.4);
         transform: translate(0, 60px);
         -webkit-transform: translate(0, 60px);
         -moz-transform: translate(0, 60px);
