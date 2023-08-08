@@ -326,9 +326,70 @@ body {
     border: 1px solid black;
 }
 
+/* slide-in-popup */
+
+.DuKSh#slidein-popup {
+    display: block !important;
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.DuKSh.gsCWf#slidein-popup {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+}
+#slidein-popup .GodhZ {
+    padding: 0;
+}
+#slidein-popup .ExGby {
+    height: 100vh;
+    overflow: scroll;
+}
+
+#slidein-popup .TImJU {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#slidein-popup .main-section {
+    flex: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#slidein-popup .main-section::-webkit-scrollbar {
+    display: none;
+}
+#slidein-popup .main-section p {
+    font-size: 20px;
+}
+#slidein-popup .AYaOY {
+    flex: 0 0 auto;
+    margin-top: 1rem;
+}
+
+#slidein-popup .iDzey {
+    display: none;
+}
+#slidein-popup.loader .iDzey {
+    display: flex;
+}
+
 /* Responsive CSS */
 @media only screen and (max-width: 991px) {
-    .DuKSh {
+    .DuKSh,
+    .DuKSh#slidein-popup {
         display: block !important;
         bottom: 0;
         right: 0;
@@ -351,13 +412,22 @@ body {
         z-index: 1002;
     }
     .DuKSh.gsCWf {
-        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 100px 60px rgba(0, 0, 0, 0.4);
         transform: translate(0, 60px);
         -webkit-transform: translate(0, 60px);
         -moz-transform: translate(0, 60px);
         -ms-transform: translate(0, 60px);
         -o-transform: translate(0, 60px);
     }
+    .DuKSh.gsCWf#slidein-popup {
+        box-shadow: 0 0 100px 60px rgba(0, 0, 0, 0.4);
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+    }
+
     .GodhZ,
     #scroll-popup .GodhZ,
     #plan-popup .GodhZ {
