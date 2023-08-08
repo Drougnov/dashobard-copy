@@ -113,7 +113,7 @@ function setBottomContainerPadding() {
         const mobileChatboxHeight = mobileChatbox.offsetHeight;
         bottomContainer.style.paddingBottom = mobileChatboxHeight + "px";
     } else {
-        bottomContainer.style.paddingBottom = "0";
+        bottomContainer.style.paddingBottom = "20px";
     }
 }
 
