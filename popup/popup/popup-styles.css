@@ -36,6 +36,13 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     pointer-events: all;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ExGby::-webkit-scrollbar {
+    display: none;
 }
 
 /* Popup Header */
@@ -83,13 +90,6 @@ body {
 }
 
 /* Scroll-Popup */
-
-#scroll-popup .GodhZ {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-}
 
 #scroll-popup .ExGby {
     width: 100%;
@@ -142,11 +142,6 @@ body {
 
 .membership-title {
     text-align: center;
-}
-
-#plan-popup .GodhZ {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 #plan-popup .ExGby {
@@ -329,7 +324,10 @@ body {
 /* slide-in-popup */
 
 .DuKSh#slidein-popup {
-    display: block !important;
+    display: flex;
+    width: 300px;
+    background-color: transparent !important;
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1);
     transform: translate(-100%, 0);
     -webkit-transform: translate(-100%, 0);
     -moz-transform: translate(-100%, 0);
@@ -341,6 +339,7 @@ body {
     -ms-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 .DuKSh.gsCWf#slidein-popup {
     transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
@@ -348,6 +347,7 @@ body {
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
 }
+
 #slidein-popup .GodhZ {
     padding: 0;
 }
@@ -356,16 +356,17 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
-#slidein-popup .ExGby::-webkit-scrollbar {
-    display: none;
-}
+
 #slidein-popup .tSrNa {
     flex: 0 0 auto;
 }
+
 #slidein-popup .TImJU {
     flex: 1;
     height: calc(100vh - 100px);
@@ -373,19 +374,19 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 #slidein-popup .main-section {
     flex: 1;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 #slidein-popup .main-section::-webkit-scrollbar {
     display: none;
 }
-#slidein-popup .main-section p {
-    font-size: 20px;
-}
-#slidein-popup .AYaOY {
+
+#slidein-popup .TImJU .AYaOY {
     flex: 0 0 auto;
     margin-top: 1rem;
 }
@@ -393,6 +394,7 @@ body {
 #slidein-popup .iDzey {
     display: none;
 }
+
 #slidein-popup.loader .iDzey {
     display: flex;
 }
@@ -405,6 +407,7 @@ body {
         bottom: 0;
         right: 0;
         margin: 0;
+        width: 100%;
         border-radius: 17px 17px 0 0;
         -webkit-border-radius: 17px 17px 0 0;
         -moz-border-radius: 17px 17px 0 0;
@@ -422,7 +425,9 @@ body {
         -o-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
         z-index: 1002;
     }
-    .DuKSh.gsCWf {
+
+    .DuKSh.gsCWf,
+    .DuKSh.gsCWf#slidein-popup {
         box-shadow: 0 0 100px 60px rgba(0, 0, 0, 0.4);
         transform: translate(0, 60px);
         -webkit-transform: translate(0, 60px);
@@ -430,34 +435,32 @@ body {
         -ms-transform: translate(0, 60px);
         -o-transform: translate(0, 60px);
     }
-    .DuKSh.gsCWf#slidein-popup {
-        box-shadow: 0 0 100px 60px rgba(0, 0, 0, 0.4);
-        transform: translate(0, 0);
-        -webkit-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-    }
 
-    .GodhZ,
-    #scroll-popup .GodhZ,
-    #plan-popup .GodhZ {
+    .GodhZ {
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
         padding: 0;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
     }
+
     .ExGby,
-    #scroll-popup .ExGby,
-    #plan-popup .ExGby {
+    #scroll-popup .ExGby {
         width: 100%;
         height: calc(100vh - 60px);
-        overflow-y: scroll;
         max-width: unset;
         border-radius: 17px 17px 0 0;
         -webkit-border-radius: 17px 17px 0 0;
         -moz-border-radius: 17px 17px 0 0;
         -ms-border-radius: 17px 17px 0 0;
         -o-border-radius: 17px 17px 0 0;
+    }
+
+    #slidein-popup .TImJU {
+        flex: unset;
+        height: calc(100vh - 137px);
     }
 }
