@@ -158,27 +158,26 @@ form select {
     background: white;
     text-align: left;
     padding: 1.5rem;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px 2px rgba(0, 30, 0, 0.15);
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1);
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -ms-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: 0.3s transform cubic-bezier(0.645, 0.045, 0.355, 1);
     z-index: 9999;
 }
 
 .nav-active .slide-in-menu {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
 }
 
 /* close-btn */
@@ -232,5 +231,28 @@ form select {
     }
     .slide-in-menu .menu-id {
         left: 0;
+    }
+
+    .slide-in-menu {
+        width: 100%;
+        box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 17px 17px 0 0;
+        -webkit-border-radius: 17px 17px 0 0;
+        -moz-border-radius: 17px 17px 0 0;
+        -ms-border-radius: 17px 17px 0 0;
+        -o-border-radius: 17px 17px 0 0;
+        transform: translate(0, 100%);
+        -webkit-transform: translate(0, 100%);
+        -moz-transform: translate(0, 100%);
+        -ms-transform: translate(0, 100%);
+        -o-transform: translate(0, 100%);
+    }
+
+    .nav-active .slide-in-menu {
+        transform: translate(0, 60px);
+        -webkit-transform: translate(0, 60px);
+        -moz-transform: translate(0, 60px);
+        -ms-transform: translate(0, 60px);
+        -o-transform: translate(0, 60px);
     }
 }
