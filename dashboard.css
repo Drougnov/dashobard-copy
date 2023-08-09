@@ -20,19 +20,32 @@
 /* nav-right section (top right) */
 .NBQVu {
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 /* nav-right icon containers */
 .gmOiP {
-    height: max-content;
+    width: 48px;
+    height: 48px;
+}
+
+.svg-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-wrapper:hover svg > * {
+    fill: #333333;
 }
 
 /* red dot on icon */
 .bPLpQ {
     position: absolute;
-    top: 9px;
-    right: -3px;
+    top: 20px;
+    right: 9px;
     width: 14px;
     height: 14px;
     background: #ff6a55;
