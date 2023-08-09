@@ -278,15 +278,17 @@ window.addEventListener("resize", checkViewportWidth);
 // Function to toggle the "active" class on the buttons
 
 document.addEventListener("DOMContentLoaded", function () {
-    const privateToggleButton = document.getElementById("privateToggleButton");
+    const privateToggleButton = document.getElementById("private");
     const privateToggleButtonText =
         privateToggleButton.querySelector("span:first-child");
 
     privateToggleButton.addEventListener("click", function () {
         if (privateToggleButtonText.textContent === "Go Private") {
             privateToggleButtonText.textContent = "Go Public";
+            privateToggleButton.id = "private";
         } else {
             privateToggleButtonText.textContent = "Go Private";
+            privateToggleButton.id = "public";
         }
     });
 });
@@ -319,4 +321,49 @@ const videoContainer = document.querySelector(".left-container");
 
 pinIcon.addEventListener("click", () => {
     videoContainer.classList.toggle("pinned");
+});
+
+// -----------------------------chatbox tab section----------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const chatboxTabButtons = document.querySelectorAll(".chatbox-button");
+    const chatboxTabContainer = document.querySelector(
+        ".tab-content-container"
+    );
+    const chatboxTabContents = document.querySelectorAll(".chatbox-tab");
+    const messageContainer = document.querySelector(".message-container");
+    const inputContainer = document.querySelector(".input-container");
+
+    function hideAllChatboxTabs() {
+        const tabs = document.querySelectorAll(".chatbox-tab");
+        tabs.forEach((tab) => {
+            tab.classList.remove("active");
+        });
+    }
+
+    chatboxTabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            chatboxTabContainer.style.display = "block";
+            messageContainer.style.display = "none";
+
+            hideAllChatboxTabs();
+            currentButtonId = button.id;
+            currentTab = document.getElementById(`${button.id}-tab`);
+            currentTab.classList.add("active");
+        });
+    });
+
+    chatboxTabContents.forEach((tabContent) => {
+        const closeBtn = tabContent.querySelector(".close-btn");
+
+        closeBtn.addEventListener("click", () => {
+            chatboxTabContainer.style.display = "none";
+            messageContainer.style.display = "flex";
+        });
+    });
+
+    inputContainer.addEventListener("click", () => {
+        chatboxTabContainer.style.display = "none";
+        messageContainer.style.display = "flex";
+    });
 });
