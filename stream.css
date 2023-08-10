@@ -206,7 +206,6 @@ video {
     z-index: 100;
     display: none;
 }
-
 .icon-pin {
     width: 24px;
     height: 24px;
@@ -283,7 +282,6 @@ video {
 }
 
 /* overwrite single-menu dropdown's padding */
-
 .menu-id {
     padding: var(--stream-section-padding) !important;
 }
@@ -1239,6 +1237,10 @@ video {
     .wrapper.full-width .chatbox-button-container {
         order: unset;
         padding-bottom: var(--stream-section-padding);
+        padding-left: var(--stream-section-padding);
+        padding-right: var(--stream-section-padding);
+        border-bottom: var(--stream-section-border-width) solid
+            var(--stream-section-border-color);
     }
 
     .wrapper.full-width .tab-content-container {
