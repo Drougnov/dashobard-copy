@@ -12,11 +12,14 @@ const toggleBtn = document.querySelector(".toggle");
 const wrapper = document.querySelector(".wrapper");
 
 toggleBtn.addEventListener("click", () => {
+    // Toggle full-width / box-width mode on toggleIcon click
     wrapper.classList.toggle("full-width");
+
+    // auto scroll to last message on toggleIcon click
     scrollToBottomMessage();
 });
 
-// Toggle class based on screen size
+//  Add 'full-width' class to wrappper if screen size is less than 1201px
 function checkScreenSize() {
     var shouldAddClass = window.innerWidth <= 1200;
     if (shouldAddClass) {
@@ -31,14 +34,17 @@ window.addEventListener("resize", checkScreenSize);
 //-----------------------Update the progress bar dynamically---------------------------
 
 function updateProgressBar(collectedAmount, totalAmount) {
+    // Get progress percentage
     const progressPercentage = (collectedAmount / totalAmount) * 100;
     const progressBars = document.querySelectorAll(".progress-bar");
 
+    // Set the percentage as progress bar's width
     progressBars.forEach((progressBar) => {
         progressBar.style.width = progressPercentage + "%";
     });
 }
 
+// Set custom progress value
 let collectedAmount = 200;
 let totalAmount = 2000;
 updateProgressBar(collectedAmount, totalAmount);
@@ -52,6 +58,7 @@ singleMenu("target_id4", "menu_id4", false);
 
 // -----------------------------------tab section--------------------------------------
 
+// hide all the tabs
 function hideAllTabs() {
     const tabs = document.querySelectorAll(".tab-menu");
     tabs.forEach((tab) => {
@@ -59,14 +66,17 @@ function hideAllTabs() {
     });
 }
 
+// show current active tab
 function showTab(tabId) {
     hideAllTabs();
     const tab = document.getElementById(`${tabId}-tab`);
     tab.classList.add("active");
     setActiveButton(tabId);
+
     addClassToBottomContainer();
 }
 
+// set class 'active' to current tab's button
 function setActiveButton(tabId) {
     const buttons = document.querySelectorAll(".tab-button");
     buttons.forEach((btn) => {
@@ -81,23 +91,23 @@ function setActiveButton(tabId) {
 const bottomContainer = document.querySelector(".bottom-container");
 const mobileChatbox = document.querySelector(".mobile-chatbox");
 const messageInput = document.querySelector(".input-message");
-
-// scroll to chat tab on mobile chatbox click
 const chatTabContainer = document.querySelector("#chat-tab");
 
 mobileChatbox.addEventListener("click", (e) => {
+    // scroll to chat tab on click
     showTab("chat");
     chatTabContainer.scrollIntoView({
         behavior: "smooth",
     });
+
+    // auto focus message input
     messageInput.focus();
 });
 
 // Add class to bottomContainer if chat tab is open
-const chatTab = document.getElementById("chat-tab");
 
 function addClassToBottomContainer() {
-    if (chatTab.classList.contains("active")) {
+    if (chatTabContainer.classList.contains("active")) {
         bottomContainer.classList.add("chat-active");
     } else {
         bottomContainer.classList.remove("chat-active");
@@ -106,7 +116,7 @@ function addClassToBottomContainer() {
 
 addClassToBottomContainer();
 
-// set bottom container's padding-bottom equal to mobile-chatbox's height
+// set bottom container's 'padding-bottom' equal to mobile-chatbox's height
 
 function setBottomContainerPadding() {
     if (window.innerWidth <= 1000) {
@@ -244,7 +254,11 @@ function moveElementsToContainer() {
     const leftContainer = document.querySelector(".left-container");
     const purpleContainer = document.querySelector(".profile-meta-container");
     const tabButtonContainer = document.querySelector(".tab-buttons");
+    const chatboxButtonContainer = document.querySelector(
+        ".chatbox-button-container"
+    );
 
+    leftContainer.appendChild(chatboxButtonContainer);
     leftContainer.appendChild(purpleContainer);
     leftContainer.appendChild(tabButtonContainer);
 }
@@ -254,7 +268,15 @@ function moveElementsBack() {
     const bottomContainer = document.querySelector(".bottom-container");
     const purpleContainer = document.querySelector(".profile-meta-container");
     const tabButtonContainer = document.querySelector(".tab-buttons");
+    const chatboxContainer = document.querySelector(".chatbox-container");
+    const chatboxButtonContainer = document.querySelector(
+        ".chatbox-button-container"
+    );
+    const chatboxTipContainer = document.querySelector(
+        ".chatbox-tip-container"
+    );
 
+    chatboxContainer.insertBefore(chatboxButtonContainer, chatboxTipContainer);
     bottomContainer.insertBefore(
         tabButtonContainer,
         bottomContainer.firstChild
@@ -296,7 +318,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // -------switch back to description tab if chat-tab is active on bigger than 1000px screen------
 
 function switchToDescriptionTab() {
-    if (window.innerWidth > 1000 && chatTab.classList.contains("active")) {
+    if (
+        window.innerWidth > 1000 &&
+        chatTabContainer.classList.contains("active")
+    ) {
         showTab("description");
     }
 }
@@ -350,6 +375,11 @@ document.addEventListener("DOMContentLoaded", function () {
             currentButtonId = button.id;
             currentTab = document.getElementById(`${button.id}-tab`);
             currentTab.classList.add("active");
+
+            if (window.innerWidth <= 1000) {
+                showTab("chat");
+                chatboxTabContainer.scrollIntoView({ behavior: "smooth" });
+            }
         });
     });
 
