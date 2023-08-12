@@ -254,11 +254,7 @@ function moveElementsToContainer() {
     const leftContainer = document.querySelector(".left-container");
     const purpleContainer = document.querySelector(".profile-meta-container");
     const tabButtonContainer = document.querySelector(".tab-buttons");
-    const chatboxButtonContainer = document.querySelector(
-        ".chatbox-button-container"
-    );
 
-    leftContainer.appendChild(chatboxButtonContainer);
     leftContainer.appendChild(purpleContainer);
     leftContainer.appendChild(tabButtonContainer);
 }
@@ -268,15 +264,7 @@ function moveElementsBack() {
     const bottomContainer = document.querySelector(".bottom-container");
     const purpleContainer = document.querySelector(".profile-meta-container");
     const tabButtonContainer = document.querySelector(".tab-buttons");
-    const chatboxContainer = document.querySelector(".chatbox-container");
-    const chatboxButtonContainer = document.querySelector(
-        ".chatbox-button-container"
-    );
-    const chatboxTipContainer = document.querySelector(
-        ".chatbox-tip-container"
-    );
 
-    chatboxContainer.insertBefore(chatboxButtonContainer, chatboxTipContainer);
     bottomContainer.insertBefore(
         tabButtonContainer,
         bottomContainer.firstChild
@@ -296,24 +284,6 @@ function checkViewportWidth() {
 // Initial check when the page loads
 checkViewportWidth();
 window.addEventListener("resize", checkViewportWidth);
-
-// Function to toggle the "active" class on the buttons
-
-document.addEventListener("DOMContentLoaded", function () {
-    const privateToggleButton = document.getElementById("private");
-    const privateToggleButtonText =
-        privateToggleButton.querySelector("span:first-child");
-
-    privateToggleButton.addEventListener("click", function () {
-        if (privateToggleButtonText.textContent === "Go Private") {
-            privateToggleButtonText.textContent = "Go Public";
-            privateToggleButton.id = "private";
-        } else {
-            privateToggleButtonText.textContent = "Go Private";
-            privateToggleButton.id = "public";
-        }
-    });
-});
 
 // -------switch back to description tab if chat-tab is active on bigger than 1000px screen------
 
@@ -346,54 +316,4 @@ const videoContainer = document.querySelector(".left-container");
 
 pinIcon.addEventListener("click", () => {
     videoContainer.classList.toggle("pinned");
-});
-
-// -----------------------------chatbox tab section----------------------------
-
-document.addEventListener("DOMContentLoaded", function () {
-    const chatboxTabButtons = document.querySelectorAll(".chatbox-button");
-    const chatboxTabContainer = document.querySelector(
-        ".tab-content-container"
-    );
-    const chatboxTabContents = document.querySelectorAll(".chatbox-tab");
-    const messageContainer = document.querySelector(".message-container");
-    const inputContainer = document.querySelector(".input-container");
-
-    function hideAllChatboxTabs() {
-        const tabs = document.querySelectorAll(".chatbox-tab");
-        tabs.forEach((tab) => {
-            tab.classList.remove("active");
-        });
-    }
-
-    chatboxTabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            chatboxTabContainer.style.display = "block";
-            messageContainer.style.display = "none";
-
-            hideAllChatboxTabs();
-            currentButtonId = button.id;
-            currentTab = document.getElementById(`${button.id}-tab`);
-            currentTab.classList.add("active");
-
-            if (window.innerWidth <= 1000) {
-                showTab("chat");
-                chatboxTabContainer.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-    });
-
-    chatboxTabContents.forEach((tabContent) => {
-        const closeBtn = tabContent.querySelector(".close-btn");
-
-        closeBtn.addEventListener("click", () => {
-            chatboxTabContainer.style.display = "none";
-            messageContainer.style.display = "flex";
-        });
-    });
-
-    inputContainer.addEventListener("click", () => {
-        chatboxTabContainer.style.display = "none";
-        messageContainer.style.display = "flex";
-    });
 });
