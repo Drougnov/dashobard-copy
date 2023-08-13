@@ -1,0 +1,275 @@
+:root {
+    --hompage-section-padding: 20px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+input,
+button,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* primary button style */
+
+.primary-button {
+    color: white;
+    background: #fb5ba2;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.primary-button span {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.primary-button .icon-arrow-forward {
+    width: 20px;
+    height: 20px;
+}
+
+/* ----------------------------header------------------------ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--hompage-section-padding);
+}
+
+/* header-section__right */
+.header-section__right {
+    display: flex;
+    align-items: center;
+    gap: var(--hompage-section-padding);
+}
+
+.login-button {
+    color: #000000;
+    background: transparent;
+    line-height: 27px;
+}
+
+.signup-button {
+    line-height: 27px;
+}
+
+/* hamburger */
+
+.menu {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 30px;
+    height: 2.25px;
+    background: #bfbfbf;
+    border-radius: 3.75px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.menu:hover .hamburger,
+.menu:hover .hamburger::before,
+.menu:hover .hamburger::after {
+    background: #959494;
+}
+
+.hamburger::before,
+.hamburger::after {
+    position: absolute;
+    content: "";
+}
+
+.hamburger::after {
+    -webkit-transform: translateY(-0.5rem);
+    -moz-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    -o-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+}
+
+.hamburger::before {
+    -webkit-transform: translateY(0.5rem);
+    -moz-transform: translateY(0.5rem);
+    -ms-transform: translateY(0.5rem);
+    -o-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+}
+
+/* ----------------------------hero-section------------------------ */
+
+.hero-section {
+    height: calc(100vh - 87px);
+    background-image: url("./images/hero-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: var(--hompage-section-padding);
+}
+
+.hero-text-wrapper {
+    max-width: 882px;
+    padding: 60px;
+    padding-left: 30px;
+}
+
+.hero__title {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0.64px;
+}
+
+.hero__subtitle {
+    display: block;
+    color: #fb5ba2;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-decoration-line: underline;
+    margin-top: var(--hompage-section-padding);
+    margin-bottom: var(--hompage-section-padding);
+}
+
+.hero-form {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--hompage-section-padding);
+    margin-top: 48px;
+}
+
+.hero__input {
+    height: 60px;
+    background: white;
+    padding: 20px 15px !important;
+    margin-top: 0 !important;
+    border-radius: 15px !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    -ms-border-radius: 15px !important;
+    -o-border-radius: 15px !important;
+}
+
+.hero__input::placeholder {
+    color: #818181;
+    font-size: 20px;
+    letter-spacing: 0.03px;
+}
+
+.hero__submit-btn {
+    height: 60px;
+}
+
+.hero__submit-btn span {
+    font-size: 22px;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: capitalize;
+}
