@@ -182,19 +182,19 @@ video {
 }
 
 .hamburger::after {
-    -webkit-transform: translateY(-0.75rem);
-    -moz-transform: translateY(-0.75rem);
-    -ms-transform: translateY(-0.75rem);
-    -o-transform: translateY(-0.75rem);
-    transform: translateY(-0.75rem);
+    -webkit-transform: translateY(-0.7rem);
+    -moz-transform: translateY(-0.7rem);
+    -ms-transform: translateY(-0.7rem);
+    -o-transform: translateY(-0.7rem);
+    transform: translateY(-0.7rem);
 }
 
 .hamburger::before {
-    -webkit-transform: translateY(0.75rem);
-    -moz-transform: translateY(0.75rem);
-    -ms-transform: translateY(0.75rem);
-    -o-transform: translateY(0.75rem);
-    transform: translateY(0.75rem);
+    -webkit-transform: translateY(0.7rem);
+    -moz-transform: translateY(0.7rem);
+    -ms-transform: translateY(0.7rem);
+    -o-transform: translateY(0.7rem);
+    transform: translateY(0.7rem);
 }
 
 /* ----------------------------hero-section------------------------ */
@@ -379,6 +379,11 @@ video {
     scrollbar-width: none;
 }
 
+.start__img-carousel-top::-webkit-scrollbar,
+.start__img-carousel-bottom::-webkit-scrollbar {
+    display: none;
+}
+
 .start__img-carousel .start__img-container {
     width: 450px;
     min-width: 450px;
@@ -398,3 +403,5 @@ video {
     letter-spacing: 0.9px;
     text-transform: capitalize;
 }
+
+/* ----------------------------creators-section------------------------ */
