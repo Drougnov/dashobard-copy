@@ -115,6 +115,16 @@ video {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.primary-button:hover {
+    color: var(--white);
+    background: #1c39ff;
 }
 
 .primary-button span {
@@ -123,9 +133,17 @@ video {
     font-weight: 600;
 }
 
+.primary-button:hover span {
+    color: var(--white);
+}
+
 .primary-button .icon-arrow-forward {
     width: 20px;
     height: 20px;
+}
+
+.primary-button:hover svg.icon-arrow-forward {
+    fill: var(--white);
 }
 
 .primary-title {
@@ -286,6 +304,10 @@ video {
 .hero__submit-btn {
     height: 75px;
     padding: 10px 32px;
+}
+
+.hero__submit-btn:hover {
+    padding: 10px 36px 10px 28px;
 }
 
 .hero__submit-btn span {
@@ -465,6 +487,7 @@ video {
     align-items: center;
     gap: 5px;
     border-bottom: 1px solid var(--main-pink);
+    cursor: pointer;
 }
 
 .creators__view-all span {
@@ -639,6 +662,7 @@ video {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    cursor: pointer;
 }
 
 .creators-pagination__btn.active {
@@ -1041,6 +1065,16 @@ select#insights-overview {
     padding: 8px 15px;
     border: 3px solid #1c39ff;
     border-radius: 10px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.beats__tag:hover {
+    background: #1c39ff;
 }
 
 .beats__tag span {
@@ -1050,6 +1084,10 @@ select#insights-overview {
     line-height: normal;
     letter-spacing: 0.7px;
     white-space: nowrap;
+}
+
+.beats__tag:hover span {
+    color: var(--white);
 }
 
 /* ----------------------------creativity-section------------------------ */
@@ -1146,6 +1184,10 @@ select#insights-overview {
     color: var(--black);
     letter-spacing: 0.9px;
     text-transform: capitalize;
+}
+
+.contact__btn svg {
+    fill: var(--black);
 }
 
 .contact__icon-container {
