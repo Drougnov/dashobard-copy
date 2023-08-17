@@ -241,36 +241,34 @@ video {
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
-    height: 1080px;
+    height: calc(100vh - 94px);
     background-image: url("./images/hero-bg.png");
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
 
 .hero-text-wrapper {
-    max-width: 900px;
+    max-width: 850px;
     padding: 4rem 2rem;
 }
 
 .hero__title {
     color: var(--white);
-    font-size: 73px;
-    line-height: 90px;
+    font-size: 58px;
+    line-height: 75px;
     letter-spacing: 0.73px;
+    margin-top: 0;
 }
 
 .hero__subtitle {
     display: block;
     color: var(--main-pink);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 900;
     line-height: normal;
     letter-spacing: 0.4px;
-    margin-top: var(--hompage-section-padding);
-    margin-bottom: var(--hompage-section-padding);
 }
 
 .hero-form {
@@ -279,11 +277,11 @@ video {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--hompage-section-padding);
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
 }
 
 .hero__input {
-    height: 75px;
+    height: 60px;
     background: var(--white);
     font-size: 20px !important;
     padding: 15px !important;
@@ -302,7 +300,7 @@ video {
 }
 
 .hero__submit-btn {
-    height: 75px;
+    height: 64px;
     padding: 10px 32px;
 }
 
@@ -311,7 +309,7 @@ video {
 }
 
 .hero__submit-btn span {
-    font-size: 22px;
+    font-size: 20px;
     line-height: normal;
     letter-spacing: 1.1px;
     text-transform: capitalize;
