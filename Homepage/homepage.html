@@ -4185,20 +4185,6 @@
         </div>
 
         <script>
-            // Function to handle scroll events
-            function handleScroll() {
-                const body = document.body;
-                const scrollPosition = window.scrollY;
-
-                if (scrollPosition > 0) {
-                    body.classList.add('scrolling');
-                } else {
-                    body.classList.remove('scrolling');
-                }
-            }
-
-            window.addEventListener('scroll', handleScroll);
-
             document.addEventListener('DOMContentLoaded', function () {
                 new Splide('.start__text-carousel', {
                     type   : 'loop',

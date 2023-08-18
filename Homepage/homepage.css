@@ -158,20 +158,10 @@ video {
 /* ----------------------------header------------------------ */
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: calc(47px / 2) var(--hompage-section-padding);
-    z-index: 9999;
-}
-
-body.scrolling .header{
-    background: rgba(251, 251, 253, .8);;
 }
 
 /* header-section__right */
@@ -628,7 +618,7 @@ body.scrolling .header{
 }
 
 .creators{
-    width: calc(100% / 6) !important;
+    width: calc(((100% + 8px) / 6) - 8px) !important;
 }
 
 .creators__img-container {
