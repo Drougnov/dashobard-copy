@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+		<title>Toast Notifications JS</title>
+		<link href="toasts.css" rel="stylesheet" type="text/css">
+        <style>
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }            
+        </style>
+	</head>
+	<body>
+        <div class="links-container">
+            <a href="www.google.com" id="link1">Link success</a>
+            <a href="www.linkedin.com" id="link2">Link verified</a>
+            <a href="www.twitter.com" id="link3">Link dark</a>
+            <a href="www.facebook.com" id="link4">Link error</a>
+            <a href="www.instagram.com" id="link5">Link empty</a>
+        </div>
+
+        <script src="toasts.js"></script>
+        <script>
+        const toasts = new Toasts({
+            width: 300,
+            timing: 'ease',
+            duration: '.5s',
+            dimOld: false,
+            position: 'top-right'
+        });
+
+        // Function to create and show a toast
+        function showToast(title, content, style) {
+            toasts.push({
+                title: title,
+                content: content,
+                style: style
+            });
+        }
+
+        // Event listeners for each link
+        document.getElementById("link1").addEventListener("click", function (event) {
+            event.preventDefault();
+            showToast("Link 1 Toast", "You clicked on Link 1", "success");
+        });
+
+        document.getElementById("link2").addEventListener("click", function (event) {
+            event.preventDefault();
+            showToast("Link 2 Toast", "You clicked on Link 2", "verified");
+        });
+
+        document.getElementById("link3").addEventListener("click", function (event) {
+            event.preventDefault();
+            showToast("Link 3 Toast", "You clicked on Link 3", "dark");
+        });
+
+        document.getElementById("link4").addEventListener("click", function (event) {
+            event.preventDefault();
+            showToast("Link 4 Toast", "You clicked on Link 4", "error");
+        });
+
+        document.getElementById("link5").addEventListener("click", function (event) {
+            event.preventDefault();
+            showToast("Link 5 Toast", "You clicked on Link 5", "");
+        });
+        </script>
+    </body>
+</html>
