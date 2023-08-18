@@ -241,7 +241,7 @@ video {
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
-    height: 100vh;
+    height: calc(100vh - 94px);
     background-image: url("./images/hero-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -597,9 +597,20 @@ video {
 
 .creators-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 8px;
     margin: 2rem 5rem;
+}
+
+.creators-container .splide__list{
+    gap: 8px;
+}
+
+.creators-container .splide__slide{
+    width: calc(100% / 6 - 8px) !important;
+}
+
+.creators-container.splide:not(.is-overflow) .splide__pagination{
+    display: flex !important;
 }
 
 .creators-container-top,.creators-container-bottom{
@@ -617,8 +628,10 @@ video {
     margin-bottom: 8rem;
 }
 
-.creators{
-    width: calc(((100% + 8px) / 6) - 8px) !important;
+.creators-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .creators__img-container {
