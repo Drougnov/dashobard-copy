@@ -158,10 +158,20 @@ video {
 /* ----------------------------header------------------------ */
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: calc(47px / 2) var(--hompage-section-padding);
+    z-index: 9999;
+}
+
+body.scrolling .header{
+    background: rgba(251, 251, 253, .8);;
 }
 
 /* header-section__right */
@@ -243,10 +253,11 @@ video {
 .hero-section {
     height: 100vh;
     background-image: url("./images/hero-bg.png");
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    padding-top: 94px;
 }
 
 .hero-text-wrapper {
@@ -364,7 +375,6 @@ video {
     justify-content: center;
     align-items: center;
     gap: var(--hompage-section-padding);
-    padding: 10px 20px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -596,11 +606,17 @@ video {
 }
 
 .creators-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
-    row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin: 2rem 5rem;
+}
+
+.creators-container-top,.creators-container-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 }
 
 .recommended-videos-creator-container {
@@ -609,6 +625,10 @@ video {
 
 .recommended-posts-creator-container {
     margin-bottom: 8rem;
+}
+
+.creators{
+    width: calc(100% / 6) !important;
 }
 
 .creators__img-container {
@@ -907,10 +927,6 @@ span.post__text--pink {
 .splide__pagination__page.is-active{
     background: var(--main-pink) !important;
     transform: scale(1) !important;
-}
-
-.new-creators-section .creators-pagination{
-    display: none;
 }
 
 /* ----------------------------grow-section------------------------ */
