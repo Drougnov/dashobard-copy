@@ -158,10 +158,16 @@ video {
 /* ----------------------------header------------------------ */
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: calc(47px / 2) var(--hompage-section-padding);
+    z-index: 9999;
 }
 
 /* header-section__right */
@@ -241,7 +247,7 @@ video {
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
-    height: calc(100vh - 94px);
+    height: 100vh;
     background-image: url("./images/hero-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
