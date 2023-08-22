@@ -247,13 +247,14 @@ video {
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
-    height: 100vh;
+    height: calc(100vh - 94px);
     background-image: url("./images/hero-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding-top: 94px;
+    margin-top: 94px;
 }
 
 .hero-text-wrapper {
