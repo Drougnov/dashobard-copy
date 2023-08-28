@@ -10,8 +10,9 @@
 }
 .anchor-container{
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    flex-wrap: wrap;
+    padding: 8px 40px;
 }
 .policies-container{
     padding: 20px;
@@ -27,6 +28,7 @@
 }
 .section__title{
     font-size: 16px;
+    font-weight: 600;
     margin-bottom: var(--policy-text-gap);
 }
 .policies-container p{
@@ -48,30 +50,8 @@
 .italic{
     font-style: italic;
 }
-.disc-style-list li{
-    list-style-type: disc;
-}
-.custom-style-list{
-    position: relative;
-    list-style: none;
-    padding-left: calc(var(--main-list-marker-width) * 2);
-}
-.custom-style-list li::before{
-    position: absolute;
-    left: var(--sub-list-marker-width);
-}
-.four-dot-style-list li::before{
-    content: '⁙';
-}
-.arrow-style-list li::before{
-    content: '⮚';
-}
 
 /* acceptable use policy */
-
-#acceptable-use-policy-for-fansocial .section__title{
-    font-weight: 400;
-}
 
 #acceptable-use-policy-for-fansocial p:last-of-type{
     margin-bottom: var(--policy-section-gap);
@@ -89,19 +69,12 @@
     margin-bottom: calc(var(--policy-section-gap) / 2);
 }
 
-#anti-sexual-exploitation-policies .section__title{
-    font-weight: 400;
-}
-
 /* complaints and report policy */
 
 #complaints-and-report-policy p{
     margin-bottom: var(--policy-section-gap);
 }
 
-#complaints-and-report-policy .section__title{
-    font-weight: 400;
-}
 
 /* fansocial web cookies policy */
 
@@ -113,9 +86,6 @@
     padding-left: calc(var(--main-list-marker-width) * 2);
 }
 
-#fansocial-web-cookies-policy .section__list--title{
-    font-weight: 400;
-}
 
 /* terms-and-condition */
 
