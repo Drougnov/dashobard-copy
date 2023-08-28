@@ -12,6 +12,13 @@
 </head>
 <body>
     <div class="wrapper">
+        <!-- scroll to top button container -->
+        <button type="button" aria-label="go to top" class="go-top">
+            <div class="svg-wrapper">
+                <svg class="icon-arrow-top" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-whiteidth="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-linejoin="round" stroke-whiteidth="2" d="M10 18V2m0 0l7 7m-7-7L3 9"></path> </g></svg>
+            </div>
+        </button>
+
         <h1>Policies and terms</h1>
         <div class="form-field">
             <select name="policies_and_terms" id="policies_and_terms" aria-label="policies and terms" aria-describedby="policies_and_terms">
@@ -772,6 +779,26 @@
         </div>
     </div>
     <script>
+        // show/hide go-top arrow based on windows offset-y
+
+        let scrollPosition = window.pageYOffset;
+        const goTopButton = document.querySelector('.go-top');
+
+        function toggleGoTopButtonVisiblity(){
+            if(window.pageYOffset >= 100){
+            goTopButton.style.opacity = "1";
+            goTopButton.style.visibility = "visible";
+            goTopButton.style.pointerEvents = "initial";
+            }else{
+                goTopButton.style.opacity = "0";
+                goTopButton.style.visibility = "hidden";
+                goTopButton.style.pointerEvents = "none";
+            }
+        }
+
+        toggleGoTopButtonVisiblity();
+        window.addEventListener('scroll', toggleGoTopButtonVisiblity);
+
         // scroll to article on option click
         const selectElement = document.getElementById("policies_and_terms");
         selectElement.addEventListener("change", function() {

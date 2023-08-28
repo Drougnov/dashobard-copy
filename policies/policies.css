@@ -5,11 +5,43 @@
     --main-list-marker-width: 19.27px;
     --sub-list-marker-width: 17.94px;
 }
+.wrapper{
+    position: relative;
+    padding: 20px;
+}
+.go-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: max-content;
+    height: max-content;
+    padding: 10px 12px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.svg-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-arrow-top{
+    width: 24px;
+    height: 24px;
+    stroke: white;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.go-top:hover .icon-arrow-top{
+    stroke: black;
+}
 h1{
     margin-bottom: var(--policy-text-gap);
-}
-.wrapper{
-    padding: 20px;
 }
 .policy-container{
     margin-top: var(--policy-article-gap);
@@ -37,6 +69,9 @@ h1{
 .section__list li{
     line-height: var(--line-height);
     margin-bottom: var(--policy-text-gap);
+}
+.section__link{
+    word-wrap: break-word;
 }
 .bold{
     font-weight: 700;
