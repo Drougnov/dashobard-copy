@@ -1,0 +1,132 @@
+*{
+    scroll-behavior: smooth;
+}
+.anchor-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.policies-container{
+    padding: 20px;
+}
+.policy-container{
+    margin-top: 80px;
+}
+.policy__title{
+    margin-bottom: 40px;
+}
+.policy__list{
+    padding-left: 19.27px;
+}
+.section__title{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.policies-container p{
+    margin-bottom: 8px;
+}
+.section__list{
+    padding-left: 17.94px;
+}
+.section__list li{
+    line-height: var(--line-height);
+    margin-bottom: 8px;
+}
+.bold{
+    font-weight: 700;
+}
+.underline{
+    text-decoration: underline;
+}
+.italic{
+    font-style: italic;
+}
+
+/* acceptable use policy */
+
+#acceptable-use-policy-for-fansocial .section__title{
+    font-weight: 400;
+}
+
+#acceptable-use-policy-for-fansocial p:last-of-type{
+    margin-bottom: 40px;
+}
+
+#acceptable-use-policy-for-fansocial .section__list{
+    margin-top: -32px;
+    margin-bottom: 40px;
+}
+
+/* anti-sexual exploitation policies */
+
+#anti-sexual-exploitation-policies .section__title,
+#anti-sexual-exploitation-policies p{
+    margin-bottom: 20px;
+}
+
+#anti-sexual-exploitation-policies .section__title{
+    font-weight: 400;
+}
+
+/* complaints and report policy */
+
+#complaints-and-report-policy p{
+    margin-bottom: 40px;
+}
+
+#complaints-and-report-policy .section__title{
+    font-weight: 400;
+}
+
+.disc-style-list li{
+    list-style-type: disc;
+}
+
+/* fansocial web cookies policy */
+
+#fansocial-web-cookies-policy p:last-of-type{
+    margin-bottom: 40px;
+}
+
+#fansocial-web-cookies-policy .policy__list{
+    padding-left: calc(19.27px * 2);
+}
+
+#fansocial-web-cookies-policy .section__list--title{
+    font-weight: 400;
+}
+
+.custom-style-list{
+    position: relative;
+    list-style: none;
+    padding-left: calc(19.27px * 2);
+}
+.custom-style-list li::before{
+    position: absolute;
+    left: 17.94px;
+}
+.four-dot-style-list li::before{
+    content: '⁙';
+}
+.arrow-style-list li::before{
+    content: '⮚';
+}
+
+/* terms-and-condition */
+
+#terms-and-conditions-for-creators .policy__title,
+#terms-and-condition-for-users .policy__title{
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#terms-and-conditions-for-creators .terms__date,
+#terms-and-condition-for-users .terms__date{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#terms-and-conditions-for-creators p,
+#terms-and-condition-for-users p{
+    margin-bottom: 8px;
+}
