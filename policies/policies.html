@@ -12,15 +12,30 @@
 </head>
 <body>
     <div class="wrapper">
-        <ul class="anchor-container">
-            <li><a class="policy-anchor" href="#acceptable-use-policy-for-fansocial">Acceptable Use Policy for Fansocial</a></li>
-            <li><a class="policy-anchor" href="#anti-sexual-exploitation-policies">Anti-Sexual Exploitation Policies</a></li>
-            <li><a class="policy-anchor" href="#complaints-and-report-policy">Complaints and Report Policy</a></li>
-            <li><a class="policy-anchor" href="#fansocial-web-cookies-policy">Fansocial Web Cookies Policy</a></li>
-            <li><a class="policy-anchor" href="#privacy-policy">Privacy Policy</a></li>
-            <li><a class="policy-anchor" href="#terms-and-conditions-for-creators">Terms & Conditions (For Creators)</a></li>
-            <li><a class="policy-anchor" href="#terms-and-condition-for-users">Terms and Conditions (For Users)</a></li>
-        </ul>
+        <h1>Policies and terms</h1>
+        <div class="form-field">
+            <select name="policies_and_terms" id="policies_and_terms" aria-label="policies and terms" aria-describedby="policies_and_terms">
+                <option selected="" value="acceptable-use-policy-for-fansocial">Acceptable Use Policy for Fansocial</option>
+                <option value="anti-sexual-exploitation-policies">
+                    Anti-Sexual Exploitation Policies
+                </option>
+                <option value="complaints-and-report-policy">
+                    Complaints and Report Policy
+                </option>
+                <option value="fansocial-web-cookies-policy">
+                    Fansocial Web Cookies Policy
+                </option>
+                <option value="privacy-policy">
+                    Privacy Policy
+                </option>
+                <option value="terms-and-conditions-for-creators">
+                    Terms & Conditions (For Creators)
+                </option>
+                <option value="terms-and-condition-for-users">
+                    Terms and Conditions (For Users)
+                </option>
+            </select>
+        </div>
         <div class="policies-container">
             <article class="policy-container" id="acceptable-use-policy-for-fansocial">
                 <h2 class="policy__title">Acceptable Use Policy for Fansocial</h2>
@@ -756,5 +771,16 @@
             </article>
         </div>
     </div>
+    <script>
+        // scroll to article on option click
+        const selectElement = document.getElementById("policies_and_terms");
+        selectElement.addEventListener("change", function() {
+            const selectedValue = this.value;
+            const targetElement = document.getElementById(selectedValue);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    </script>
 </body>
 </html>

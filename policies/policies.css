@@ -1,6 +1,3 @@
-*{
-    scroll-behavior: smooth;
-}
 :root{
     --policy-article-gap: 80px;
     --policy-section-gap: 40px;
@@ -8,13 +5,10 @@
     --main-list-marker-width: 19.27px;
     --sub-list-marker-width: 17.94px;
 }
-.anchor-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 8px 40px;
+h1{
+    margin-bottom: var(--policy-text-gap);
 }
-.policies-container{
+.wrapper{
     padding: 20px;
 }
 .policy-container{
