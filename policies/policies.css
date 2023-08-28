@@ -37,6 +37,9 @@
 .section__list{
     padding-left: var(--sub-list-marker-width);
 }
+.section__list-unordered{
+    list-style-type: disc;
+}
 .section__list li{
     line-height: var(--line-height);
     margin-bottom: var(--policy-text-gap);
