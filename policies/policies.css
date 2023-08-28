@@ -1,6 +1,13 @@
 *{
     scroll-behavior: smooth;
 }
+:root{
+    --policy-article-gap: 80px;
+    --policy-section-gap: 40px;
+    --policy-text-gap: 8px;
+    --main-list-marker-width: 19.27px;
+    --sub-list-marker-width: 17.94px;
+}
 .anchor-container{
     display: flex;
     gap: 1rem;
@@ -10,27 +17,27 @@
     padding: 20px;
 }
 .policy-container{
-    margin-top: 80px;
+    margin-top: var(--policy-article-gap);
 }
 .policy__title{
-    margin-bottom: 40px;
+    margin-bottom: var(--policy-section-gap);
 }
 .policy__list{
-    padding-left: 19.27px;
+    padding-left: var(--main-list-marker-width);
 }
 .section__title{
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: var(--policy-text-gap);
 }
 .policies-container p{
-    margin-bottom: 8px;
+    margin-bottom: var(--policy-text-gap);
 }
 .section__list{
-    padding-left: 17.94px;
+    padding-left: var(--sub-list-marker-width);
 }
 .section__list li{
     line-height: var(--line-height);
-    margin-bottom: 8px;
+    margin-bottom: var(--policy-text-gap);
 }
 .bold{
     font-weight: 700;
@@ -41,6 +48,24 @@
 .italic{
     font-style: italic;
 }
+.disc-style-list li{
+    list-style-type: disc;
+}
+.custom-style-list{
+    position: relative;
+    list-style: none;
+    padding-left: calc(var(--main-list-marker-width) * 2);
+}
+.custom-style-list li::before{
+    position: absolute;
+    left: var(--sub-list-marker-width);
+}
+.four-dot-style-list li::before{
+    content: '⁙';
+}
+.arrow-style-list li::before{
+    content: '⮚';
+}
 
 /* acceptable use policy */
 
@@ -49,19 +74,19 @@
 }
 
 #acceptable-use-policy-for-fansocial p:last-of-type{
-    margin-bottom: 40px;
+    margin-bottom: var(--policy-section-gap);
 }
 
 #acceptable-use-policy-for-fansocial .section__list{
-    margin-top: -32px;
-    margin-bottom: 40px;
+    margin-top: calc(var(--policy-text-gap) - var(--policy-section-gap));
+    margin-bottom: var(--policy-section-gap);
 }
 
 /* anti-sexual exploitation policies */
 
 #anti-sexual-exploitation-policies .section__title,
 #anti-sexual-exploitation-policies p{
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--policy-section-gap) / 2);
 }
 
 #anti-sexual-exploitation-policies .section__title{
@@ -71,62 +96,42 @@
 /* complaints and report policy */
 
 #complaints-and-report-policy p{
-    margin-bottom: 40px;
+    margin-bottom: var(--policy-section-gap);
 }
 
 #complaints-and-report-policy .section__title{
     font-weight: 400;
 }
 
-.disc-style-list li{
-    list-style-type: disc;
-}
-
 /* fansocial web cookies policy */
 
 #fansocial-web-cookies-policy p:last-of-type{
-    margin-bottom: 40px;
+    margin-bottom: var(--policy-section-gap);
 }
 
 #fansocial-web-cookies-policy .policy__list{
-    padding-left: calc(19.27px * 2);
+    padding-left: calc(var(--main-list-marker-width) * 2);
 }
 
 #fansocial-web-cookies-policy .section__list--title{
     font-weight: 400;
 }
 
-.custom-style-list{
-    position: relative;
-    list-style: none;
-    padding-left: calc(19.27px * 2);
-}
-.custom-style-list li::before{
-    position: absolute;
-    left: 17.94px;
-}
-.four-dot-style-list li::before{
-    content: '⁙';
-}
-.arrow-style-list li::before{
-    content: '⮚';
-}
-
 /* terms-and-condition */
 
 #terms-and-conditions-for-creators .policy__title,
 #terms-and-condition-for-users .policy__title{
-    margin-bottom: 8px;
+    margin-bottom: var(--policy-text-gap);
     text-align: center;
 }
 
 #terms-and-conditions-for-creators .terms__date,
 #terms-and-condition-for-users .terms__date{
-    margin-bottom: 40px;
+    margin-bottom: var(--policy-section-gap);
     text-align: center;
 }
 
 #terms-and-conditions-for-creators p,
 #terms-and-condition-for-users p{
-    margin-bottom: 8px;
+    margin-bottom: var(--policy-text-gap);
 }
