@@ -408,7 +408,7 @@
 
             <section class="creators-section">
                 <h2 class="creators__title primary-title">
-                    Explore Our <span class="primary-title">LIVE</span> Creators
+                    <span class="primary-title creators__title--explore">Explore</span><br class="line-break-mobile"> Our <span class="primary-title pink-title">LIVE</span> Creators
                 </h2>
 
                 <div class="creators__nav">
@@ -5665,7 +5665,7 @@
             <div class="creativity-section">
                 <div class="creativity-text-wrapper">
                     <h2 class="creativity__title primary-title">
-                        Be Proud of Your Creativity
+                        Be Proud of <span class="creativity__title primary-title creativity__title--uppercase">Your</span> Creativity
                     </h2>
                     <button class="creativity__btn">Start Your Page</button>
                 </div>
@@ -5692,7 +5692,8 @@
                             Creators & Fans
                         </p>
                         <button class="contact__btn primary-button">
-                            <span>Support</span>
+                            <span class="contact__btn--desktop-span">Support</span>
+                            <span class="contact__btn--mobile-span">Contact Us</span>
                             <svg
                                 class="icon-arrow-forward"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -5878,8 +5879,15 @@
                             perPage: 6,
                         },
                         850: {
+                            perPage: 5,
                             pagination: false,
-                        }
+                        },
+                        650: {
+                            perPage: 3,
+                        },
+                        350: {
+                            perPage: 2,
+                        },
                     },
                     focus: 'center',
                 }).mount();
@@ -5899,7 +5907,13 @@
                             },
                             850: {
                                 perPage: 3,
-                            }
+                            },
+                            650: {
+                                perPage: 2,
+                            },
+                            350: {
+                                perPage: 1,
+                            },
                         },
                         arrows: false,
                         focus: 'left',
