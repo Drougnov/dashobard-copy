@@ -56,7 +56,7 @@
                         <button class="nav-btn UJQCM">Try for free</button>
             
                         <!-- single-menu dropdown-target -->
-                        <div class="nav-dropdown target-id DeYlt" style="--target-half-width: 12px;">
+                        <div class="nav-dropdown target-id DeYlt">
                             <svg class="target-id-button" id="target_id1" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -71,9 +71,10 @@
                             </svg>
             
                             <!-- single-menu dropdown container -->
-                            <div id="menu_id1" class="menu-id right" style="display: none;">
+                            <div id="menu_id1" class="menu-id right">
                                 <div class="form-field">
-                                    <label for="user_language">language</label><select name="user_language" id="user_language" required="" aria-required="true" aria-label="language" aria-describedby="user_language-description ">
+                                    <label for="user_language">language</label>
+                                    <select name="user_language" id="user_language_one" required="" aria-required="true" aria-label="language" aria-describedby="user_language-description ">
                                         <option value="en" selected="">
                                             English (English)
                                         </option>
@@ -6317,30 +6318,32 @@
         </div>
 
         <script>
-            // Calculate header's initial height
+            
+            // ------------------handle header height----------------------
+
+            // calculate header height
             let headerHeight = document.querySelector('.header').offsetHeight;
 
+            // set the header height as a css variable
             function setHeaderHeightVariable() {
-            document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+                document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
             }
-
             setHeaderHeightVariable();
 
-            // Create a ResizeObserver instance with a callback function
+            // set an obserber for header height change and update the variable
             const resizeObserver = new ResizeObserver(() => {
-            // Recalculate header's height and update the CSS variable
-            const newHeaderHeight = document.querySelector('.header').offsetHeight;
-            if (newHeaderHeight !== headerHeight) {
-                headerHeight = newHeaderHeight; // Use let instead of const
-                setHeaderHeightVariable();
-            }
+                const newHeaderHeight = document.querySelector('.header').offsetHeight;
+                if (newHeaderHeight !== headerHeight) {
+                    headerHeight = newHeaderHeight;
+                    setHeaderHeightVariable();
+                }
             });
 
             // Observe the header element
             resizeObserver.observe(document.querySelector('.header'));
 
+            // -------------------initiate splides.js------------------
 
-            // initiate splides.js
             document.addEventListener('DOMContentLoaded', function () {
                 new Splide('.start__text-carousel', {
                     type   : 'loop',

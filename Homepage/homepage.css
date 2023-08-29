@@ -1,4 +1,5 @@
 :root {
+    /* colors */
     --white: #fff;
     --black: #000;
     --base: #333;
@@ -13,9 +14,11 @@
     --main-red: #d61f27;
     --main-yellow: #fce40d;
 
+    /* spacing */
     --homepage--section-padding: 20px;
     --homepage-inline-space: 5rem;
 
+    /* normal text font size */
     --fs-xxxs: 10px;
     --fs-xxs: 12px;
     --fs-xs: 14px;
@@ -26,6 +29,7 @@
     --fs-xxl: 28px;
     --fs-xxxl: 32px;
 
+    /* header font size */
     --fs-h1: 96px;
     --fs-h2: 64px;
     --fs-h3: 48px;
@@ -119,7 +123,6 @@ video {
 }
 
 /* primary button style */
-
 .primary-button {
     color: var(--white);
     background: var(--main-pink);
@@ -503,6 +506,8 @@ video {
     font-weight: 800;
 }
 
+/* creators nav (with view-all button on right) */
+
 .creators__nav {
     display: flex;
     justify-content: space-between;
@@ -542,6 +547,7 @@ video {
     height: 15px;
 }
 
+/* creators-container (2 rows image grid) */
 .creators-container {
     display: flex;
     gap: 8px;
@@ -810,6 +816,7 @@ span.post__text--pink {
     margin-bottom: 8rem;
 }
 
+/* new-creators slider */
 .new-creators-container {
     display: flex;
     align-items: center;
@@ -905,6 +912,7 @@ span.post__text--pink {
     line-height: 2;
 }
 
+/* two widget container */
 .grow-container {
     display: flex;
     justify-content: space-between;
@@ -1152,6 +1160,7 @@ select#insights-overview {
     margin-bottom: var(--homepage-inline-space);
 }
 
+/* most popular tags */
 .beats__tags-container {
     display: flex;
     flex-wrap: wrap;
@@ -1386,7 +1395,7 @@ select#insights-overview {
     line-height: normal;
 }
 
-/* media-queries */
+/* -----------------------media-queries------------------- */
 
 @media (max-width: 1200px){
     :root{
@@ -1447,12 +1456,6 @@ select#insights-overview {
 @media (max-width: 850px){
     :root{
         --homepage-inline-space: 3rem;
-    }
-
-    .login-button,
-    .signup-button,
-    .profile-avatar{
-        display: none !important;
     }
 
     .menu{
