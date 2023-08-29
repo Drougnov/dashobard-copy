@@ -779,11 +779,17 @@
         </div>
     </div>
     <script>
-        // show/hide go-top arrow based on windows offset-y
+        //------------------handle go top button-----------------
 
         let scrollPosition = window.pageYOffset;
         const goTopButton = document.querySelector('.go-top');
 
+        // scroll back to top on click
+        goTopButton.addEventListener('click', ()=>{
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+
+        // show/hide go-top arrow based on windows offset-y
         function toggleGoTopButtonVisiblity(){
             if(window.pageYOffset >= 100){
             goTopButton.style.opacity = "1";
