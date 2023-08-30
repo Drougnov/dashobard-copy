@@ -1424,10 +1424,6 @@ select#insights-overview {
         --fs-h4: 32px;
     }
 
-    .nav-link{
-        display: none;
-    }
-
     .hero-text-wrapper{
         max-width: 685px;
     }
