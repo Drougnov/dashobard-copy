@@ -181,6 +181,10 @@ video {
     left: -1rem !important;
 }
 
+.header{
+    position: fixed;
+}
+
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
@@ -191,7 +195,7 @@ video {
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 0;
+    margin-top: var(--header-height);
 }
 
 .hero-text-wrapper {
