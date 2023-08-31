@@ -181,6 +181,15 @@ video {
     left: -1rem !important;
 }
 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+}
+
 /* ----------------------------hero-section------------------------ */
 
 .hero-section {
@@ -191,7 +200,7 @@ video {
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 0;
+    margin-top: var(--header-height);
 }
 
 .hero-text-wrapper {
@@ -1614,10 +1623,6 @@ select#insights-overview {
         --fs-h2: 54px;
         --fs-h3: 40px;
         --fs-h4: 32px;
-    }
-
-    .nav-link{
-        display: none;
     }
 
     .hero-text-wrapper{
