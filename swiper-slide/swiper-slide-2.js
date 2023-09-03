@@ -129,8 +129,12 @@ function toggleButtonVisiblity(buttonsEnabled){
     swiperButtons.forEach(btn=>{
         if(buttonsEnabled){
             btn.style.opacity = "1";
+            btn.style.visibility = "visible";
+            btn.style.pointerEvents = "initial";
         }else{
             btn.style.opacity = "0";
+            btn.style.visibility = "hidden";
+            btn.style.pointerEvents = "none";
         }
     })
 }
