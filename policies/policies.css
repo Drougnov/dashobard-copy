@@ -52,8 +52,15 @@
 }
 
 h1{
+    font-weight: 900;
+    text-align: center;
     margin-bottom: var(--policy-text-gap);
 }
+.form-field{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
 .policy-container{
     margin-top: var(--policy-article-gap);
 }
