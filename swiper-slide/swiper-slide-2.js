@@ -1,17 +1,28 @@
 'use strict';
 
-var swiperContainer = document.querySelector('.swiper');
-var swiperCards = document.querySelectorAll('.swiper-card');
+// dom elements
+const swiperContainer = document.querySelector('.swiper');
+const swiperCards = document.querySelectorAll('.swiper-card');
+const progressBar = document.querySelector('.progress-bar');
 const swiperButtons = document.querySelectorAll('.swiper--button');
-var no = document.getElementById('no');
-var yes = document.getElementById('yes');
-let buttonsEnabled = false;
+const no = document.getElementById('no');
+const yes = document.getElementById('yes');
+
+// state variables
+let hammer;
+const totalCards = swiperCards.length;
+
 
 function initCards(card, index) {
     var newCards = document.querySelectorAll('.swiper-card:not(.removed)');
+    var totalCards = newCards.length;
+
+    if(totalCards === 0){
+        noCardsLeft();
+    }
 
     newCards.forEach(function (card, index) {
-        card.style.zIndex = swiperCards.length - index;
+        card.style.zIndex = totalCards - index;
     });
 
     swiperContainer.classList.add('loaded');
@@ -20,9 +31,9 @@ function initCards(card, index) {
 initCards();
 
 swiperCards.forEach(function (el) {
-    const hammer = new Hammer(el);
+    hammer = new Hammer(el);
 
-    hammer.on('pan', function (event) {
+    hammer.on('panstart', function (event) {
         el.classList.add('moving');
     });
 
@@ -62,39 +73,21 @@ swiperCards.forEach(function (el) {
             var rotate = xMulti * yMulti;
 
             event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
+
             initCards();
+            if(event.target.classList.contains('removed')){
+                removedCard();
+            }
         }
+        event.preventDefault();
     });
-
-    el.addEventListener('transitionend', () => {
-        togglePanningOnTwoSeconds();
-    });
-
-    function togglePanning(enablePanning) {
-        const options = hammer.get('pan').options;
-        options.enable = enablePanning;
-        hammer.get('pan').set(options);
-    }
-    
-    function togglePanningOnTwoSeconds(){
-        togglePanning(false);
-        buttonsEnabled = false;
-        toggleButtonVisiblity(buttonsEnabled);
-        const progressBar = document.querySelector('.progress-bar');
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '0%';
-        progressBar.offsetWidth;
-        progressBar.style.transition = 'width 2s';
-        progressBar.style.width = '100%';
-        setTimeout(()=>{
-            buttonsEnabled = true;
-            toggleButtonVisiblity(buttonsEnabled);
-            togglePanning(true);
-        },2000)
-    }
-
-    togglePanningOnTwoSeconds();
 });
+
+function togglePanning(enablePanning) {
+    const options = hammer.get('pan').options;
+    options.enable = enablePanning;
+    hammer.get('pan').set(options);
+}
 
 function createButtonListener(yes) {
     return function (event) {
@@ -104,26 +97,22 @@ function createButtonListener(yes) {
         if (!cards.length) return false;
 
         var card = cards[0];
-
         card.classList.add('removed');
 
         if (yes) {
-            card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+            card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(-30deg)';
         } else {
-            card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+            card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(30deg)';
         }
-
+        
         initCards();
 
         event.preventDefault();
     };
 }
 
-var noListener = createButtonListener(false);
-var yesListener = createButtonListener(true);
-
-no.addEventListener('click', noListener);
-yes.addEventListener('click', yesListener);
+yes.addEventListener('click', createButtonListener(true));
+no.addEventListener('click', createButtonListener(false));
 
 function toggleButtonVisiblity(buttonsEnabled){
     swiperButtons.forEach(btn=>{
@@ -137,4 +126,20 @@ function toggleButtonVisiblity(buttonsEnabled){
             btn.style.pointerEvents = "none";
         }
     })
+}
+toggleButtonVisiblity(true);
+
+function setProgressBarWidth(width){
+    progressBar.style.width = width + '%';
+}
+setProgressBarWidth(0);
+
+function noCardsLeft(){
+    toggleButtonVisiblity(false)
+    setProgressBarWidth(0);
+}
+
+function removedCard(){
+    togglePanning(true);
+    setProgressBarWidth(100);
 }

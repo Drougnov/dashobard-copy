@@ -97,11 +97,11 @@
     width: 0%;
     height: 100%;
     background-color: #d61f27;
-    transition: width .2s linear;
-    -webkit-transition: width .2s linear;
-    -moz-transition: width .2s linear;
-    -ms-transition: width .2s linear;
-    -o-transition: width .2s linear;
+    transition: width 2s linear;
+    -webkit-transition: width 2s linear;
+    -moz-transition: width 2s linear;
+    -ms-transition: width 2s linear;
+    -o-transition: width 2s linear;
 }
 
 .swiper--buttons {
