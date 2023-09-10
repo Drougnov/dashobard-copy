@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     new Splide('.new-creators-container', {
         type   : 'loop',
         perPage: 8,
+        gap: '10px',
         breakpoints: {
             1024: {
                 perPage: 6,
