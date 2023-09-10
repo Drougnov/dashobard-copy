@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        id="hello-elementor-child-style-css"
+        href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3"
+        media="all"
+    />
+    <title>Pagination</title>
+    <style>
+        /* unneccessary */
+        body{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        /* unneccessary */
+
+
+        :root{
+            --pagination-items-gap: 8px;
+            --pagination-button-background: #fff;
+            --pagination-button-hover-background: #fce40d;
+            --pagination-button-padding: 6px 12px;
+            --pagination-button-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+            --pagination-button-border-radius: 4px;
+            --pagination-button-icon-size: 24px;
+            --pagination-button-icon-color: #ec644b;
+
+            --pagination-number-padding: 8px 10px;
+            --pagination-number-border-radius: 4px;
+            --pagination-number-active-color: #fff;
+            --pagination-number-active-background: #eb5338;
+            --pagination-number-hover-background: #d9d9d9;
+            --pagination-number-font-size: 14px;
+            --pagination-number-font-weight: 600;
+        }
+        
+        .pagination-pages{
+            display: flex;
+            align-items: center;
+            gap: var(--pagination-items-gap);
+        }
+
+        .pagination__btn{
+            background: var(--pagination-button-background);
+            border: none;
+            padding: var(--pagination-button-padding);
+            box-shadow: var(--pagination-button-box-shadow);
+            border-radius: var(--pagination-button-border-radius);
+            transition: all .1s linear;
+        }
+
+        .pagination__btn:hover{
+            background: var(--pagination-button-hover-background);
+        }
+
+        .pagination__btn--icon-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+        }
+
+        .pagination__btn--icon{
+            position: absolute;
+            width: var(--pagination-button-icon-size);
+            height: var(--pagination-button-icon-size);
+        }
+
+        .pagination__btn svg path{
+            stroke: var(--pagination-button-icon-color);
+        }
+
+        .page-number{
+            padding: var(--pagination-number-padding);
+            border-radius: var(--pagination-number-border-radius);
+            transition: all .1s linear;
+        }
+
+        .page-number:hover{
+            background: var(--pagination-number-hover-background);
+        }
+
+        .page-number.current{
+            background: var(--pagination-number-active-background);
+        }
+
+        .page-number__span{
+            font-size: var(--pagination-number-font-size);
+            font-weight: var(--pagination-number-font-weight);
+            transition: all .1s linear;
+        }
+
+        .page-number.current .page-number__span{
+            color: var(--pagination-number-active-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="pagination-pages">
+        <button type="button" class="pagination__btn pagination__btn--prev" aria-label="go previous page">
+            <div class="pagination__btn--icon-container">
+                <svg class="icon-chevron-left pagination__btn--icon" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M15 6L9 12L15 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                    </g>
+                </svg>
+            </div>
+        </button>
+        <a href="#" class="page-number"><span class="page-number__span">1</span></a>
+        <span>...</span>
+        <a href="#" class="page-number"><span class="page-number__span">3</span></a>
+        <a href="#" class="page-number"><span class="page-number__span">4</span></a>
+        <a href="#" class="page-number current"><span class="page-number__span">5</span></a>
+        <a href="#" class="page-number"><span class="page-number__span">6</span></a>
+        <a href="#" class="page-number"><span class="page-number__span">7</span></a>
+        <span>...</span>
+        <a href="#" class="page-number"><span class="page-number__span">29</span></a>
+        <button type="button" class="pagination__btn pagination__btn--next" aria-label="go next page">
+            <div class="pagination__btn--icon-container">
+                <svg class="icon-chevron-right pagination__btn--icon" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                    </g>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <script>
+        const pageNumbers = document.querySelectorAll('.page-number');
+        let currentNumber = document.querySelector('.page-number.current');
+
+        pageNumbers.forEach(pageNum => {
+            pageNum.addEventListener('click', () => {
+                // Check if the clicked number is not the current one
+                if (pageNum !== currentNumber) {
+                    // Remove the 'current' class from the current number
+                    currentNumber.classList.remove('current');
+
+                    // Add the 'current' class to the clicked number
+                    pageNum.classList.add('current');
+
+                    // Update the current number to the newly clicked number
+                    currentNumber = pageNum;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
