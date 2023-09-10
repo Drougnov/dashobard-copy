@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      id="hello-elementor-child-style-css"
+      href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <title>Homepage</title>
+    <style>
+        .splide__slide {
+            width: calc(100% / 6) !important;
+            text-align: center;
+        }
+        .splide__pagination{
+            bottom: -2.5rem;
+        }
+        .splide__pagination__page{
+            background: rgba(255, 0, 0, 0.5);
+        }
+        .splide__pagination__page.is-active{
+            background: rgb(255, 0, 0);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">Slide 1</li>
+                <li class="splide__slide">Slide 2</li>
+                <li class="splide__slide">Slide 3</li>
+                <li class="splide__slide">Slide 4</li>
+                <li class="splide__slide">Slide 5</li>
+                <li class="splide__slide">Slide 6</li>
+                <li class="splide__slide">Slide 7</li>
+                <li class="splide__slide">Slide 8</li>
+                <li class="splide__slide">Slide 9</li>
+                <li class="splide__slide">Slide 10</li>
+                <li class="splide__slide">Slide 11</li>
+                <li class="splide__slide">Slide 12</li>
+                <li class="splide__slide">Slide 13</li>
+                <li class="splide__slide">Slide 14</li>
+                <li class="splide__slide">Slide 15</li>
+                <li class="splide__slide">Slide 16</li>
+                <li class="splide__slide">Slide 17</li>
+                <li class="splide__slide">Slide 18</li>
+                <li class="splide__slide">Slide 19</li>
+                <li class="splide__slide">Slide 20</li>
+                <li class="splide__slide">Slide 21</li>
+                <li class="splide__slide">Slide 22</li>
+                <li class="splide__slide">Slide 23</li>
+                <li class="splide__slide">Slide 24</li>
+                <li class="splide__slide">Slide 25</li>
+                <li class="splide__slide">Slide 26</li>
+                <li class="splide__slide">Slide 27</li>
+                <li class="splide__slide">Slide 28</li>
+                <li class="splide__slide">Slide 29</li>
+              </ul>
+            </div>
+          </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script>
+        const splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 5,
+            breakpoints: {
+              1200: {
+                  perPage: 4,
+              },
+              1024: {
+                  perPage: 3,
+              },
+              850: {
+                  perPage: 2,
+              },
+              650: {
+                  perPage: 1,
+              },
+              350: {
+                  perPage: 1,
+              },
+            },
+            arrows: false
+        });
+        splide.mount();
+    </script>
+  </body>
+</html>
