@@ -829,6 +829,7 @@ span.post__text--pink {
 
 .new-creators-container .splide__list{
     gap: 10px;
+    padding: 12px 0 !important;
 }
 
 .new-creators-container .splide__arrows{
@@ -1831,6 +1832,9 @@ select#insights-overview {
         padding-left: 0;
     }
 
+    .beats__title {
+        font-size: 7vw;
+    }
 
     .contact-section{
         background-image: url('./images/contact-bg-mobile.png');
@@ -2026,6 +2030,7 @@ select#insights-overview {
     .beats__tags-container{
         margin: 2rem var(--homepage-inline-space) 5rem var(--homepage-inline-space);
     }
+
     .creators-container{
         margin-bottom: 8rem;
     }
