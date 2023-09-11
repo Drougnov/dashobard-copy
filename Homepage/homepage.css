@@ -872,6 +872,10 @@ span.post__text--pink {
     letter-spacing: 0.06px;
 }
 
+.new-creators-container.splide:not(.is-overflow) .splide__pagination {
+    display: flex;
+}
+
 .splide__pagination.splide__pagination.splide__pagination--ltr{
     bottom: -2.65rem;
     gap: 8px;
@@ -1424,6 +1428,7 @@ select#insights-overview {
 .DuKSh .GodhZ {
     width: 100%;
     height: 100%;
+    align-items: center;
     padding: 0;
     overflow: auto;
     -ms-overflow-style: none;
@@ -1691,15 +1696,16 @@ select#insights-overview {
         -o-transform: translate(0, 0);
     }
 
+    .DuKSh .GodhZ{
+        align-items: flex-end;
+    }
+
     .GodhZ .ExGby {
         width: 100%;
-        height: max-content;
         max-width: unset;
-        border-radius: 17px;
-        -webkit-border-radius: 17px;
-        -moz-border-radius: 17px;
-        -ms-border-radius: 17px;
-        -o-border-radius: 17px;
+        height: max-content;
+        min-height: 60vh;
+        max-height: 100vh;
     }
 }
 
