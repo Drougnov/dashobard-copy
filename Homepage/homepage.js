@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             650: {
                 perPage: 3,
+                padding: { left: 10, right: 10 }
             },
             350: {
                 perPage: 2,
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 650: {
                     perPage: 2,
+                    padding: { left: 8, right: 8 }
                 },
                 350: {
                     perPage: 1,
