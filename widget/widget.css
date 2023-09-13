@@ -42,12 +42,12 @@
     -o-border-radius: 50%;
 }
 
-.widget__tab-one{
+.widget__tab-one .widget__icon-container{
     background: #b1e5fc;
 
 }
 
-.widget__tab-two{
+.widget__tab-two .widget__icon-container{
     background: #cabdff;
 }
 
