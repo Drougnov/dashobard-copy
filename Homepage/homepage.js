@@ -21,9 +21,10 @@ const resizeObserver = new ResizeObserver(() => {
 // Observe the header element
 resizeObserver.observe(document.querySelector('.header'));
 
-// -------------------initiate splides.js------------------
+// -------------------------initiate splides.js---------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
+    // (keyhole icon + featured creators)
     new Splide('.start__text-carousel', {
         type   : 'loop',
         drag   : 'free',
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     }).mount( window.splide.Extensions );
 
+    // auto sliding image - top
     new Splide('.start__img-carousel-top', {
         type   : 'loop',
         drag   : 'free',
@@ -46,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     }).mount( window.splide.Extensions );
 
+    // auto sliding image - bottom
     new Splide('.start__img-carousel-bottom', {
         type   : 'loop',
         drag   : 'free',
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     }).mount( window.splide.Extensions );
 
+    // center focused carousel (img + name + username)
     new Splide('.new-creators-container', {
         type   : 'loop',
         perPage: 8,
@@ -80,10 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
     }).mount();
 
+    // static two row carousel (multiple instances)
     const creatorsContainers = document.querySelectorAll('.creators-container');
-    const slideToSwipe = 5;
+    const slideToSwipe = 5;  // number of column to slide on pagination button click
 
     creatorsContainers.forEach(creatorsContainer =>{
+        // initiate carousel
         var splide = new Splide( creatorsContainer, {
             type   : 'loop',
             gap: '8px',
@@ -110,37 +116,42 @@ document.addEventListener('DOMContentLoaded', function () {
             focus: 'left',
         } ).mount();
 
+        // update button activity on column swipe and screen resize
         splide.on('move', checkButtonActivity);
-        // manually perMove on pagination click
-        const paginationButtons = creatorsContainer.querySelectorAll('[role="presentation"]:nth-child(4n + 1) .splide__pagination__page');
+        window.addEventListener('resize', checkButtonActivity);
+
+        // visible pagination buttons
+        const paginationButtons = creatorsContainer.querySelectorAll(`[role="presentation"]:nth-child(${slideToSwipe}n + 1) .splide__pagination__page`);
 
         paginationButtons.forEach((btn, index) => {
+            // swipe columns on pagination button click
             btn.addEventListener('click', ()=>{
                 const newIndex = index * slideToSwipe;
-
                 splide.go(newIndex);
                 checkButtonActivity();
             })
         })
 
-        //--------------------------look for activity on slide-----------------------------
-
-        const targetElement = creatorsContainer.querySelector('.splide__pagination');
-
         //check which button is active
         function checkButtonActivity(){
-            // Get all the buttons
+            // Get all the buttons (visible + hidden)
             const buttons = Array.from(creatorsContainer.querySelectorAll('.splide__pagination__page'));
 
             buttons.forEach((btn, index) => {
+                // remove class from inactive buttons
                 if(btn.parentElement.classList.contains('pagination-active')){
                     btn.parentElement.classList.remove('pagination-active');
                 }
 
                 if (btn.classList.contains('is-active')) {
+                    // if any of 1st-5th button is active, show to 1st button
+                    // if any of 6th-10th button is active, show 6th button
+                    // so on....
+
+
                     for (let i = 0; i < slideToSwipe; i++) {
                         if (index >= slideToSwipe * i && index <= slideToSwipe * (i + 1) - 1) {
-                            buttons[(slideToSwipe - 1) * i].parentElement.classList.add('pagination-active');
+                            buttons[slideToSwipe  * i].parentElement.classList.add('pagination-active');
                             break;
                         }
                     }
@@ -149,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         checkButtonActivity();
-        window.addEventListener('resize', checkButtonActivity);
     })
 });
 
