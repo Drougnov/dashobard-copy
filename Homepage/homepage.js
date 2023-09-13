@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         checkButtonActivity();
+        window.addEventListener('resize', checkButtonActivity);
     })
 });
 
