@@ -40,7 +40,15 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.widget__tab-one{
     background: #b1e5fc;
+
+}
+
+.widget__tab-two{
+    background: #cabdff;
 }
 
 .widget__caption {
