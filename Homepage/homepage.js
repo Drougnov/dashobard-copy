@@ -80,10 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
     }).mount();
 
-    var elms = document.getElementsByClassName( 'creators-container' );
+    const creatorsContainers = document.querySelectorAll('.creators-container');
+    const slideToSwipe = 5;
 
-    for ( var i = 0; i < elms.length; i++ ) {
-        new Splide( elms[ i ], {
+    creatorsContainers.forEach(creatorsContainer =>{
+        var splide = new Splide( creatorsContainer, {
             type   : 'loop',
             gap: '8px',
             perPage: 6,
@@ -108,7 +109,47 @@ document.addEventListener('DOMContentLoaded', function () {
             arrows: false,
             focus: 'left',
         } ).mount();
-    }
+
+        splide.on('move', checkButtonActivity);
+        // manually perMove on pagination click
+        const paginationButtons = creatorsContainer.querySelectorAll('[role="presentation"]:nth-child(4n + 1) .splide__pagination__page');
+
+        paginationButtons.forEach((btn, index) => {
+            btn.addEventListener('click', ()=>{
+                const newIndex = index * slideToSwipe;
+
+                splide.go(newIndex);
+                checkButtonActivity();
+            })
+        })
+
+        //--------------------------look for activity on slide-----------------------------
+
+        const targetElement = creatorsContainer.querySelector('.splide__pagination');
+
+        //check which button is active
+        function checkButtonActivity(){
+            // Get all the buttons
+            const buttons = Array.from(creatorsContainer.querySelectorAll('.splide__pagination__page'));
+
+            buttons.forEach((btn, index) => {
+                if(btn.parentElement.classList.contains('pagination-active')){
+                    btn.parentElement.classList.remove('pagination-active');
+                }
+
+                if (btn.classList.contains('is-active')) {
+                    for (let i = 0; i < slideToSwipe; i++) {
+                        if (index >= slideToSwipe * i && index <= slideToSwipe * (i + 1) - 1) {
+                            buttons[(slideToSwipe - 1) * i].parentElement.classList.add('pagination-active');
+                            break;
+                        }
+                    }
+                }
+            })
+        }
+
+        checkButtonActivity();
+    })
 });
 
 
