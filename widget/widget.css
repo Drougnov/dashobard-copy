@@ -1,0 +1,111 @@
+.widget-container{
+    width: max-content;
+    padding: 1rem;
+}
+
+.widget{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 20px;
+    background: #f4f4f4;
+}
+
+.widget__tab {
+    width: 100%;
+    padding: 20px 100px 20px 20px;
+    position: relative;
+}
+
+.widget__tab-one{
+    border-radius: 12px;
+    background: #fcfcfc;
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25), 0px 2px 0px 0px rgba(255, 255, 255, 0.25) inset, 0px -1px 1px 0px rgba(0, 0, 0, 0.04) inset;
+}
+
+.widget__flex-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.widget__icon-container{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #b1e5fc;
+}
+
+.widget__caption {
+    color: #6f767e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.13px;
+}
+
+.widget__number {
+    color: #1a1d1f;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+}
+
+.widget__status {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.widget__status-negative{
+    background: #ffe7e4;
+}
+
+.widget__status-positive{
+    background: #eafae5;
+}
+
+.widget__status--icon-container{
+    width: 16px;
+    height: 16px;
+}
+
+.widget__status--number {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: -0.12px;
+}
+
+.widget__status-negative .widget__status--number{
+    color: #ff6a55;
+}
+
+.widget__status-positive .widget__status--number{
+    color: #83bf6e;
+}
+
+@media(max-width: 650px){
+    .widget{
+        flex-direction: column;
+    }
+}
