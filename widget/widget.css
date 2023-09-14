@@ -1,9 +1,12 @@
 .widget-container{
-    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
 }
 
 .widget{
+    width: max-content;
     display: flex;
     align-items: center;
     padding: 8px;
