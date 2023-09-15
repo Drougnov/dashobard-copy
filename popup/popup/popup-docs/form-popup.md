@@ -1,5 +1,17 @@
 # Form Popup Documentation
 
+## Usage && elements
+
+Can be used for forms
+
+It containes a dropdown and a loader. The loader is visible on submit
+
+## special classes
+
+`AYaOY`: Add this class to any element inside the popup. On click of that/those elment the popup will be closed.
+
+`gsCWf`: Add this class to the popup's outer wrapper/loader, to show them intially on page load.
+
 ## How to add form popup
 
 First select a target elment which will toggle the visibility of the popup. It can be any elements (button, div, image etc.). Add a function `initiate_popup()` on click. The function takes an object as argument. Set an unique id as the value of the object's target property.  Here is an example:
@@ -14,7 +26,7 @@ Then add the markup for the popup inside the body. Add the same unique id on the
 <div class="DuKSh EJVsl OtrSK cNGwx" id="#example id">
 ```
 
-## How to add loader to the popup
+### How to add loader to the popup
 
 The loader is activated on click of any element with the attribute [type="submit"]. Ex: `<button type="submit">Save</button>`. Add the loader markup inside the container `<div class="ExGby HruDj">`:
 
@@ -52,6 +64,59 @@ The loader is activated on click of any element with the attribute [type="submit
 ```
 
 Thats it!
+
+### How to add dropdown to the popup
+
+We can add dropdown to the popup header. To add the dropdown add this markup inside the header right section (`<div class="wcrwV gsCWf EJVsl">`) and it's done: 
+
+```html
+<div class="BgbBR HruDj">
+    <!-- dropdown toggle button -->
+    <div
+        class="RTcUA TNIio UYvZu gsCWf EJVsl OtrSK DeYlt"
+    >
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            ></path>
+            <path
+                d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            ></path>
+            <path
+                d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            ></path>
+        </svg>
+    </div>
+    <!-- dropdown contents -->
+    <div class="JVeuW CzomY">
+        <div class="YLtig DeYlt">Deleted Tasks</div>
+        <div class="YLtig DeYlt">
+            Archived Tasks
+        </div>
+        <div class="YLtig DeYlt">
+            Duplicate Tasks
+        </div>
+    </div>
+</div>
+```
 
 ## complete markup
 
