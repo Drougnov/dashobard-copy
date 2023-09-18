@@ -335,13 +335,6 @@ video {
     gap: var(--homepage--section-padding);
 }
 
-.start__text-carousel .splide__arrows,
-.start__text-carousel .splide__pagination,
-.start__img-carousel .splide__arrows,
-.start__img-carousel .splide__pagination{
-    display: none;
-}
-
 .start__text-carousel .featured-creators {
     width: max-content !important;
     display: flex;
@@ -565,18 +558,6 @@ video {
     margin: 2rem var(--homepage-inline-space);
 }
 
-.creators-container.splide:not(.is-overflow) .splide__pagination.splide__pagination--ltr{
-    display: flex;
-}
-
-.creators-container .splide__pagination li[role="presentation"]{
-    display: none;
-}
-
-.creators-container .splide__pagination li[role="presentation"]:nth-child(5n + 1){
-    display: block;
-}
-
 .creators-container-top,.creators-container-bottom{
     display: flex;
     justify-content: space-between;
@@ -736,26 +717,37 @@ video {
     border-radius: 5px;
 }
 
-.creators-pagination {
+.pagination-container {
+    position: absolute;
+    bottom: -2.65rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
-.creators-pagination__btn {
+.pagination-btn {
     width: 12px;
     height: 12px;
+    background: var(--white);
     border: 1px solid var(--main-pink);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
     cursor: pointer;
 }
 
-.creators-pagination__btn.active {
+.pagination-btn.pagination-active{
     background: var(--main-pink);
 }
 
@@ -894,8 +886,7 @@ span.post__text--pink {
     height: 13.6px;
 }
 
-.splide__pagination__page[type="button"],
-.creators-container li[role="presentation"] .splide__pagination__page[type="button"]{
+.splide__pagination__page[type="button"]{
     width: 12px;
     height: 12px;
     background: var(--white);
@@ -912,8 +903,7 @@ span.post__text--pink {
     -o-transform: scale(1);
 }
 
-.splide__pagination__page[type="button"].is-active,
-.creators-container li[role="presentation"].pagination-active .splide__pagination__page[type="button"]{
+.splide__pagination__page[type="button"].is-active{
     background: var(--main-pink);
     transform: scale(1);
     -webkit-transform: scale(1);

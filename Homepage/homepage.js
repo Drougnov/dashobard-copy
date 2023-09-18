@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
+        pagination: false,
+        arrows: false,
         autoScroll: {
             speed: .25,
             pauseOnHover: false,
@@ -41,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
+        pagination: false,
+        arrows: false,
         autoScroll: {
             speed: -.25,
             pauseOnHover: false,
@@ -53,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         type   : 'loop',
         drag   : 'free',
         focus  : 'center',
+        pagination: false,
+        arrows: false,
         autoScroll: {
             speed: .25,
             pauseOnHover: false,
@@ -84,83 +90,87 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
     }).mount();
 
-    // static two row carousel (multiple instances)
+    // static two-row carousel (multiple instances)
     const creatorsContainers = document.querySelectorAll('.creators-container');
-    const slideToSwipe = 5;  // number of column to slide on pagination button click
 
-    creatorsContainers.forEach(creatorsContainer =>{
-        // initiate carousel
-        var splide = new Splide( creatorsContainer, {
-            type   : 'loop',
-            gap: '8px',
-            perPage: 6,
-            breakpoints: {
-                1200: {
-                    perPage: 5,
-                },
-                1024: {
-                    perPage: 4,
-                },
-                850: {
-                    perPage: 3,
-                },
-                650: {
-                    perPage: 2,
-                    padding: { left: 8, right: 8 }
-                },
-                350: {
-                    perPage: 1,
-                },
-            },
-            arrows: false,
-            focus: 'left',
-        } ).mount();
+    creatorsContainers.forEach((creatorsContainer) => {
+    const splide = new Splide(creatorsContainer, {
+        type: 'loop',
+        gap: '8px',
+        perPage: 6,
+        pagination: false,
+        breakpoints: {
+        1200: {
+            perPage: 5,
+        },
+        1024: {
+            perPage: 4,
+        },
+        850: {
+            perPage: 3,
+        },
+        650: {
+            perPage: 2,
+            padding: { left: 8, right: 8 },
+        },
+        350: {
+            perPage: 1,
+        },
+        },
+        arrows: false,
+        focus: 'left',
+    }).mount();
 
-        // update button activity on column swipe and screen resize
-        splide.on('move', checkButtonActivity);
-        window.addEventListener('resize', checkButtonActivity);
+    // Create the custom-pagination container
+    const paginationContainer = document.createElement('div');
+    paginationContainer.classList.add('pagination-container');
 
-        // visible pagination buttons
-        const paginationButtons = creatorsContainer.querySelectorAll(`[role="presentation"]:nth-child(${slideToSwipe}n + 1) .splide__pagination__page`);
+    // Calculate the number of pagination buttons based on the perPage setting
+    const pageCount = Math.ceil(splide.length / 5); // Each button controls 5 slides
 
-        paginationButtons.forEach((btn, index) => {
-            // swipe columns on pagination button click
-            btn.addEventListener('click', ()=>{
-                const newIndex = index * slideToSwipe;
-                splide.go(newIndex);
-                checkButtonActivity();
-            })
-        })
+    // Create pagination buttons
+    const buttons = [];
 
-        //check which button is active
-        function checkButtonActivity(){
-            // Get all the buttons (visible + hidden)
-            const buttons = Array.from(creatorsContainer.querySelectorAll('.splide__pagination__page'));
+    for (let i = 0; i < pageCount; i++) {
+        const button = document.createElement('div');
+        button.classList.add("pagination-btn", "tRLtc")
 
-            buttons.forEach((btn, index) => {
-                // remove class from inactive buttons
-                if(btn.parentElement.classList.contains('pagination-active')){
-                    btn.parentElement.classList.remove('pagination-active');
-                }
+        // Add a data attribute to each button to store the target slide index
+        button.dataset.targetSlide = i * 5; // Each button controls 5 slides
 
-                if (btn.classList.contains('is-active')) {
-                    // if any of 1st-5th button is active, show to 1st button
-                    // if any of 6th-10th button is active, show 6th button
-                    // so on....
+        // Add a click event listener to each button
+        button.addEventListener('click', (event) => {
+        const targetSlide = parseInt(event.target.dataset.targetSlide);
 
+        // Go to the target slide index
+        splide.go(targetSlide);
+        });
 
-                    for (let i = 0; i < slideToSwipe; i++) {
-                        if (index >= slideToSwipe * i && index <= slideToSwipe * (i + 1) - 1) {
-                            buttons[slideToSwipe  * i].parentElement.classList.add('pagination-active');
-                            break;
-                        }
-                    }
-                }
-            })
-        }
+        // Append the button to the pagination container
+        paginationContainer.appendChild(button);
+        buttons.push(button);
+    }
 
-        checkButtonActivity();
-    })
+    // Add an 'active' class to the first button to highlight it on initialization
+    buttons[0].classList.add('pagination-active');
+
+    // Add a 'move' event listener to update the active button based on Splide movement
+    splide.on('move', (newIndex) => {
+        // Remove the 'active' class from all buttons
+        buttons.forEach((button) => {
+        button.classList.remove('pagination-active');
+        });
+
+        // Calculate the index of the active button based on the currently focused slide
+        const activeButtonIndex = Math.floor(newIndex / 5); // Each button controls 5 slides
+
+        // Add the 'active' class to the active button
+        buttons[activeButtonIndex].classList.add('pagination-active');
+    });
+
+    // Append the custom-pagination container to the creatorsContainer
+    creatorsContainer.appendChild(paginationContainer);
+    });
 });
 
 
