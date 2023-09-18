@@ -14,10 +14,10 @@ It containes `splide` carousel library.
 
 ## How to add plan popup
 
-First select a target elment which will toggle the visibility of the popup. It can be any elements (button, div, image etc.). Add a function `initiate_popup()` on click. The function takes an object as argument. Set an unique id as the value of the object's target property.  Here is an example:
+First select a target elment which will toggle the visibility of the popup. It can be any elements (button, div, image etc.). Add a function `initiate_popup()` on click. The function takes an object as argument. Set an unique id as the value of the object's target property. Add another function `initiateSplideElements()` to initialize splide.js on click. Here is an example:
 
 ```html
-<button onclick="initiate_popup({'target': '#example id', 'overlay_color': 'rgb(0 170 255 / 58%)'});">Show/Hide Popup</button>
+<button onclick="initiate_popup({'target': '#example id', 'overlay_color': 'rgb(0 170 255 / 58%)'});initiateSplideElements()">Show/Hide Popup</button>
 ```
 
 Then add the markup for the popup inside the body. Add the same unique id on the popup's outer wrapper. Also add the `plan-popup` class to activate the element's style. Like this:
