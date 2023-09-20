@@ -2,24 +2,6 @@
     margin-bottom: 0;
 }
 
-.connect__img-container{
-    width: 100%;
-    max-height: 250px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    overflow: hidden;
-}
-
-.connect__img-container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .connect__title,
 .connect__title > span.username{
     color: var(--default-heading-font-color);
@@ -56,7 +38,6 @@
 
 .connect__login-section{
     margin-top: 40px;
-    margin-bottom: 20px;
 }
 
 .connect__login-btn{
