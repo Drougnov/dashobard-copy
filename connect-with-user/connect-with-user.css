@@ -1,0 +1,62 @@
+.connect-container p{
+    margin-bottom: 0;
+}
+
+.connect__img-container{
+    width: 100%;
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    overflow: hidden;
+}
+
+.connect__img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.connect__title,
+.connect__title > span.username{
+    color: var(--default-heading-font-color);
+    font-size: var(--default-h1-font-size);
+    font-family: var(--default-heading-font-family);
+    font-weight: var(--default-heading-font-weight);
+    line-height: var(--default-heading-line-height);
+    text-decoration: none;
+}
+
+.connect__cost-section{
+    margin: 20px 0;
+}
+
+.connect__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.UJQCM .svg-container svg{
+    width: 16px;
+    height: 16px;
+}
+
+/* login-section */
+
+.connect-container.logged-in .connect__login-section{
+    display: none;
+}
+
+.connect__login-section{
+    margin-top: 40px;
+}
+
+.connect__login-btn{
+    margin-top: 20px;
+}
