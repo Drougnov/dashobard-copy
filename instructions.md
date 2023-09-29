@@ -37,38 +37,30 @@ To add the `red dot notification` to an icon, follow these steps:
 
 ## How to add single menu dropdown
 
-1. Identify the `div` where you want to add the dropdown. For example:
-
-```html
-<div>
-    <p>text</p>
-</div>
-```
-
-2. Add the class `target_id` to the `div`. Here's an example:
+1. Identify the div and add the class `target_id` to the dropdown menu's parent element`. Here's an example:
 
 ```html
 <div class="target_id">
-    <p id="target_id1">text</p>
+    
 </div>
 ```
 
-3. Add an id `target_id(number)` and a class `target-id-button` to the `div`'s child which will be the dropdown/menu toggle button. The `number` should be unique and can be any value. Like this:
+2. Add a data-attribute `data-target="menu-(number)"` and a class `target-id-button` to the element which will be the dropdown/menu toggle button. The `number` should be unique and can be any value. *The toggle button will also work even if it is outside the `target-id` container*. Like this:
 
 ```html
 <div class="target_id">
-    <p id="target_id1" class="target-id-button">text</p>
+    <p data-target="menu-1" class="target-id-button">text</p>
 </div>
 ```
 
-4. Inside the `div`, add a `dropdown-menu container`. It should have the class `menu-id` and an id `menu-id(number)`. The `number` should match the `target_id`'s number. Here's the complete code:
+3. Inside the `target-id` container, add a `dropdown-menu container`. It should have the class `menu-id` and a data-attribute `data-menu="menu-(number)"` that has the same value as the toggle button. The `number` should match with the toggle button data-attribute's number. Here's the complete code:
 
 ```html
 <div class="target-id DeYlt">
     <!-- this <p> will be the toggle button for the dropdown-menu -->
-    <p id="target_id1" class="target-id-button">text</p>
-    <!-- add dropdown-menu container with a class 'menu-id' and id 'menu-id(same-number)' -->
-    <div id="menu_id1" class="menu-id">
+    <p data-target="menu-1" class="target-id-button">text</p>
+    <!-- add dropdown-menu container with a class 'menu-id' and attribute 'data-menu="menu-(number)' -->
+    <div data-menu="menu-1" class="menu-id">
         <!-- dropdown menu item -->
         <div class="menu-item menu-item-active">
             <!-- dropdown menu item left side (icon-container) -->
@@ -80,8 +72,10 @@ To add the `red dot notification` to an icon, follow these steps:
 </div>
 ```
 
-4. Call the function in the script with the specific ids. You can toggle the visibility of the dropdown menu by modifying the 3rd argument. Use `true` to show the dropdown initially, and `false` to hide it initially. For example:
+Thats it. We are done.
 
-`singleMenu("target_id1", "menu_id1", false);`
+*Remember to include the `popup-styles.css` stylesheet and `popup-scripts.js` script file in your HTML document*.
 
-Remember to include the `single-menu-dropdown.js` script file in your HTML document.
+## Speciality
+
+You can put the toggle button anywhere on the webpage; it doesn't have to be next to the menu it opens. Plus, you can use multiple buttons with the same identifier to control the same menu.
