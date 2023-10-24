@@ -27,6 +27,9 @@
   /* toast-inner-wrapper */
   .toast-notification .toast-notification-wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-right: var(--message-padding);
     overflow: hidden;
   }
