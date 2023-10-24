@@ -102,10 +102,10 @@ class Toasts {
                 this._transformToast(this.stack[i]);
             }
         }
-        // Use setTimeout to close the toast after 3 seconds
+        // Use setTimeout to close the toast after 30 seconds
         setTimeout(() => {
             this.closeToast(toast);
-        }, 3000);
+        }, 30000);
         return true;
     }
 
