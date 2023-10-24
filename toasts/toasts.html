@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1">
 		<title>Toast Notifications JS</title>
-		<link rel="stylesheet" href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3">
+        <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3">
 		<link href="toasts.css" rel="stylesheet" type="text/css">
         <style>
         * {
@@ -39,9 +39,8 @@
         });
 
         // Function to create and show a toast
-        function showToast(title, content, style) {
+        function showToast(content, style) {
             toasts.push({
-                title: title,
                 content: content,
                 style: style
             });
@@ -50,27 +49,27 @@
         // Event listeners for each link
         document.getElementById("link1").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("Link 1 Toast", "You clicked on Link 1", "success");
+            showToast("You clicked on Link 1", "success");
         });
 
         document.getElementById("link2").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("Link 2 Toast", "You clicked on Link 2", "verified");
+            showToast("You clicked on Link 2", "verified");
         });
 
         document.getElementById("link3").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("Link 3 Toast", "You clicked on Link 3", "dark");
+            showToast("You clicked on Link 3", "dark");
         });
 
         document.getElementById("link4").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("Link 4 Toast", "You clicked on Link 4", "error");
+            showToast("You clicked on Link 4", "error");
         });
 
         document.getElementById("link5").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("Link 5 Toast", "You clicked on Link 5", "");
+            showToast("You clicked on Link 5", "");
         });
         </script>
     </body>
