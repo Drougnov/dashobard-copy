@@ -34,17 +34,6 @@
     overflow: hidden;
   }
 
-  /* toast-header */
-  .toast-notification .toast-notification-wrapper .toast-notification-header {
-    padding: 0 0 5px 0;
-    margin: 0;
-    font-weight: var(--message-font-weight);
-    font-size: var(--message-font-size);
-    line-height: 1;
-    word-break: break-all;
-    color: var(--message-font-color);
-  }
-
   /* toast-content */
   .toast-notification .toast-notification-wrapper .toast-notification-content {
     font-size: var(--message-font-size);
@@ -66,11 +55,14 @@
     padding: 0;
     padding-bottom: 4px;
     align-items: unset;
-    font-weight: var(--message-font-weight);
-    color: rgba(0, 0, 0, 0.2);
   }
-  .toast-notification .toast-notification-close:hover {
-    color: rgba(0, 0, 0, 0.4);
+  .toast-close-icon-container{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+  }
+  .toast-close-icon-container:hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   /* toast-position */
@@ -86,24 +78,26 @@
 
   /* toast-background */
   .toast-notification.toast-notification-success {
-    background-color: var(--message-success-background);
+    background-color: var(--message-success-background, #007BFF);
   }
   .toast-notification.toast-notification-error {
-    background-color: var(--message-error-background);
+    background-color: var(--message-error-background, #007BFF);
   }
   .toast-notification.toast-notification-verified {
-    background-color: var(--message-info-background);
+    background-color: var(--message-info-background, #007BFF);
   }
   .toast-notification.toast-notification-dark {
-    background-color: var(--message-dark-background);
+    background-color: var(--message-dark-background, #007BFF);
   }
 
   /* toast-if-dark */
-  .toast-notification.toast-notification-dark .toast-notification-wrapper .toast-notification-header {
-    color: #edeff3;
-  }
   .toast-notification.toast-notification-dark .toast-notification-wrapper .toast-notification-content {
     color: #edeff3;
+  }
+
+  /* toast-if-white */
+  .toast-notification.toast-notification-empty{
+    box-shadow: 0 0 15px 0 #ccc;
   }
 
   /* toast-if-dimmed */
