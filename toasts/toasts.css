@@ -17,6 +17,7 @@
     text-decoration: none;
     z-index: 999999;
     max-width: 300px;
+    min-height: 100px;
     background-color: var(--message-background);
     border-radius: 4px;
     display: flex;
@@ -54,7 +55,6 @@
     line-height: 24px;
     padding: 0;
     padding-bottom: 4px;
-    align-items: unset;
   }
   .toast-close-icon-container{
     width: 36px;
