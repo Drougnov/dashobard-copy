@@ -23,13 +23,29 @@ class Toasts {
             toast.href = obj.link;
             toast.target = obj.linkTarget ? obj.linkTarget : '_self';
         }
-        toast.className = 'toast-notification' + (obj.style ? ' toast-notification-' + obj.style : '') + ' toast-notification-' + this.position;
+        toast.className = 'toast-notification';
+        if (obj.style) {
+            if (obj.style !== '') {
+                toast.className += ' toast-notification-' + obj.style;
+            }
+        }else{
+            toast.className += ' toast-notification-empty';
+        }
+        
+        toast.className += ' toast-notification-' + this.position;
         toast.innerHTML = `
             <div class="toast-notification-wrapper">
-                ${obj.title ? '<h3 class="toast-notification-header">' + obj.title + '</h3>' : ''}
                 ${obj.content ? '<div class="toast-notification-content">' + obj.content + '</div>' : ''}
             </div>
-            ${obj.closeButton == null || obj.closeButton === true ? '<button class="toast-notification-close">&times;</button>' : ''}
+            ${obj.closeButton == null || obj.closeButton === true ? `<button class="toast-notification-close">
+            <div class="toast-close-icon-container TNIio UYvZu gsCWf EJVsl OtrSK DeYlt">
+                <svg class="toast-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </div>
+        </button>` : ''}
         `;
         document.body.appendChild(toast);
         toast.getBoundingClientRect();
