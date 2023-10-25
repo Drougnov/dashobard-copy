@@ -35,6 +35,7 @@
 
   /* toast-content */
   .toast-notification .toast-notification-wrapper .toast-notification-content {
+    max-width: 390px;
     font-size: var(--message-font-size);
     font-weight: var(--message-font-weight);
     margin: 0;
