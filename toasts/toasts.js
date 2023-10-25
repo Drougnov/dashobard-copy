@@ -58,6 +58,7 @@ class Toasts {
         } else if (this.position == 'top-right') {
             toast.style.top = 0;
             toast.style.right = this.offsetX + 'px';
+            toast.style.marginLeft = this.offsetX + 'px';
         } else if (this.position == 'bottom-left') {
             toast.style.bottom = 0;
             toast.style.left = this.offsetX + 'px';
