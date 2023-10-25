@@ -16,7 +16,6 @@
     position: fixed;
     text-decoration: none;
     z-index: 999999;
-    max-width: 300px;
     background-color: var(--message-background);
     border-radius: 4px;
     display: flex;
@@ -40,7 +39,7 @@
     font-weight: var(--message-font-weight);
     margin: 0;
     padding: 0;
-    word-break: break-all;
+    word-break: break-word;
     color: var(--message-font-color);
   }
 
