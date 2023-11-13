@@ -38,10 +38,11 @@
         });
 
         // Function to create and show a toast
-        function showToast(content, style) {
+        function showToast(content, style, closeTime = 6) {
             toasts.push({
                 content: content,
-                style: style
+                style: style,
+                closeTime: closeTime
             });
         }
 
@@ -53,12 +54,12 @@
 
         document.getElementById("link2").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("You clicked on Link 2", "verified");
+            showToast("You clicked on Link 2", "verified", 2);
         });
 
         document.getElementById("link3").addEventListener("click", function (event) {
             event.preventDefault();
-            showToast("You clicked on Link 3", "dark");
+            showToast("You clicked on Link 3", "dark", 12);
         });
 
         document.getElementById("link4").addEventListener("click", function (event) {
