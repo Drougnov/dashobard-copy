@@ -84,11 +84,12 @@ class Toasts {
         if (obj.link) {
             toast.onclick = () => this.closeToast(this.stack[index-1]);
         }
-        this.openToast(this.stack[index-1]);
+        console.log(obj.closeTime)
+        this.openToast(this.stack[index-1], obj.closeTime);
         if (obj.onOpen) obj.onOpen(this.stack[index-1]);
     }
 
-    openToast(toast) {
+    openToast(toast, closeTime) {
         if (this.isOpening() === true) {
             return false;
         }
@@ -100,7 +101,7 @@ class Toasts {
                 toast.element.dataset.transitionState = 'complete';
                 for (let i = 0; i < this.stack.length; i++) {
                     if (this.stack[i].element.dataset.transitionState == 'queue') {
-                        this.openToast(this.stack[i]);
+                        this.openToast(this.stack[i], closeTime);
                     }
                 }
                 if (toast.props.dismissAfter) {
@@ -119,10 +120,10 @@ class Toasts {
                 this._transformToast(this.stack[i]);
             }
         }
-        // Use setTimeout to close the toast after 30 seconds
+        // Auto close the toast after specified time
         setTimeout(() => {
             this.closeToast(toast);
-        }, 30000);
+        }, (closeTime * 1000));
         return true;
     }
 
